@@ -52,7 +52,6 @@ label prolog_pertama:
 
     larasati "[text_prolog_larasati[7]]"
 
-
     # This ends the game.
 
     return

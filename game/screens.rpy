@@ -62,8 +62,8 @@ style vscrollbar:
 
 style slider:
     ysize gui.slider_size
-    #base_bar Frame("gui/slider/horizontal_[prefix_]bar.png", gui.slider_borders, tile=gui.slider_tile)
-    #thumb "gui/slider/horizontal_[prefix_]thumb.png"
+    base_bar Frame("gui/slider/horizontal1_[prefix_]bar.png", gui.slider_borders, tile=gui.slider_tile)
+    thumb "gui/slider/horizontal1_[prefix_]thumb.png"
 
 style vslider:
     xsize gui.slider_size
@@ -246,9 +246,9 @@ screen quick_menu():
         hbox:
             style_prefix "quick"
 
-            xalign 0.886
+            xalign 0.888
             yalign 0.973
-            spacing 43
+            spacing 45
             textbutton _("Back") action Rollback()
             #textbutton _("History") action ShowMenu('history')
             textbutton _("Skip") action Skip() alternate Skip(fast=True, confirm=True)
@@ -293,9 +293,10 @@ screen button_menu():
     if main_menu:
 
         imagebutton:
-            auto "Btnicons/StartButtons_%s.png"
-            xalign 0.78
-            yalign 0.38
+            auto "Btnicons/StartButtone_%s.png"
+            xalign 0.73
+            yalign 0.39
+            hover_sound "audio/SFX/kertas.mp3"
             action Start()
 
     else:
@@ -305,15 +306,17 @@ screen button_menu():
         textbutton _("Save") action ShowMenu("save")
 
     imagebutton:
-        auto "Btnicons/LoadButtons_%s.png"
-        xalign 0.65
-        yalign 0.44
+        auto "Btnicons/LoadButtone_%s.png"
+        xalign 0.73
+        yalign 0.465
+        hover_sound "audio/SFX/kertas.mp3"
         action [ShowMenu("load"),SetVariable("buttonasset",False)]
 
     imagebutton:
-        auto "Btnicons/SettingButtons_%s.png"
-        xalign 0.77
-        yalign 0.55
+        auto "Btnicons/SettingButtone_%s.png"
+        xalign 0.733
+        yalign 0.535
+        hover_sound "audio/SFX/kertas.mp3"
         action [ShowMenu("preferences"),SetVariable("buttonasset",False)]
 
     if _in_replay:
@@ -330,9 +333,10 @@ screen button_menu():
 
             ## Help isn't necessary or relevant to mobile devices.
         imagebutton:
-            auto "Btnicons/HelpButtons_%s.png"
-            xalign 0.69
-            yalign 0.64
+            auto "Btnicons/HelpButtone_%s.png"
+            xalign 0.729
+            yalign 0.608
+            hover_sound "audio/SFX/kertas.mp3"
             action [ShowMenu("help"),SetVariable("buttonasset",False)]
 
         if renpy.variant("pc"):
@@ -341,9 +345,10 @@ screen button_menu():
             ## Web.
             #textbutton _("Quit") action Quit(confirm=not main_menu)
             imagebutton:
-                auto "Btnicons/QuitButtons_%s.png"
-                xalign 0.76
-                yalign 0.76
+                auto "Btnicons/QuitButtone_%s.png"
+                xalign 0.733
+                yalign 0.685
+                hover_sound "audio/SFX/kertas.mp3"
                 action Quit(confirm=not main_menu)             
 
 style navigation_button is gui_button
@@ -620,7 +625,7 @@ screen load():
 
 
 screen file_slots(title):
-    add "images/bg_loat.png"
+    add "images/bg_loat1.png"
     text "Load" xpos 970 ypos 15 size 88 font "fonts/Comfy Feeling.ttf"
     hbox:
         xalign 0.7
@@ -740,7 +745,7 @@ screen preferences():
     frame:
         xalign 0.5 yalign 0.5
         xsize 1280 ysize 720
-        background im.Scale("images/Setting_bg.png",1280,720)
+        background ("images/Option_bg.png")
         text "Settings" xalign 0.46 yalign 0.16 size 60 font "fonts/Comfy Feeling.ttf"
 
         vbox:
@@ -755,7 +760,7 @@ screen preferences():
                         xpos -168
                         ypos 34
                         style_prefix "radio"
-                        text "Display" size 50 font "fonts/Comfy Feeling.ttf"
+                        text "Display" size 51 font "fonts/Comfy Feeling.ttf"
                         textbutton ("Window") action Preference("display", "window")
                         textbutton _("Fullscreen") action Preference("display", "fullscreen")
 
@@ -763,7 +768,7 @@ screen preferences():
                     xpos 66
                     ypos 35
                     style_prefix "check"
-                    text "Skip" size 50 font "fonts/Comfy Feeling.ttf"
+                    text "Skip" size 51 font "fonts/Comfy Feeling.ttf"
                     textbutton _("Unseen Text") action Preference("skip", "toggle")
                     textbutton _("After Choices") action Preference("after choices", "toggle")
                     textbutton _("Transitions") action InvertSelected(Preference("transitions", "toggle"))
@@ -1009,7 +1014,7 @@ screen help():
     frame:
         xalign 0.5 yalign 0.5
         xsize 1280 ysize 720
-        background "images/Help_bg.png"
+        background "images/Help_bg1.png"
         text "Keyboard & Mouse" xpos 150 ypos 20 size 52 font "fonts/Comfy Feeling.ttf"
 
         vbox:
@@ -1654,3 +1659,6 @@ style slider_vbox:
 style slider_slider:
     variant "small"
     xsize 600
+
+style button_menu:
+    hover_sound "audio/SFX/kertas.mp3"

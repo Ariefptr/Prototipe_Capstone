@@ -27,3 +27,7 @@ define text_prolog_sriyani=[
 screen black_screen():
     frame:
         background "#000000"
+
+#screen white_screen():
+    #frame:
+        #background "#ffffff"
