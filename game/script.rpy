@@ -14,12 +14,10 @@ label start:
 
 label prolog_pertama:
     scene envi_mom
-    show larasati_sma at left:
-        zoom 0.8 xalign 0.089 yalign 1.0
+    show larasati_kecil at left
     with fade
     larasati "[text_prolog_larasati[0]]"
-    show sriyani at right:
-        zoom 0.17 xalign 0.94 yalign 2.0
+    show sriyani_muda at right
     with dissolve
     sriyani "[text_prolog_sriyani[0]]"
 
@@ -42,16 +40,61 @@ label prolog_pertama:
     larasati "[text_prolog_larasati[5]]"
 
     sriyani "[text_prolog_sriyani[5]]"
-    hide sriyani
+    hide sriyani_muda
     with dissolve
     larasati "[text_prolog_larasati[6]]"
-    show sriyani at right:
-        zoom 0.17 xalign 0.94 yalign 2.0
+    show sriyani_muda at right
     with dissolve
     sriyani "[text_prolog_sriyani[6]]"
 
     larasati "[text_prolog_larasati[7]]"
 
-    # This ends the game.
+    # This ends the game prolog.
+    hide larasati_kecil
+    hide sriyani_muda
+    jump kamar_larasati_1
 
-    return
+
+label kamar_larasati_1:
+    scene kamar_larasati 
+    show larasati_sma at left 
+    with dissolve
+
+    larasati "[text_larasati_kamar[0]]"
+    larasati "[text_larasati_kamar[1]]"
+    larasati "[text_larasati_kamar[2]]"
+
+    hide larasati_sma
+    with dissolve
+    jump dm_from_rani
+
+label dm_from_rani:
+    scene kamar_larasati
+    show phone at center 
+    with dissolve
+
+    rani "[text_rani[0]]"
+    larasati "[text_larasati_dm[0]]"
+    rani "[text_rani[1]]"
+    larasati "[text_larasati_dm[1]]"
+    rani "[text_rani[2]]"
+    larasati "[text_larasati_dm[2]]"
+    rani "[text_rani[3]]"
+    rani "[text_rani[4]]"
+    larasati "[text_larasati_dm[3]]"
+    rani "[text_rani[5]]"
+    larasati "[text_larasati_dm[4]]"
+    rani "[text_rani[6]]"
+    larasati "[text_larasati_dm[5]]"
+
+    hide phone 
+    with dissolve
+    jump kamar_larasati_2
+
+label kamar_larasati_2:
+    scene kamar_larasati
+    show larasati_sma at center 
+    with dissolve
+
+    larasati "[text_larasati_kamar[3]]"
+    larasati "[text_larasati_kamar[4]]"

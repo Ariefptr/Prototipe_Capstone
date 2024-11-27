@@ -1,0 +1,26 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "game/script.rpy", line 53, in script
+    $ Hide(prolog_pertama)
+  File "game/script.rpy", line 53, in <module>
+    $ Hide(prolog_pertama)
+NameError: name 'prolog_pertama' is not defined
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "game/script.rpy", line 53, in script
+    $ Hide(prolog_pertama)
+  File "D:\RenPy\renpy-8.3.0-sdk\renpy\ast.py", line 821, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "D:\RenPy\renpy-8.3.0-sdk\renpy\python.py", line 1178, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "game/script.rpy", line 53, in <module>
+    $ Hide(prolog_pertama)
+NameError: name 'prolog_pertama' is not defined
+
+Windows-10-10.0.19045 AMD64
+Ren'Py 8.3.0.24082114
+ 
+Wed Nov 27 12:08:10 2024
