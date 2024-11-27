@@ -757,21 +757,21 @@ screen preferences():
                 if renpy.variant("pc") or renpy.variant("web"):
 
                     vbox:
-                        xpos -168
+                        xpos -160
                         ypos 34
                         style_prefix "radio"
                         text "Display" size 51 font "fonts/Comfy Feeling.ttf"
-                        textbutton ("Window") action Preference("display", "window")
-                        textbutton _("Fullscreen") action Preference("display", "fullscreen")
+                        textbutton ("Window") action Preference("display", "window") xpos 6
+                        textbutton _("Fullscreen") action Preference("display", "fullscreen") xpos 6
 
                 vbox:
-                    xpos 66
+                    xpos 85
                     ypos 35
                     style_prefix "check"
                     text "Skip" size 51 font "fonts/Comfy Feeling.ttf"
-                    textbutton _("Unseen Text") action Preference("skip", "toggle")
-                    textbutton _("After Choices") action Preference("after choices", "toggle")
-                    textbutton _("Transitions") action InvertSelected(Preference("transitions", "toggle"))
+                    textbutton _("Unseen Text") action Preference("skip", "toggle") xpos 10
+                    textbutton _("After Choices") action Preference("after choices", "toggle") xpos 10
+                    textbutton _("Transitions") action InvertSelected(Preference("transitions", "toggle")) xpos 10
 
                 ## Additional vboxes of type "radio_pref" or "check_pref" can be
                 ## added here, to add additional creator-defined preferences.
@@ -826,6 +826,7 @@ screen preferences():
                         null height gui.pref_spacing
 
                         textbutton _("Mute All"):
+                            xalign 0.23
                             action Preference("all mute", "toggle")
                             style "mute_all_button"
 
@@ -833,7 +834,7 @@ screen preferences():
                             style "return_button"
                             auto "Btnicons/ReturnButtons_%s.png"
                             xpos -648
-                            ypos -487
+                            ypos -491
                             action [Return(),SetVariable("buttonasset",True)]
 
 
@@ -871,27 +872,35 @@ style pref_label_text:
     yalign 1.0
 
 style pref_vbox:
-    xsize 225
+    xsize 200
 
 style radio_vbox:
-    spacing gui.pref_button_spacing
+    #spacing gui.pref_button_spacing
+    spacing 5
 
-#style radio_button:
-    #properties gui.button_properties("radio_button")
-    #foreground "gui/button/radio_[prefix_]foreground.png"
+style radio_button:
+    properties gui.button_properties("radio_button")
+    foreground "gui/button/radio_[prefix_]foreground.png"
 
-#style radio_button_text:
-    #properties gui.text_properties("radio_button")
+style radio_button_text:
+    properties gui.text_properties("radio_button")
+    xpos 15
+    font "fonts/Stanberry.ttf"
+    size 27
 
 style check_vbox:
-    spacing gui.pref_button_spacing
+    #spacing gui.pref_button_spacing
+    spacing 5
 
-#style check_button:
-    #properties gui.button_properties("check_button")
-    #foreground "gui/button/check_[prefix_]foreground.png"
+style check_button:
+    properties gui.button_properties("check_button")
+    foreground "gui/button/check_[prefix_]foreground.png"
 
 style check_button_text:
     properties gui.text_properties("check_button")
+    xpos 15
+    font "fonts/Stanberry.ttf"
+    size 27
 
 style slider_slider:
     xsize 350
@@ -1584,13 +1593,13 @@ style window:
     variant "small"
     background "gui/phone/textbox.png"
 
-#style radio_button:
-    #variant "small"
-    #foreground "gui/phone/button/radio_[prefix_]foreground.png"
+style radio_button:
+    variant "small"
+    foreground "gui/phone/button/radio_[prefix_]foreground.png"
 
-#style check_button:
-    #variant "small"
-    #foreground "gui/phone/button/check_[prefix_]foreground.png"
+style check_button:
+    variant "small"
+    foreground "gui/phone/button/check_[prefix_]foreground.png"
 
 style nvl_window:
     variant "small"
