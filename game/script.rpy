@@ -9,6 +9,7 @@ label start:
     pause 1.0
     hide screen black_screen
     with dissolve
+    stop music fadeout 1.3
     jump prolog_pertama
 
 
@@ -96,7 +97,7 @@ label kamar_larasati_1:
 
     show larasati_sma at left
     larasati "[text_larasati_kamar[2]]"
-    
+
     scene kamar_larasati
     show notif_pesan at center
     play sound "SFX/Notif2.mp3"
@@ -109,19 +110,31 @@ label dm_dari_rani:
     scene kamar_larasati
     show phone at center
     with dissolve
-
+    play sound "audio/SFX/dring.mp3" fadeout 0.3
     rani "[text_rani[0]]"
+    play sound "audio/SFX/typing.mp3" fadeout 1.5
     larasati "[text_larasati_dm[0]]"
+    play sound "audio/SFX/dring.mp3" fadeout 0.3
     rani "[text_rani[1]]"
+    play sound "audio/SFX/typing.mp3" fadeout 1.5
     larasati "[text_larasati_dm[1]]"
+    play sound "audio/SFX/dring.mp3" fadeout 0.3
     rani "[text_rani[2]]"
+    play sound "audio/SFX/typing4.mp3" fadeout 1.5
     larasati "[text_larasati_dm[2]]"
+    play sound "audio/SFX/dring.mp3" fadeout 0.3
     rani "[text_rani[3]]"
+    play sound "audio/SFX/dring.mp3" fadeout 0.3
     rani "[text_rani[4]]"
+    play sound "audio/SFX/typing.mp3" fadeout 1.5
     larasati "[text_larasati_dm[3]]"
+    play sound "audio/SFX/dring.mp3" fadeout 0.3
     rani "[text_rani[5]]"
+    play sound "audio/SFX/typing2.mp3" fadeout 0.6
     larasati "[text_larasati_dm[4]]"
+    play sound "audio/SFX/dring.mp3" fadeout 0.3
     rani "[text_rani[6]]"
+    play sound "audio/SFX/typing3.mp3" fadeout 0.7
     larasati "[text_larasati_dm[5]]"
 
     hide phone
