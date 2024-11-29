@@ -294,8 +294,8 @@ screen button_menu():
 
         imagebutton:
             auto "Btnicons/StartButtone_%s.png"
-            xalign 0.73
-            yalign 0.39
+            xalign 0.74
+            yalign 0.382
             hover_sound "audio/SFX/kertas.mp3"
             action Start()
 
@@ -307,15 +307,15 @@ screen button_menu():
 
     imagebutton:
         auto "Btnicons/LoadButtone_%s.png"
-        xalign 0.73
+        xalign 0.74
         yalign 0.465
         hover_sound "audio/SFX/kertas.mp3"
         action [ShowMenu("load"),SetVariable("buttonasset",False)]
 
     imagebutton:
         auto "Btnicons/SettingButtone_%s.png"
-        xalign 0.733
-        yalign 0.535
+        xalign 0.74
+        yalign 0.540
         hover_sound "audio/SFX/kertas.mp3"
         action [ShowMenu("preferences"),SetVariable("buttonasset",False)]
 
@@ -334,8 +334,8 @@ screen button_menu():
             ## Help isn't necessary or relevant to mobile devices.
         imagebutton:
             auto "Btnicons/HelpButtone_%s.png"
-            xalign 0.729
-            yalign 0.608
+            xalign 0.734
+            yalign 0.616
             hover_sound "audio/SFX/kertas.mp3"
             action [ShowMenu("help"),SetVariable("buttonasset",False)]
 
@@ -346,10 +346,11 @@ screen button_menu():
             #textbutton _("Quit") action Quit(confirm=not main_menu)
             imagebutton:
                 auto "Btnicons/QuitButtone_%s.png"
-                xalign 0.733
-                yalign 0.685
+                xalign 0.736
+                yalign 0.693
                 hover_sound "audio/SFX/kertas.mp3"
-                action Quit(confirm=not main_menu)             
+                action Quit(confirm=not main_menu)
+                  
 
 style navigation_button is gui_button
 style navigation_button_text is gui_button_text
