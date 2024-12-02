@@ -1,6 +1,8 @@
 define larasati = Character("Larasati",color ="#2674f1")
 define sriyani = Character("Sriyani",color = "#ffa201")
 define rani = Character("Rani",color = "#e374ffff")
+define makhluk_1 = Character("Makara",color = "#000000")
+define makhluk = Character("???",color = "#000000")
 
 image bg envi mom = im.Scale("envi_mom.jpg",1280,720)
 
@@ -70,10 +72,10 @@ screen black_screen():
     frame:
         background "#000000"
 
-screen mengamati1():
-    frame:
-        background "mengamati"
+#screen mengamati1():
+#    frame:
+        #background "mengamati"
 
-#screen white_screen():
-    #frame:
-        #background "#ffffff"
+screen white_screen():
+    frame:
+        background "#ffffff"

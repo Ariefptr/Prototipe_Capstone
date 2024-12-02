@@ -243,7 +243,7 @@ define suara_misterius=[
     "Siapa namamu ?",
 ]
 
-define makara=[
+define text_makara=[
     "Namaku Makara",
     "Bagaimana kamu bisa berada di sini ?",
     "Itu terdengar aneh",
@@ -271,7 +271,7 @@ define makara=[
     "Begitu rupanya",
     "Aku tidak memiliki solusi yang pasti untuk permasalahan itu",
     "Tapi terimakasih karena sudah berbagi cerita",
-    "Ohiya aku hampir lupa",
+    "Oh iya aku hampir lupa",
     "Kamu membutuhkan ini nanti",
     "Kamu simpan dulu saja, nanti pasti dibutuhkan",
     "Hmm…",
