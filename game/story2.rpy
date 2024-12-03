@@ -1,4 +1,5 @@
 
+default img_7 = 45
 
 define larasati_story_2=[
     #(Suatu tempat yang tidak diketahui)
@@ -294,3 +295,53 @@ define text_makara=[
     "Lelah juga ya",
     "Karena kita berada di dataran tinggi",
 ]
+
+screen rotate_batik():
+    image "images/bg_puzzle_rotate.png"
+
+    imagebutton:
+        idle "back_btn"
+        action Jump("story_parang")
+
+    frame:
+        image "images/puzzle/Completed.png"
+        xpos 0.6
+        ypos 0.2
+
+    hbox:
+        xpos 0.7
+        ypos 0.8
+        imagebutton:
+            idle "images/puzzle/rotate_kiri.png"
+            action SetVariable("img_7", img_7 - 5)
+            if img_7 == 0:
+                action Jump("story_3")
+        imagebutton:
+            idle "images/puzzle/rotate_kanan.png"
+            action SetVariable("img_7", img_7 + 5)
+            if img_7 == 360:
+                action Jump("story_3")
+
+    vbox:
+        xpos 0.1
+        ypos 0.2
+        hbox:
+            image "images/puzzle/MegaMendung1.png" 
+            image "images/puzzle/MegaMendung2.png" 
+            image "images/puzzle/MegaMendung3.png" 
+            image "images/puzzle/MegaMendung4.png" 
+        hbox:
+            image "images/puzzle/MegaMendung5.png" 
+            image "images/puzzle/MegaMendung6.png" 
+            image "images/puzzle/MegaMendung7.png" rotate img_7
+            image "images/puzzle/MegaMendung8.png"  
+        hbox:
+            image "images/puzzle/MegaMendung9.png" 
+            image "images/puzzle/MegaMendung10.png" 
+            image "images/puzzle/MegaMendung11.png" 
+            image "images/puzzle/MegaMendung12.png"
+        hbox:
+            image "images/puzzle/MegaMendung14.png" 
+            image "images/puzzle/MegaMendung13.png" 
+            image "images/puzzle/MegaMendung15.png" 
+            image "images/puzzle/MegaMendung16.png"

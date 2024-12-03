@@ -823,6 +823,13 @@ label story_parang:
     larasati "[larasati_story_2[78]]"
     larasati "[larasati_story_2[79]]"
 
+    hide larasati_outfit
+    hide makara
+    jump puzzle_rotate
+
+label puzzle_rotate:
+    call screen rotate_batik
 
 
-    return
+label story_3:
+    "story 3"
