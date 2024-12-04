@@ -1,5 +1,7 @@
 
+default img_2 = 100
 default img_7 = 45
+default img_13 = 200
 
 define larasati_story_2=[
     #(Suatu tempat yang tidak diketahui)
@@ -299,9 +301,14 @@ define text_makara=[
 screen rotate_batik():
     image "images/bg_puzzle_rotate.png"
 
-    imagebutton:
-        idle "back_btn"
-        action Jump("story_parang")
+    hbox:
+        xpos 0.02
+        ypos 0.03
+        imagebutton:
+            idle "back_button"
+            action Jump("story_parang")
+
+    text "Benarkan {b}ROTASI{/b} batik" xpos 0.4 ypos 0.02 color "#3c26ffff"
 
     frame:
         image "images/puzzle/Completed.png"
@@ -315,33 +322,74 @@ screen rotate_batik():
             idle "images/puzzle/rotate_kiri.png"
             action SetVariable("img_7", img_7 - 5)
             if img_7 == 0:
-                action Jump("story_3")
+                action Jump("puzzle_rotate_2")
         imagebutton:
             idle "images/puzzle/rotate_kanan.png"
             action SetVariable("img_7", img_7 + 5)
             if img_7 == 360:
-                action Jump("story_3")
+                action Jump("puzzle_rotate_2")
 
-    vbox:
-        xpos 0.1
+    image "images/puzzle/puzzle_r_1.png" xpos 0.1 ypos 0.2
+    image "images/puzzle/piece_7.png" xpos 0.25 ypos 0.32 rotate img_7
+
+screen rotate_batik_2():
+    image "images/bg_puzzle_rotate.png"
+
+    text "Benarkan {b}ROTASI{/b} batik" xpos 0.4 ypos 0.02 color "#3c26ffff"
+
+    frame:
+        image "images/puzzle/Completed.png"
+        xpos 0.6
         ypos 0.2
-        hbox:
-            image "images/puzzle/MegaMendung1.png" 
-            image "images/puzzle/MegaMendung2.png" 
-            image "images/puzzle/MegaMendung3.png" 
-            image "images/puzzle/MegaMendung4.png" 
-        hbox:
-            image "images/puzzle/MegaMendung5.png" 
-            image "images/puzzle/MegaMendung6.png" 
-            image "images/puzzle/MegaMendung7.png" rotate img_7
-            image "images/puzzle/MegaMendung8.png"  
-        hbox:
-            image "images/puzzle/MegaMendung9.png" 
-            image "images/puzzle/MegaMendung10.png" 
-            image "images/puzzle/MegaMendung11.png" 
-            image "images/puzzle/MegaMendung12.png"
-        hbox:
-            image "images/puzzle/MegaMendung14.png" 
-            image "images/puzzle/MegaMendung13.png" 
-            image "images/puzzle/MegaMendung15.png" 
-            image "images/puzzle/MegaMendung16.png"
+    hbox:
+        xpos 0.7
+        ypos 0.8
+        imagebutton:
+            idle "images/puzzle/rotate_kiri.png"
+            action SetVariable("img_13", img_13 - 5)
+            if img_13 == 0:
+                action Jump("puzzle_rotate_3")
+        imagebutton:
+            idle "images/puzzle/rotate_kanan.png"
+            action SetVariable("img_13", img_13 + 5)
+            if img_13 == 360:
+                action Jump("puzzle_rotate_3")
+
+    image "images/puzzle/piece_13.png" xpos 0.08 ypos 0.63 rotate img_13
+    image "images/puzzle/puzzle_r_2.png" xpos 0.1 ypos 0.2
+
+screen rotate_batik_3():
+    image "images/bg_puzzle_rotate.png"
+
+    text "Benarkan {b}ROTASI{/b} batik" xpos 0.4 ypos 0.02 color "#3c26ffff"
+
+    frame:
+        image "images/puzzle/Completed.png"
+        xpos 0.6
+        ypos 0.2
+    hbox:
+        xpos 0.7
+        ypos 0.8
+        imagebutton:
+            idle "images/puzzle/rotate_kiri.png"
+            action SetVariable("img_2", img_2 - 5)
+            if img_2 == 0:
+                action ShowMenu("reward_puzzle_1")
+        imagebutton:
+            idle "images/puzzle/rotate_kanan.png"
+            action SetVariable("img_2", img_2 + 5)
+            if img_2 == 360:
+                action ShowMenu("reward_puzzle_1")
+    
+    image "images/puzzle/piece_2.png" xpos 0.17 ypos 0.17 rotate img_2
+    image "images/puzzle/puzzle_r_3.png" xpos 0.1 ypos 0.2
+
+screen reward_puzzle_1():
+    image "images/bg_puzzle_rotate.png"
+
+    hbox:
+        xpos 0.5
+        ypos 0.8
+        textbutton "Lanjut":
+            background "#a5fd5cff"
+            action Jump("story_3")

@@ -1,0 +1,10 @@
+﻿I'm sorry, but errors were detected in your script. Please correct the
+errors listed below, and try again.
+
+
+File "game/story2.rpy", line 390: image statement expects 1 positional arguments, got 0.
+    image 
+          ^
+
+Ren'Py Version: Ren'Py 8.3.0.24082114
+Wed Dec  4 17:48:06 2024

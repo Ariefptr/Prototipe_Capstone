@@ -830,6 +830,16 @@ label story_parang:
 label puzzle_rotate:
     call screen rotate_batik
 
+label puzzle_rotate_2:
+    call screen rotate_batik_2
+
+label puzzle_rotate_3:
+    call screen rotate_batik_3
+
+label reward_puzzle:
+    call screen reward_puzzle_1
 
 label story_3:
     "story 3"
+    
+    return
