@@ -13,24 +13,136 @@ label start:
     jump prolog_pertama
 
 label prolog_pertama:
-    scene bg ruang_menjahit
-    show lolilaras_bahagia :
-        subpixel True pos (121, 179) zpos 0.0 
+    play music "BGM/All_Idle_Game_BGM.mp3" volume 0.7
+    scene bg kamar_larasati
+    narrator "[narator_text[0]]"
+    show lolilaras_base at left
     with fade
     larasati "[text_prolog_larasati[0]]"
-    show larasatisma_bingungcemas at right
-    with dissolve
-    sriyani "[text_prolog_sriyani[0]]"
     larasati "[text_prolog_larasati[1]]"
-    sriyani "[text_prolog_sriyani[1]]"
+    narrator "[narator_text[1]]"
+    scene bg ruang_menjahit
+    show sriyani_senyum at right
+    show lolilaras_base at left
+    with fade
+    sriyani "[text_prolog_sriyani[0]]"
     larasati "[text_prolog_larasati[2]]"
-    sriyani "[text_prolog_sriyani[2]]"
+    narrator "[narator_text[2]]"
+    play sound "SFX/SFX_MesinJahit2.mp3" fadeout 1.3
+    with dissolve
     larasati "[text_prolog_larasati[3]]"
+    sriyani "[text_prolog_sriyani[1]]"
+    sriyani "[text_prolog_sriyani[2]]"
+    stop sound fadeout 0.5
     sriyani "[text_prolog_sriyani[3]]"
     larasati "[text_prolog_larasati[4]]"
-    sriyani "[text_prolog_sriyani[4]]"
+    hide lolilaras_base
+    with fade
+    narrator "[narator_text[3]]"
+    play sound "SFX/Kain2.mp3" fadeout 1.3
+    with dissolve
+    show lolilaras_base at left
+    with fade
     larasati "[text_prolog_larasati[5]]"
+    sriyani "[text_prolog_sriyani[4]]"
     sriyani "[text_prolog_sriyani[5]]"
+    narrator "[narator_text[4]]"
+    larasati "[text_prolog_larasati[6]]"
+    sriyani "[text_prolog_sriyani[6]]"
+    larasati "[text_prolog_larasati[7]]"
+    sriyani "[text_prolog_sriyani[7]]"
+    larasati "[text_prolog_larasati[8]]"
+    narrator "[narator_text[5]]"
+    larasati "[text_prolog_larasati[9]]"
+    larasati "[text_prolog_larasati[10]]"
+    narrator "[narator_text[6]]"
+    sriyani "[text_prolog_sriyani[8]]"
+    narrator "[narator_text[7]]"
+    hide lolilaras_base 
+    hide sriyani_senyum
+    with dissolve
+    scene bg kamar_larasati
+    show lolilaras_base
+    with fade
+    play sound "SFX/kertas.mp3" fadeout 1.3
+    narrator "[narator_text[8]]"
+    narrator "[narator_text[9]]"
+    hide lolilaras_base
+    with dissolve
+    narrator "[narator_text[10]]"
+    scene bg ruang_menjahit
+    show lolilaras_bahagia at left
+    show sriyani_senang at right
+    with fade
+    larasati "[text_prolog_larasati[11]]"
+    narrator "[narator_text[11]]"
+    sriyani "[text_prolog_sriyani[9]]"
+    show lolilaras_senang at left
+    show sriyani_ketawa at right
+    narrator "[narator_text[12]]"
+    hide lolilaras_senang
+    hide sriyani_ketawa
+    with dissolve
+    scene bg ruang_menjahit
+    with fade
+    narrator "[narator_text[13]]"
+    show lolilaras_base at left
+    show sriyani_senyum at right
+    with fade
+    larasati "[text_prolog_larasati[12]]"
+    play sound "SFX/SFX_MesinJahit2.mp3" fadeout 1.3
+    with dissolve
+    sriyani "[text_prolog_sriyani[10]]"
+    larasati "[text_prolog_larasati[13]]"
+    stop sound fadeout 0.5
+    larasati "[text_prolog_larasati[14]]"
+    sriyani "[text_prolog_sriyani[11]]"
+    larasati "[text_prolog_larasati[15]]"
+    narrator "[narator_text[14]]"
+    narrator "[narator_text[15]]"
+    show sriyani_ketawa at right
+    narrator "[narator_text[16]]"
+    show sriyani_ketawav2 at right
+    larasati "[text_prolog_larasati[16]]"
+    sriyani "[text_prolog_sriyani[12]]"
+    sriyani "[text_prolog_sriyani[13]]"
+    show lolilaras_penasaran at left
+    larasati "[text_prolog_larasati[17]]"
+    sriyani "[text_prolog_sriyani[14]]"
+    sriyani "[text_prolog_sriyani[15]]"
+    sriyani "[text_prolog_sriyani[16]]"
+    larasati "[text_prolog_larasati[18]]"
+    sriyani "[text_prolog_sriyani[17]]"
+    show lolilaras_bahagia at left
+    larasati "[text_prolog_larasati[19]]"
+    larasati "[text_prolog_larasati[20]]"
+    sriyani "[text_prolog_sriyani[18]]"
+    larasati "[text_prolog_larasati[21]]"
+    larasati "[text_prolog_larasati[22]]"
+    sriyani "[text_prolog_sriyani[19]]"
+    sriyani "[text_prolog_sriyani[20]]"
+    show lolilaras_senang at left
+    larasati "[text_prolog_larasati[23]]"
+    larasati "[text_prolog_larasati[24]]"
+    larasati "[text_prolog_larasati[25]]"
+    hide sriyani_ketawav2 
+    show sriyani_ketawa at right
+    narrator "[narator_text[17]]"
+    sriyani "[text_prolog_sriyani[21]]"
+    larasati "[text_prolog_larasati[26]]"
+    sriyani "[text_prolog_sriyani[22]]"
+    larasati "[text_prolog_larasati[27]]"
+    play sound "SFX/Kain2.mp3" fadeout 1.3
+    with dissolve
+    narrator "[narator_text[18]]"
+    play sound "SFX/Kain.mp3" fadeout 1.3
+    with dissolve
+    sriyani "[text_prolog_sriyani[23]]"
+    sriyani "[text_prolog_sriyani[24]]"
+    narrator "[narator_text[19]]"
+
+
+
     jump penasaran_1
 
 label penasaran_1:

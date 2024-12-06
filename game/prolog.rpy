@@ -3,9 +3,11 @@ define sriyani = Character("Sriyani",color = "#007b1d")
 define rani = Character("Rani",color = "#e374ffff")
 define makhluk_1 = Character("Makara",color = "#000000")
 define makhluk = Character("???",color = "#000000")
+define narrator = Character("   ",color = "#000000")
 
 image bg envi mom = im.Scale("envi_mom.jpg",1280,720)
 image bg ruang_menjahit = im.Scale("ruang_menjahit.png",1280,720)
+image bg kamar_larasati = im.Scale("kamar_larasati.png",1280,720)
 image lolilaras_base = im.Scale("larasatilolibase.png",442,539)
 image lolilaras_bahagia = im.Scale("larasatilolibahagia.png",442,539)
 image lolilaras_penasaran = im.Scale("larasatilolipenasaran.png",442,539)
@@ -67,14 +69,36 @@ image satria_merem = im.Scale("satriasenyummerem.png",510,667)
 image satria_serius = im.Scale("satriaserius.png",510,667)
 
 
+define narator_text=[
+    "Larasati baru saja bangun pagi di hari libur sekolah, Hari libur merupakan hari yang sangat disukai oleh anak sekolah, Karena tidak ada kegiatan yang wajib diikuti, Melainkan hanya dirumah dan bebas untuk melakukan apapun",
+    "Larasati bangun dari kasurnya dan menemui Ibunya,Seperti biasa, Ibunya berada di ruang kerja,Mendesain motif batik dan membuat pakaian batik pesanan orang lain,Saat ini Ibu Larasati sedang membuat selendang batik",
+    "Dengan mata yang masih kantuk, Larasati melihat Ibunya membuat selendang",
+    "Setelah selesai makan, Larasati kembali melihat Ibunya yang sedang memotong kain",
+    "Larasati mengambil sisa potongan kain yang terjatuh ke lantai, dan memperhatikan kain tersebut. Di kain tersebut terdapat pola yang Ia tidak ketahui",
+    "Larasati mengambil potongan kain-kain batik yang tidak digunakan lalu melihat perbedaan motif dari potongan kain batik tersebut",
+    "Sriyani menoleh ke arah potongan batik yang dipegang Larasati",
+    "Larasati memperhatikan kembali motif-motif batik yang ada di sekitarnya",
+    "Ia kembali ke kamarnya, mengambil buku gambar serta pensil dan penghapus",
+    "Mulai perlahan Larasati membuat motif batik dari potongan-potongan kain yang tidak terpakai",
+    "Setelah beberapa saat",
+    "Larasati menunjukkan hasil gambar motif batik yang Ia buat",
+    "Sejak saat itu Larasati suka sekali menggambar motif-motif batik yang ada di ruang kerja Ibunya",
+    "Beberapa hari kemudian",
+    "Larasati memainkan gulungan-gulungan benang dan memperhatikan ada apa saja isi dari kotak yang biasa disimpan Ibunya untuk menjahit",
+    "Lalu Larasati mencoba untuk memasukkan benang ke jarum dan mengikat benang di kancing yang tidak terpakai",
+    "Sriyani yang melihat tingkah Larasati hanya tersenyum",
+    "Sriyani merasa bangga dari apa yang sudah dilakukan Larasati",
+    "Sriyani mengambil kain dari lemari dan membawanya",
+    "Larasati sangat senang karena bisa belajar apa yang dia inginkan,sejak saat itu Larasati belajar menjahit untuk pertama kalinya ",
+]
 
 # Prolog Larasati masih SD
 define text_prolog_larasati=[
     "Hooam... jam berapa ini ?",
     "Delapan lewat ?",
-    "Hm",
+    "Hmmm...hmmm....",
     "Ibu membuat apa saja hari ini ?",
-    "Hmm",
+    "Hmmm......",
     "Kenapa kainnya dipotong bu ?",
     "Ibu ini gambar apa ? ",
     "Batik ? kok gambarnya berbeda dari yang ibu buat kemarin",
@@ -82,19 +106,19 @@ define text_prolog_larasati=[
     "Yang ini bagus , eh tapi yang ini juga bagus bu",
     "Ibu kenapa yang ini sedikit berbeda dari motif lainnya ?",
     "Ibu lihat",
-    "Ibu lagi buat apa ?",
+    "Ibu lagi buat apa ?", #12
     "Aku pernah melihat nenek melakukan hal yang sama seperti ibu",
     "Aku lupa namanya apa ...",
     "Ah... iya menjahit",
-    "Dulu ibu menjahit selendang juga ?",
-    "Lalu Ibu belajar desain motif batik dari siapa... ?",
-    "Berarti dulu Ibu belajar menjahit dari nenek ya ?",
-    "Aku juga ingin belajar menjahit bu...",
-    "Tapi aku lebih suka menggambar motif-motif batik",
-    "Hari ini aku hanya menggambar satu motif saja",
-    "Dari kemeja yang sering ayah pakai saat ada acara keluarga",
-    "Aku suka....",
-    "Aku suka yang motif nya berbentuk seperti bunga bu...",
+    "Dulu ibu menjahit selendang juga ?", #16
+    "Lalu Ibu belajar desain motif batik dari siapa... ?", #17
+    "Berarti dulu Ibu belajar menjahit dari nenek ya ?", #18
+    "Aku juga ingin belajar menjahit bu...", #19
+    "Tapi aku lebih suka menggambar motif-motif batik", #20
+    "Hari ini aku hanya menggambar satu motif saja", #21
+    "Dari kemeja yang sering ayah pakai saat ada acara keluarga", #22
+    "Aku suka....", #23
+    "Aku suka yang motif nya berbentuk seperti bunga bu...", #24
     "Walaupun terkadang susah tapi aku bisa dan aku suka....",
     "Belum bu...",
     "Ih... aku mau bu",
