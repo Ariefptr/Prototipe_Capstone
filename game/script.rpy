@@ -12,13 +12,13 @@ label start:
     stop music fadeout 1.3
     jump prolog_pertama
 
-
 label prolog_pertama:
-    scene envi_mom
-    show larasati_kecil at left
+    scene bg ruang_menjahit
+    show lolilaras_bahagia :
+        subpixel True pos (121, 179) zpos 0.0 
     with fade
     larasati "[text_prolog_larasati[0]]"
-    show sriyani_muda at right
+    show larasatisma_bingungcemas at right
     with dissolve
     sriyani "[text_prolog_sriyani[0]]"
     larasati "[text_prolog_larasati[1]]"
