@@ -173,785 +173,242 @@ label penasaran_1:
     # This ends the game.
     hide larasati_kecil
     hide sriyani_muda
-    jump kamar_larasati_1
+    jump chapter_1
 
+# ------ Chapter 1 ------
 
-label kamar_larasati_1:
-    scene kamar_larasati
-    show mencobaa at center
-    with dissolve
-    $renpy.pause(5.0, hard=True)
-    hide mencobaa
-    show mencoba at center
-    with dissolve
-    $renpy.pause(5.0, hard=True)
-    hide mencoba
-
-    show larasati_sma at left
-    with dissolve
-
-    larasati "[text_larasati_kamar[0]]"
-    larasati "[text_larasati_kamar[1]]"
-
-    scene kamar_larasati
-    show kebingungan at center
-    with dissolve
-    $renpy.pause(5.0, hard=True)
-    hide kebingungan
-
-    show larasati_sma at left
-    larasati "[text_larasati_kamar[2]]"
-
-    scene kamar_larasati
-    show notif_pesan at center
-    play sound "SFX/Notif2.mp3"
-    with dissolve
-    $renpy.pause(4.0, hard=True)
-    hide notif_pesan
-    jump dm_dari_rani
-
-label dm_dari_rani:
-    scene kamar_larasati
-    show phone at center
-    with dissolve
-    play sound "audio/SFX/dring.mp3" fadeout 0.3
-    rani "[text_rani[0]]"
-    play sound "audio/SFX/typing.mp3" fadeout 1.5
-    larasati "[text_larasati_dm[0]]"
-    play sound "audio/SFX/dring.mp3" fadeout 0.3
-    rani "[text_rani[1]]"
-    play sound "audio/SFX/typing.mp3" fadeout 1.5
-    larasati "[text_larasati_dm[1]]"
-    play sound "audio/SFX/dring.mp3" fadeout 0.3
-    rani "[text_rani[2]]"
-    play sound "audio/SFX/typing4.mp3" fadeout 1.5
-    larasati "[text_larasati_dm[2]]"
-    play sound "audio/SFX/dring.mp3" fadeout 0.3
-    rani "[text_rani[3]]"
-    play sound "audio/SFX/dring.mp3" fadeout 0.3
-    rani "[text_rani[4]]"
-    play sound "audio/SFX/typing.mp3" fadeout 1.5
-    larasati "[text_larasati_dm[3]]"
-    play sound "audio/SFX/dring.mp3" fadeout 0.3
-    rani "[text_rani[5]]"
-    play sound "audio/SFX/typing2.mp3" fadeout 0.6
-    larasati "[text_larasati_dm[4]]"
-    play sound "audio/SFX/dring.mp3" fadeout 0.3
-    rani "[text_rani[6]]"
-    play sound "audio/SFX/typing3.mp3" fadeout 0.7
-    larasati "[text_larasati_dm[5]]"
-
-    hide phone
-    with dissolve
-    jump kamar_larasati_2
-
-label kamar_larasati_2:
-    scene kamar_larasati
-    show terdiam at center
-    with dissolve
-    $renpy.pause(5.0, hard=True)
-    hide terdiam
-
-    show larasati_sma at center
-    with dissolve
-
-    larasati "[text_larasati_kamar[3]]"
-    larasati "[text_larasati_kamar[4]]"
-    jump dikafe_3
-
-
-label dikafe_3:
-    scene cafe
-    show menunggu at center
-    with dissolve
-    $renpy.pause(5.0, hard=True)
-    hide menunggu
-
-    scene cafe
-    show rani_outfit at center
-    with dissolve
-
-    rani "[text_rani[7]]"
-    rani "[text_rani[8]]"
-
-    hide rani_outfit
-    with dissolve
-
-    scene cafe
-    show ketemuan at center
-    with dissolve
-    $renpy.pause(6.0, hard=True)
-    hide ketemuan
-
-    show rani_outfit at right
-    with dissolve
-
-    rani "[text_rani[9]]"
-
-    show larasati_outfit at left
-    with dissolve
-
-    larasati "[text_larasati_kafe[0]]"
-    rani "[text_rani[10]]"
-    larasati "[text_larasati_kafe[1]]"
-    larasati "[text_larasati_kafe[2]]"
-
-    scene cafe
-    show screen white_screen
-    with dissolve
-    $renpy.pause(3.0, hard=True)
-    hide screen white_screen
-    scene cafe
+label chapter_1:
     show screen black_screen
     with dissolve
-    $renpy.pause(3.0, hard=True)
+    pause 1.0
     hide screen black_screen
-    jump dunia_lain
-
-label dunia_lain:
-    show dimensi
     with dissolve
-    $renpy.pause(4.0, hard=True)
-    hide dimensi
-    jump story_parang
-
-label story_parang:
-    scene hutan_parang
-    show dimensi_1
-    with dissolve
-    $renpy.pause(4.0, hard=True)
-    hide dimensi_1
-
-    scene hutan_parang
-    with dissolve
-    larasati "[larasati_story_2[0]]"
-
-    scene hutan_parang
-    show terbangun
-    with dissolve
-    $renpy.pause(3.0, hard=True)
-    hide terbangun
-    show mengingat
-    with dissolve
-    $renpy.pause(3.0, hard=True)
-    hide mengingat
-
-    show larasati_outfit at center
-    with dissolve
-
-    larasati "[larasati_story_2[1]]"
-    larasati "[larasati_story_2[2]]"
-    larasati "[larasati_story_2[3]]"
-    larasati "[larasati_story_2[4]]"
-    larasati "[larasati_story_2[5]]"
-    scene hutan_parang
-    show tenang
-    with dissolve
-    $renpy.pause(5.0, hard=True)
-    hide tenang
-    show melihat
-    with dissolve
-    $renpy.pause(3.0, hard=True)
-    hide melihat
-
-    show larasati_outfit at left
-    with dissolve
-    larasati "[larasati_story_2[6]]"
-    larasati "[larasati_story_2[7]]"
-    larasati "[larasati_story_2[8]]"
-    larasati "[larasati_story_2[9]]"
-    larasati "[larasati_story_2[10]]"
-    larasati "[larasati_story_2[11]]"
-
-    scene hutan_parang
-    show keliling
-    with dissolve
-    $renpy.pause(4.0, hard=True)
-    hide keliling
-
-    show larasati_outfit at left
-    with dissolve
-    larasati "[larasati_story_2[12]]"
-    larasati "[larasati_story_2[13]]"
-    larasati "[larasati_story_2[14]]"
-    larasati "[larasati_story_2[15]]"
-    larasati "[larasati_story_2[16]]"
-    larasati "[larasati_story_2[17]]"
-    larasati "[larasati_story_2[18]]"
-
-    scene hutan_parang
-    show keliling_1
-    with dissolve
-    $renpy.pause(6.0, hard=True)
-    hide keliling_1
-    show keliling_2
-    with dissolve
-    $renpy.pause(11.0, hard=True)
-    hide keliling_2
-
-    show larasati_outfit at left
-    with dissolve
-    larasati "[larasati_story_2[19]]"
-    larasati "[larasati_story_2[20]]"
-
-    scene hutan_parang
-    show mencari
-    with dissolve
-    $renpy.pause(5.0, hard=True)
-    hide mencari
-
-    show larasati_outfit at left
-    with dissolve
-    larasati "[larasati_story_2[21]]"
-
-    scene hutan_parang
-    show pikiran
-    with dissolve
-    $renpy.pause(3.0, hard=True)
-    hide pikiran
-
-    show larasati_outfit at left
-    with dissolve
-    larasati "[larasati_story_2[22]]"
-    scene hutan_parang
-    show larasati_outfit at center
-    with dissolve
-    $renpy.pause(2.0, hard=True)
-    scene hutan_parang
-    show larasati_outfit at right
-    with dissolve
-    $renpy.pause(2.0, hard=True)
-    hide larasati_outfit
-    with dissolve
-
-    scene hutan_parang
-    show tinggal
-    with dissolve
-    $renpy.pause(4.0, hard=True)
-    hide tinggal
-    show melihat_1
-    with dissolve
-    $renpy.pause(7.0, hard=True)
-    hide melihat_1
-
-    show larasati_outfit at left
-    with dissolve
-    larasati "[larasati_story_2[23]]"
-    show misterius at right:
-        zoom 1.74
-        xpos 1279 ypos 524
-    with dissolve
-    larasati "[larasati_story_2[24]]"
-    larasati "[larasati_story_2[25]]"
-
-    scene hutan_parang
-    show waspada
-    with dissolve
-    $renpy.pause(6.0, hard=True)
-    hide waspada
-    show waspada_1
-    with dissolve
-    $renpy.pause(6.0, hard=True)
-    hide waspada_1
-
-    show larasati_outfit at left
-    with dissolve
-    scene hutan_parang
-    show larasati_outfit at center
-    with dissolve
-    $renpy.pause(2.0, hard=True)
-    scene hutan_parang
-    show larasati_outfit_1 at center
-    with dissolve
-    $renpy.pause(2.0, hard=True)
-    hide misterius
-    with dissolve
-    scene hutan_parang
-    show larasati_outfit at center
-    with dissolve
-    hide larasati_outfit
-    with dissolve
-
-    show larasati_outfit at left
-    with dissolve
-    larasati "[larasati_story_2[26]]"
-
-    show makara at right
-    with dissolve
-    makhluk "[suara_misterius[0]]"
-    larasati "[larasati_story_2[27]]"
-    scene hutan_parang
-    show terkaget
-    with dissolve
-    $renpy.pause(4.0, hard=True)
-    hide terkaget
-
-    show larasati_outfit at left
-    with dissolve
-    larasati "[larasati_story_2[28]]"
-    scene hutan_parang
-    show penasaran
-    with dissolve
-    $renpy.pause(3.0, hard=True)
-    hide penasaran
-    show larasati_outfit at left
-    with dissolve
-    larasati "[larasati_story_2[29]]"
-    show makara at right
-    with dissolve
-    makhluk "[suara_misterius[1]]"
-    scene hutan_parang
-    show tenang_1
-    with dissolve
-    $renpy.pause(3.0, hard=True)
-    hide tenang_1
-    show larasati_outfit at left
-    with dissolve
-    show makara at right
-    with dissolve
-    show larasati_outfit at left
-    makhluk "[suara_misterius[2]]"
-    makhluk "[suara_misterius[3]]"
-    makhluk "[suara_misterius[4]]"
-    larasati "[larasati_story_2[30]]"
-    larasati "[larasati_story_2[31]]"
-    makhluk "[suara_misterius[5]]"
-    scene hutan_parang
-    show bicara
-    with dissolve
-    $renpy.pause(9.0, hard=True)
-    hide bicara
-    show makara at right
-    with dissolve
-    show larasati_outfit at left
-    with dissolve
-    makhluk "[suara_misterius[6]]"
-    larasati "[larasati_story_2[32]]"
-    larasati "[larasati_story_2[33]]"
-    makhluk "[suara_misterius[7]]"
-    larasati "[larasati_story_2[34]]"
-    makhluk "[suara_misterius[8]]"
-    larasati "[larasati_story_2[35]]"
-    makhluk_1 "[text_makara[0]]"
-    makhluk_1 "[text_makara[1]]"
-    larasati "[larasati_story_2[36]]"
-    larasati "[larasati_story_2[37]]"
-
-    scene hutan_parang
-    show notis
-    with dissolve
-    $renpy.pause(10.0, hard=True)
-    hide notis
-    show makara at right
-    with dissolve
-    show larasati_outfit at left
-    with dissolve
-    makhluk_1 "[text_makara[2]]"
-    makhluk_1 "[text_makara[3]]"
-    larasati "[larasati_story_2[38]]"
-    larasati "[larasati_story_2[39]]"
-    makhluk_1 "[text_makara[4]]"
-    makhluk_1 "[text_makara[5]]"
-    larasati "[larasati_story_2[40]]"
-    makhluk_1 "[text_makara[6]]"
-    makhluk_1 "[text_makara[7]]"
-    makhluk_1 "[text_makara[8]]"
-    makhluk_1 "[text_makara[9]]"
-    scene hutan_parang
-    show menjelaskan
-    with dissolve
-    $renpy.pause(4.0, hard=True)
-    hide menjelaskan
-    show makara at right
-    with dissolve
-    show larasati_outfit at left
-    with dissolve
-    makhluk_1 "[text_makara[10]]"
-    larasati "[larasati_story_2[41]]"
-    larasati "[larasati_story_2[42]]"
-    makhluk_1 "[text_makara[11]]"
-    makhluk_1 "[text_makara[12]]"
-    makhluk_1 "[text_makara[13]]"
-    larasati "[larasati_story_2[43]]"
-    makhluk_1 "[text_makara[14]]"
-
-    scene hutan_parang
-    show mencari_1
-    with dissolve
-    $renpy.pause(4.0, hard=True)
-    hide mencari_1
-    show makara at right
-    with dissolve
-    show larasati_outfit at left
-    with dissolve
-    larasati "[larasati_story_2[44]]"
-    larasati "[larasati_story_2[45]]"
-    makhluk_1 "[text_makara[15]]"
-    larasati "[larasati_story_2[46]]"
-    makhluk_1 "[text_makara[16]]"
-    scene hutan_parang
-    show senang
-    with dissolve
-    $renpy.pause(5.0, hard=True)
-    hide senang
-    show makara at right
-    with dissolve
-    show larasati_outfit at left
-    with dissolve
-    makhluk_1 "[text_makara[17]]"
-    makhluk_1 "[text_makara[18]]"
-    larasati "[larasati_story_2[47]]"
-    scene hutan_parang
-    show keliling_3
-    with dissolve
-    $renpy.pause(12.0, hard=True)
-    hide keliling_3
-
-    show makara at right
-    with dissolve
-    show larasati_outfit at left
-    with dissolve
-    larasati "[larasati_story_2[48]]"
-    scene hutan_parang
-    show tersenyum
-    with dissolve
-    $renpy.pause(4.0, hard=True)
-    hide tersenyum
-    show makara at right
-    with dissolve
-    show larasati_outfit at left
-    with dissolve
-    makhluk_1 "[text_makara[19]]"
-    makhluk_1 "[text_makara[20]]"
-    hide makara
-    show makara1 at right
-    with dissolve
-    hide makara1
-    hide larasati_outfit
-    scene hutan_parang
-    show larasati_outfit at center
-    with dissolve
-    $renpy.pause(2.0, hard=True)
-    scene hutan_parang
-    show larasati_outfit at right
-    with dissolve
-    $renpy.pause(2.0, hard=True)
-    hide larasati_outfit
-    with dissolve
-
-    scene hutan_parang
-    show berjalan
-    with dissolve
-    $renpy.pause(7.0, hard=True)
-    hide berjalan
-
-    scene hutan_parang
-    show makara at right
-    with dissolve
-    show larasati_outfit at left
-    with dissolve
-    makhluk_1 "[text_makara[21]]"
-    larasati "[larasati_story_2[49]]"
-    makhluk_1 "[text_makara[22]]"
-    larasati "[larasati_story_2[50]]"
-    larasati "[larasati_story_2[51]]"
-    makhluk_1 "[text_makara[23]]"
-    larasati "[larasati_story_2[52]]"
-    larasati "[larasati_story_2[53]]"
-    larasati "[larasati_story_2[54]]"
-    larasati "[larasati_story_2[55]]"
-    larasati "[larasati_story_2[56]]"
-    scene hutan_parang
-    show menjelaskan_1
-    with dissolve
-    $renpy.pause(4.0, hard=True)
-    hide menjelaskan_1
-    show memahami
-    with dissolve
-    $renpy.pause(3.0, hard=True)
-    hide memahami
-
-    show makara at right
-    with dissolve
-    show larasati_outfit at left
-    with dissolve
-    makhluk_1 "[text_makara[24]]"
-    makhluk_1 "[text_makara[25]]"
-    makhluk_1 "[text_makara[26]]"
-    larasati "[larasati_story_2[57]]"
-    makhluk_1 "[text_makara[27]]"
-    makhluk_1 "[text_makara[28]]"
-    scene hutan_parang
-    show mengepakkan
-    with dissolve
-    $renpy.pause(6.0, hard=True)
-    hide mengepakkan
-    show makara at right
-    with dissolve
-    show larasati_outfit at left
-    with dissolve
-    larasati "[larasati_story_2[58]]"
-    larasati "[larasati_story_2[59]]"
-    makhluk_1 "[text_makara[29]]"
-    larasati "[larasati_story_2[60]]"
-    scene hutan_parang
-    show melanjutkan
-    with dissolve
-    $renpy.pause(5.0, hard=True)
-    hide melanjutkan
-    show makara at right
-    with dissolve
-    show larasati_outfit at left
-    with dissolve
-    larasati "[larasati_story_2[61]]"
-    larasati "[larasati_story_2[62]]"
-    makhluk_1 "[text_makara[30]]"
-    scene hutan_parang
-    show melihat_2
-    with dissolve
-    $renpy.pause(3.0, hard=True)
-    hide melihat_2
-    show makara at right
-    with dissolve
-    show larasati_outfit at left
-    with dissolve
-    makhluk_1 "[text_makara[31]]"
-    scene hutan_parang
-    show melompat
-    with dissolve
-    $renpy.pause(3.0, hard=True)
-    hide melompat
-    show makara at right
-    with dissolve
-    hide makara
-    show makara1 at right
-    with dissolve
-    show larasati_outfit at left
-    with dissolve
-    makhluk_1 "[text_makara[32]]"
-    hide makara1
-    scene hutan_parang
-    show larasati_outfit at left
-    with dissolve
-    show larasati_outfit at center
-    with dissolve
-    $renpy.pause(2.0, hard=True)
-    scene hutan_parang
-    show larasati_outfit at right
-    with dissolve
-    $renpy.pause(2.0, hard=True)
-    hide larasati_outfit
-    with dissolve
-    scene hutan_parang
-    show melompat_1
-    with dissolve
-    $renpy.pause(9.0, hard=True)
-    hide melompat_1
-    scene hutan_parang
-    show larasati_outfit at left
-    with dissolve
-    hide larasati_outfit
-    with dissolve
-    show larasati_outfit at center
-    with dissolve
-    $renpy.pause(2.0, hard=True)
-    larasati "[larasati_story_2[63]]"
-    show makara at right
-    with dissolve
-    makhluk_1 "[text_makara[33]]"
-    makhluk_1 "[text_makara[34]]"
-    makhluk_1 "[text_makara[35]]"
-    scene hutan_parang
-    show menyadari
-    with dissolve
-    $renpy.pause(6.0, hard=True)
-    hide menyadari
-
-    show larasati_outfit at center
-    with dissolve
-    show makara at right
-    with dissolve
-    larasati "[larasati_story_2[64]]"
-    scene hutan_parang
-    show mengikuti
-    with dissolve
-    $renpy.pause(13.0, hard=True)
-    hide mengikuti
-    show melewati
-    with dissolve
-    $renpy.pause(6.0, hard=True)
-    hide melewati
-    scene hutan_parang
-    show larasati_outfit at right
-    with dissolve
-    $renpy.pause(2.0, hard=True)
-    hide larasati_outfit
-
-    scene hutan_parang
-    show larasati_outfit at left
-    with dissolve
-    show makara at right
-    with dissolve
-    larasati "[larasati_story_2[65]]"
-    larasati "[larasati_story_2[66]]"
-    makhluk_1 "[text_makara[36]]"
-    makhluk_1 "[text_makara[37]]"
-    makhluk_1 "[text_makara[38]]"
-    makhluk_1 "[text_makara[39]]"
-    scene hutan_parang
-    show melihat_3
-    with dissolve
-    $renpy.pause(3.0, hard=True)
-    hide melihat_3
-    scene hutan_parang
-    show larasati_outfit at left
-    with dissolve
-    show makara at right
-    with dissolve
-    larasati "[larasati_story_2[67]]"
-    larasati "[larasati_story_2[68]]"
-    larasati "[larasati_story_2[69]]"
-    makhluk_1 "[text_makara[40]]"
-    makhluk_1 "[text_makara[41]]"
-    scene hutan_parang
-    show makara1 at right
-    with dissolve
-    hide makara1
-    show larasati_outfit at center
-    with dissolve
-    $renpy.pause(2.0, hard=True)
-    hide larasati_outfit
-    scene hutan_parang
-    show larasati_outfit at right
-    with dissolve 
-    $renpy.pause(2.0, hard=True)
-    hide larasati_outfit
-    scene hutan_parang
-    show melanjutkan_1
-    with dissolve
-    $renpy.pause(9.0, hard=True)
-    hide melanjutkan_1
-    show keberanian
-    with dissolve
-    $renpy.pause(7.0, hard=True)
-    hide keberanian
-
-    show larasati_outfit at left
-    with dissolve
-    show makara at right
-    with dissolve
-    makhluk_1 "[text_makara[42]]"
-    makhluk_1 "[text_makara[43]]"
-    scene hutan_parang
-    show memahami_1
-    with dissolve
-    $renpy.pause(4.0, hard=True)
-    hide memahami_1
-    show larasati_outfit at left
-    with dissolve
-    show makara at right
-    with dissolve
-    larasati "[larasati_story_2[70]]"
-    larasati "[larasati_story_2[71]]"
-    larasati "[larasati_story_2[72]]"
-    scene hutan_parang
-    show senang_1
-    with dissolve
-    $renpy.pause(4.0, hard=True)
-    hide senang_1
-    show larasati_outfit at left
-    with dissolve
-    show makara at right
-    with dissolve
-    makhluk_1 "[text_makara[44]]"
-    scene hutan_parang
-    show mengerti
-    with dissolve
-    $renpy.pause(10.0, hard=True)
-    hide mengerti
-
-    show larasati_outfit at left
-    with dissolve
-    show makara at right
-    with dissolve
-    larasati "[larasati_story_2[73]]"
-    larasati "[larasati_story_2[74]]"
-    makhluk_1 "[text_makara[45]]"
-    hide makara
-    scene hutan_parang
-    show makara1 at right
-    with dissolve
-    $renpy.pause(1.0, hard=True)
-    hide makara1
-    scene hutan_parang
-    show larasati_outfit at center
-    with dissolve
-    $renpy.pause(2.0, hard=True)
-    hide larasati_outfit
-    scene hutan_parang
-    show larasati_outfit at right
-    with dissolve
-    $renpy.pause(2.0, hard=True)
-    hide larasati_outfit
-    scene hutan_parang
-    show setelah
-    with dissolve
-    $renpy.pause(3.0, hard=True)
-    hide setelah
-    scene bukit
-    with dissolve
-    show makara at right
-    with dissolve
-    show larasati_outfit at left
-    with dissolve
-    makhluk_1 "[text_makara[46]]"
-    makhluk_1 "[text_makara[47]]"
-    scene bukit
-    show rebahan
-    with dissolve
-    $renpy.pause(4.0, hard=True)
-    hide rebahan
-    show larasati_outfit at left
-    with dissolve
-    show makara at right
-    with dissolve
-    larasati "[larasati_story_2[75]]"
-    larasati "[larasati_story_2[76]]"
-    makhluk_1 "[text_makara[48]]"
-    scene bukit
-    show rebahan_1
-    with dissolve
-    $renpy.pause(11.0, hard=True)
-    hide rebahan_1
-    show menggambar
-    with dissolve
-    $renpy.pause(12.0, hard=True)
-    hide menggambar
-    show larasati_outfit at left
-    with dissolve
-    show makara at right
-    with dissolve
-    larasati "[larasati_story_2[77]]"
-    larasati "[larasati_story_2[78]]"
-    larasati "[larasati_story_2[79]]"
-
-    hide larasati_outfit
-    hide makara
-    jump puzzle_rotate
-
-label puzzle_rotate:
-    call screen rotate_batik
-
-label puzzle_rotate_2:
-    call screen rotate_batik_2
-
-label puzzle_rotate_3:
-    call screen rotate_batik_3
-
-label reward_puzzle:
-    call screen reward_puzzle_1
-
-label story_3:
-    "story 3"
     
-    return
+    show larasatisma_senang at left
+    with moveinright
+    with dissolve
+    larasati "Aku pulang"
+    show sriyanitua_bingung at right
+    with dissolve
+    sriyani "Pulang cepat hari ini kamu"
+    larasati "Iya gurunya ada rapat jadi pulang lebih awal"
+    hide sriyanitua_bingung
+    show sriyanitua_senyum at right
+    sriyani "Begitu"
+    sriyani "kalau begitu kamu bisa melanjutkan desain motif batiknya"
+    sriyani "Dan juga ada 2 kain yang harus kamu jadikan selendang hari ini"
+    hide larasatisma_senang
+    show larasatisma_kagetbiasa at left
+    larasati "Bukannya aku sudah buat 4 desain kemarin ?"
+    sriyani "Desainnya kurang menarik jika di aplikasikan ke kemeja"
+    sriyani "Dan juga tidak cocok untuk diaplikasikan ke selendang"
+    sriyani "Ibu kan sudah bilang untuk menggunakan motif yang sudah Ibu rekomendasikan"
+    hide larasatisma_kagetbiasa
+    show larasatisma_senyum at left
+    larasati "Bukannya yang ini bagus kalau jadi selendang"
+    narrator "Larasati menunjuk jarinya ke arah desain motif yang sudah Ia buat"
+    sriyani "Tidak nak, orangnya sudah bilang ke Ibu Dia tidak mau dengan desain motif seperti itu"
+    sriyani "Kamu ini kenapa sih"
+    sriyani "Kalau kamu tidak ada ide sendiri untuk membuat desain motif batik"
+    sriyani "Gunakan desain yang sudah Ibu berikan"
+    larasati "..."
+    larasati "Iya bu"
+    # 10:11
+    narrator "Larasati membuat selendang pesanan orang"
+    narrator "Membuat selendang cukup mudah untuknya"
+    narrator "Karena sudah terbiasa sejak Ia masih anak-anak"
+    # 12:20
+    show screen black_screen
+    with dissolve
+    pause 1.0
+    hide screen black_screen
+    with dissolve
+
+    larasati "Selesai"
+    larasati "Sekarang saatnya membuat desain motif batik"
+    larasati "Apasih padahal desain motif ini bagus loh"
+    larasati "Dan kenapa orangnya juga tidak suka ya"
+    larasati "Ah malas sekali"
+    larasati "Ide apa lagi yang bisa aku buat"
+    narrator "Larasati melihat desain motif batik Ibunya yang sudah lama"
+    narrator "Ada 3 desain motif batik"
+    narrator "Tapi Larasati bosan melihat desain yang seperti itu dan ingin membuat desain yang lebih modern"
+    narrator "Larasati tidak bisa mengerjakan desain motif batiknya"
+    narrator "Karena pikiran yang tidak tenang"
+    narrator "Ditambah harus belajar untuk ujian dua minggu lagi"
+    larasati "Ah iya tugas sejarah belum selesai lagi"
+    larasati "Mana sebentar lagi ujian"
+    larasati "Bagaimana ini ?"
+    larasati "Desain motif batik harus selesai dalam beberapa hari kedepan"
+    narrator "Pikiran Larasati benar-benar kacau"
+    narrator "Dia tidak bisa berpikir jernih untuk menyelesaikan masalahnya satu per satu"
+    larasati "..."
+    larasati "Kurang menarik"
+    larasati "Yang ini kurang bagus"
+    larasati "Ini warnanya..."
+    larasati "Kalau desain ini dijadikan kemeja kayaknya aneh"
+    narrator "Hampir 2 jam Larasati tidak menyelesaikan"
+    # 14:35
+    narrator "Larasati belum menyelesaikan desainnya dan memilih untuk istirahat di kasur"
+    larasati "Haah..."
+    larasati "Kenapa aku jadi tidak yakin begini ya dengan desain yang aku buat"
+    narrator "Larasati memejamkan matanya"
+    show screen black_screen
+    with dissolve
+    pause 1.0
+    hide screen black_screen
+    with dissolve
+    
+    # sfx notif hp
+    larasati "Siapa sih"
+    larasati "Oh..."
+    larasati "Rani"
+    rani "Sore ini kamu kosong gak ?"
+    larasati "Kosong, memangnya kenapa ?"
+    rani "Aku mau ngajak kamu ke kafe yang kemarin aku kasih tau"
+    larasati "Ohh yang harganya mahal itu"
+    rani "ENGGA MAHAL"
+    larasati "Mana ada kopi harganya 25 ribu Ranii"
+    rani "Ih, yaudah nanti aku tambahin"
+    rani "Pokoknya nanti datang yahh, aku mau ngomong sesuatu"
+    larasati "Kenapa gak bahas di WA aja?"
+    rani "Nggak asik ah, enakan langsung ketemu sekalian minum kopi"
+    larasati "Yaudah jam berapa"
+    rani "Jam 15:30 kita disana"
+    larasati "Okelah"
+    # 15:35
+    narrator "Rani sudah sampai di kafe tapi Larasati belum datang"
+    rani "..."
+    rani "Ternyata belum sampai Dia"
+    # 15:55
+    rani "Lama banget sih itu anak"
+    narrator "Larasati akhirnya datang"
+    narrator "Rani melambaikan tangan untuk memberitahu Larasati"
+    rani "Datang juga kamu"
+    larasati "Ah iya"
+    rani "Aku sampai pesan kopi duluan"
+    rani "Kenapa lama sekali sih ?"
+    larasati "Dih..."
+    larasati "Macet tahu"
+    rani "Dih..."
+    rani "Alasan"
+    larasati "Au ah"
+    larasati "Aku mau pesan kopi dulu"
+    narrator "Setelah Larasati memesan kopi"
+    narrator "Mereka melanjutkan pembicaraan"
+    larasati "Tempatnya lumayan juga"
+    rani "Iyalah"
+    larasati "Tapi lumayan mahal-mahal menunya"
+    rani "Yaa standard harga kafe sih"
+    rani "Ngomong-ngomong kemarin kamu lagi bikin desain motif batik ya ?"
+    larasati "Iya"
+    rani "Udah selesai ?"
+    larasati "Sudah"
+    larasati "Tapi aku harus buat ulang"
+    rani "Loh"
+    larasati "Desain yang aku buat ternyata nggak sesuai keinginan pelanggan"
+    rani "Ooh"
+    rani "Jadi kamu buat ulang lagi tuh ?"
+    larasati "Iyalah"
+    rani "Sudah selesai ?"
+    larasati "Belum"
+    larasati "Aku bingung nggak ada ide lagi"
+    larasati "Eh udah sih tapi aku nggak yakin hasilnya bagus di manat orang lain"
+    rani "Emang kamu bikin yang kaya gimana"
+    larasati "Aku bikin yang modelnya agak modern gitu"
+    larasati "Tapi kayaknya aneh kalau di aplikasikan ke kemeja"
+    rani "Batik tapi modern ?"
+    rani "Emang ada ya ?"
+    larasati "Ada aku pernah lihat waktu liburan ke Solo"
+    rani "Hmm aku nggak tahu banyak sih tentang batik"
+    rani "Tapi kalau desain harusnya selera masing-masing orang"
+    larasati "..."
+    larasati "Iya sih aku harus membuat desain yang menarik menurut pandangan orang lain"
+    rani "Kamu tidak menggunakan desain model dari Ayahmu ?"
+    rani "Kamu pernah bilang dulu Ayahmu suka sekali membuat model batik kan?"
+    larasati "Sudah"
+    larasati "Aku sudah melihat semua buku gambarnya"
+    larasati "Tapi aku cukup bosan melihat model yang begitu-begitu saja"
+    larasati "Aku mau buat desain model batikku sendiri"
+    rani "Memang susah sih kalau membuat desain sendiri"
+    rani "Coba saja kamu cari buku-buku Ayahmu lagi"
+    rani "Siapa tahu ada desain model batik yang dapat membantu kamu"
+    larasati "Yaa nanti saja lah"
+    larasati "Aku sedang tidak ingin mencari ide untuk desain"
+    rani "Hmm"
+    rani "Yaa tidak apa-apa"
+    rani "Untuk mencari ide memang tidak harus terburu-buru"
+    rani "Eh kamu tahu kakak kelas kita nggak yang ikut ekskul bahasa Inggris"
+    larasati "Yang mana ? ada banyak tuh"
+    rani "Itu yang namanya *bisik-bisik*"
+    larasati "Ohh diaaa"
+    larasati "Dia kenapa ?"
+    rani "Dia masih single tidak ya"
+    larasati "Dih"
+    larasati "Mau deketin anak orang"
+    rani "Dih"
+    rani "Suka-suka"
+    larasati "Emang dia single ?"
+    rani "Harusnya sih iya"
+    rani "Dia nggak pernah bikin status sama pasangannya sih"
+    narrator "Obrolan mereka berlanjut sampai jam 19:45"
+    narrator "Dan mereka pulang ke rumah masing-masing"
+    larasati "Aku pulang"
+    # 20:25
+    narrator "Larasati sampai di rumah"
+    narrator "Dan teringat harus bersih-bersih dan melanjutkan desainnya"
+    sriyani "Baru pulang ?"
+    sriyani "Sudah makan belum"
+    sriyani "Nasi sama lauknya mau dimasukin ke lemari es"
+    larasati "Sudah bu"
+    sriyani "Oh yasudah"
+    sriyani "Sebelum tidur mandi dulu"
+    larasati "Baik bu"
+    sriyani "Sama desainnya jangan lupa dikerjakan juga"
+    larasati "..."
+    larasati "Iya bu"
+    narrator "Larasati pergi ke kamarnya"
+    larasati "Huft..."
+    larasati "Mandi ya"
+    larasati "Malas mandi lagi"
+    narrator "Larasati masih memikirkan desain model batiknya"
+    narrator "Ia merasa bahwa desain modelnya masih kurang bagus"
+    narrator "Larasati sekali lagi melihat desain model Ibunya"
+    larasati "Ah, apa Ayah masih buku desain motif batik tidak ya"
+    larasati "Tapi sudah aku baca semua sih buku yang Ayah kasih"
+    larasati "Sudah lah mandi saja"
+    narrator "Tapi Larasati tetap penasaran"
+    narrator "Ada rasa ingin mencari buku peninggalan Ayahnya"
+    larasati "Ih..."
+    larasati "Kenapa aku jadi kepikiran begini"
+    narrator "Dan akhirnya..."
+    narrator "Larasati membuka semua lemari dan laci yang ada di kamarnya dan mencari buku peninggalan ayahnya"
+    narrator "Larasati membuka laci yang ada di sebelah kasurnya"
+    narrator "Ketika baru dibuka, tiba-tiba ada buku yang tidak pernah Ia lihat sebelumnya"
+    larasati "Eh..."
+    larasati "Sebentar"
+    larasati "Ini buku apa ya"
+    larasati "Belum pernah lihat"
+    larasati "Dan siapa yang meletakkannya disini ?"
+    larasati "Hmm..."
+    larasati "Rahara Batik"
+    larasati "Ini buku Ayah ?"
+    narrator "Larasati membuka buku tersebut"
+    narrator "Tiba-tiba ada cahaya yang muncul dari buku tersebut"
+    larasati "Huaah..."
+    narrator "Buku tersebut melayang di hadapan Larasati"
+    larasati "Eh bukunya terbang"
+    larasati "Eh kenapa jadi ada gempa begini ?"
+    narrator "Barang-barang berjatuhan ke lantai"
+    narrator "Suasana menjadi tegang seperti ada bencana yang datang"
+    narrator "Dan Tiba-tiba Larasati masuk ke dalam buku tersebut"
+    narrator "..."
+    narrator "..."
+    narrator "Semua menjadi hening"
+    narrator "Buku yang Larasati pegang berada di tempat semula"
+    narrator "Barang-barang yang berjatuhan kembali ke tempat semula"
+
+    jump chapter_3:
+
+label chapter_3:
+    "ch 3"

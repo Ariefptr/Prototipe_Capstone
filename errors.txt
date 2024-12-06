@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 128: expected 'image_name_component' not found.
-    show 
-         ^
+File "game/script.rpy", line 187: end of line expected.
+    show larasatisma_senang with moveinright at left
+                                             ^
 
-Ren'Py Version: Ren'Py 8.3.3.24111502
-Fri Dec  6 16:47:48 2024
+Ren'Py Version: Ren'Py 8.3.0.24082114
+Fri Dec  6 17:42:17 2024
