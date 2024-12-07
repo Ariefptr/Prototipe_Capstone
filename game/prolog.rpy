@@ -1,7 +1,7 @@
 define larasati = Character("Larasati",color ="#c9166d")
 define sriyani = Character("Sriyani",color = "#296a38")
 define rani = Character("Rani",color = "#d07e13ff")
-define makhluk_1 = Character("Makara",color = "#000000")
+define makara = Character("Makara",color = "#000000")
 define makhluk = Character("???",color = "#000000")
 define narrator = Character("   ",color = "#000000")
 
