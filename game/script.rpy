@@ -506,55 +506,6 @@ label pulang_rumah:
     narrator "[text_narrator_pulang[20]]"
     narrator "[text_narrator_pulang[21]]"
 
-
-# label dikafe_3:
-#     scene cafe
-#     show menunggu at center
-#     with dissolve
-#     $renpy.pause(5.0, hard=True)
-#     hide menunggu
-
-#     scene cafe
-#     show rani_outfit at center
-#     with dissolve
-
-#     rani "[text_rani[7]]"
-#     rani "[text_rani[8]]"
-
-#     hide rani_outfit
-#     with dissolve
-
-#     scene cafe
-#     show ketemuan at center
-#     with dissolve
-#     $renpy.pause(6.0, hard=True)
-#     hide ketemuan
-
-#     show rani_outfit at right
-#     with dissolve
-
-#     rani "[text_rani[9]]"
-
-#     show larasati_outfit at left
-#     with dissolve
-
-#     larasati "[text_larasati_kafe[0]]"
-#     rani "[text_rani[10]]"
-#     larasati "[text_larasati_kafe[1]]"
-#     larasati "[text_larasati_kafe[2]]"
-
-#     scene cafe
-#     show screen white_screen
-#     with dissolve
-#     $renpy.pause(3.0, hard=True)
-#     hide screen white_screen
-#     scene cafe
-#     show screen black_screen
-#     with dissolve
-#     $renpy.pause(3.0, hard=True)
-#     hide screen black_screen
-#     jump dunia_lain
-
 label dunia_lain:
     show dimensi
     with dissolve
