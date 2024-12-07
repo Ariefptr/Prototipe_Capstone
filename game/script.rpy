@@ -753,9 +753,65 @@ label chapter_2_hutan:
     narrator "Saat ini keberanian Larasati semakin meningkat"
     makara "Sepertinya kamu sudah mulai terbiasa dengan hutan ini"
     # ----- Quiz 1 -----
+    
+
+label soal_quiz_1:
     makara "Selama kita berada di hutan Parang"
     makara "Apa yang sudah kamu dapat ?"
     makara "Seperti esensinya"
+    call screen quiz_1
 
+label jawaban_soal_1_1:
+    makara "Hmm ?"
+    makara "Bukan itu yang sebenarnya dari esensi Hutan Parang ini"
+    makara "Esensi dari hutan Parang ini adalah keberanian, ketekunan dan semangat untuk menghadapi tantangan hidup"
+    jump chapter_2_hutan_2
+
+label jawaban_soal_1_2:
+    makara "Benar"
+    makara "Hutan Parang ini memiliki Esensi dari hutan Parang ini adalah keberanian, ketekunan dan semangat untuk menghadapi tantangan hidup"
+    jump chapter_2_hutan_2
+
+label chapter_2_hutan_2:
+    narrator "Larasati mengerti maksud perkataan Makara"
+    narrator "Ketiga hal yang dibicarakan..."
+    narrator "Keberanian, ketekunan, dan semangat berjuang"
+    narrator "Sudah ada di dalam diri Larasati"
+    larasati "Ngomong-ngomong jalannya menanjak"
+    larasati "Apa kita sebentar lagi keluar dari hutan ini ?"
+    makara "Ya benar kita sebentar lagi keluar dari hutan ini"
+    narrator "Setelah beberapa saat"
+    makara "Akhirnya kita keluar dari hutan Parang"
+    makara "Lelah juga ya"
+    narrator "Makara langsung rebahan di atas rumput"
+    larasati "Iya cukup melelahkan"
+    larasati "Tapi disini anginnya cukup sejuk dari sebelumnya"
+    makara "Karena kita berada di dataran tinggi"
+    makara "Kamu tahu ?"
+    makara "Hutan Parang ini sebenarnya motif batik dari dunia manusia tahu"
+    larasati "Tapi Aku belum pernah mendengarnya"
+    makara "Motif Parang berasal dari Solo"
+    makara "Lebih tepatnya dari Keraton Mataram Kartasura"
+    larasati "Solo ?"
+    larasati "Kamu benar-benar tahu dunia ku ya ?"
+    makara "Aku sudah bilang sebelumnya"
+    makara "Aku tahu karena seseorang pernah memberitahuku"
+    larasati "Eh seseorang ?"
+    makara "Aku ingin istirahat dulu"
+    narrator "Melihat Makara yang sedang rebahan, Larasati langsung duduk dan memandangi hutan Parang"
+    narrator "Larasati menghela nafas panjang karena melihat hutan Parang dan mengingat apa yang sudah dilewati serta pelajaran yang didapat"
+    narrator "Ia melihat hutan tersebut, banyak sekali pohon-pohon yang menyerupai suatu pola dan begitu juga sungainya"
+    narrator "Lalu Ia teringat kertas dan pena yang diberikan Makara"
+    narrator "Larasati pun menggambar hutan Parang di kertas dengan pena"
+    larasati "Aku buat seperti apa ya ?"
+    larasati "Oh aku tahu"
+    larasati "Sepertinya kalau seperti ini jadi menarik"
+
+    # ---- mini game drag and drop -----
+
+    narrator "Sesaat setelah selesai menggambar, Larasati rebahan di atas rumput sembari memandangi langit"
+    narrator "Suasana saat ini membuatnya begitu sangat tenang, walaupun tetap harus mencari jalan keluar dari dunia ini"
+
+    # ----- end chapter 2 -------
 
 

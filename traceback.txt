@@ -1,26 +1,53 @@
-﻿I'm sorry, but an uncaught exception occurred.
+﻿
+I'm sorry, but an uncaught exception occurred.
 
-While running game code:
-  File "game/script.rpy", line 231, in script
-    $ renpy.window.hide
-  File "game/script.rpy", line 231, in <module>
-    $ renpy.window.hide
-AttributeError: module 'renpy.exports' has no attribute 'window'
+After initialization, but before game start.
+  File "game/Quiz.rpy", line 2, in prepare_screen
+    screen quiz_1():
+  File "game/Quiz.rpy", line 2, in prepare
+    screen quiz_1():
+  File "game/Quiz.rpy", line 3, in prepare
+    hbox:
+  File "game/Quiz.rpy", line 3, in prepare
+    hbox:
+  File "game/Quiz.rpy", line 7, in prepare
+    imagebutton:
+  File "game/Quiz.rpy", line 7, in prepare
+    imagebutton:
+  File "game/Quiz.rpy", line 9, in <module>
+    action Jump()
+TypeError: __init__() missing 1 required positional argument: 'label'
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 231, in script
-    $ renpy.window.hide
-  File "D:\RenPy\renpy-8.3.0-sdk\renpy\ast.py", line 821, in execute
-    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
-  File "D:\RenPy\renpy-8.3.0-sdk\renpy\python.py", line 1178, in py_exec_bytecode
-    exec(bytecode, globals, locals)
-  File "game/script.rpy", line 231, in <module>
-    $ renpy.window.hide
-AttributeError: module 'renpy.exports' has no attribute 'window'
+  File "D:\RenPy\renpy-8.3.0-sdk\renpy\bootstrap.py", line 359, in bootstrap
+    renpy.main.main()
+  File "D:\RenPy\renpy-8.3.0-sdk\renpy\main.py", line 652, in main
+    run(restart)
+  File "D:\RenPy\renpy-8.3.0-sdk\renpy\main.py", line 94, in run
+    renpy.display.screen.prepare_screens()
+  File "D:\RenPy\renpy-8.3.0-sdk\renpy\display\screen.py", line 1026, in prepare_screens
+    s.ast.prepare_screen()
+  File "game/Quiz.rpy", line 2, in prepare_screen
+    screen quiz_1():
+  File "game/Quiz.rpy", line 2, in prepare
+    screen quiz_1():
+  File "game/Quiz.rpy", line 3, in prepare
+    hbox:
+  File "game/Quiz.rpy", line 3, in prepare
+    hbox:
+  File "game/Quiz.rpy", line 7, in prepare
+    imagebutton:
+  File "game/Quiz.rpy", line 7, in prepare
+    imagebutton:
+  File "D:\RenPy\renpy-8.3.0-sdk\renpy\python.py", line 1202, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "game/Quiz.rpy", line 9, in <module>
+    action Jump()
+TypeError: __init__() missing 1 required positional argument: 'label'
 
 Windows-10-10.0.19045 AMD64
 Ren'Py 8.3.0.24082114
  
-Fri Dec  6 19:03:15 2024
+Sat Dec  7 12:04:21 2024
