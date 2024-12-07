@@ -141,12 +141,11 @@ label prolog_pertama:
     sriyani "[text_prolog_sriyani[24]]"
     narrator "[narator_text[19]]"
 
-
-
     jump penasaran_1
 
 label penasaran_1:
-    scene envi_mom
+    window hide
+    scene bg ruang_menjahit
     play sound "SFX/Kain.mp3" fadeout 1.3
     show mengamati at center
     play sound "SFX/Kain2.mp3" fadeout 1.3
@@ -157,36 +156,42 @@ label penasaran_1:
     show sriyani_muda at right
     with dissolve
     show larasati_kecil at left
+    window show
     sriyani "[text_prolog_sriyani[6]]"
 
-    scene envi_mom
+    window hide
     show berpikir at center
     with dissolve
     $renpy.pause(5.0, hard=True)
     hide berpikir
+    window show
 
     show larasati_kecil at left
     with dissolve
     show sriyani_muda at right
     larasati "[text_prolog_larasati[6]]"
 
-    # This ends the game.
     hide larasati_kecil
     hide sriyani_muda
-    jump chapter_1
+    window hide
+    jump transisi_1
 
 # ------ Chapter 1 ------
-
-label chapter_1:
+label transisi_1:
     show screen black_screen
     with dissolve
     pause 1.0
     hide screen black_screen
     with dissolve
-    
+    jump chapter_1
+
+
+label chapter_1:
+    scene bg ruang_menjahit
     show larasatisma_senang at left
-    with moveinright
+    with moveinleft
     with dissolve
+    window show
     larasati "Aku pulang"
     show sriyanitua_bingung at right
     with dissolve
@@ -194,6 +199,8 @@ label chapter_1:
     larasati "Iya gurunya ada rapat jadi pulang lebih awal"
     hide sriyanitua_bingung
     show sriyanitua_senyum at right
+    hide sriyanitua_senyum
+    show sriyanitua_serius at right
     sriyani "Begitu"
     sriyani "kalau begitu kamu bisa melanjutkan desain motif batiknya"
     sriyani "Dan juga ada 2 kain yang harus kamu jadikan selendang hari ini"
@@ -204,13 +211,15 @@ label chapter_1:
     sriyani "Dan juga tidak cocok untuk diaplikasikan ke selendang"
     sriyani "Ibu kan sudah bilang untuk menggunakan motif yang sudah Ibu rekomendasikan"
     hide larasatisma_kagetbiasa
-    show larasatisma_senyum at left
+    show larasatisma_pasrah at left
     larasati "Bukannya yang ini bagus kalau jadi selendang"
     narrator "Larasati menunjuk jarinya ke arah desain motif yang sudah Ia buat"
     sriyani "Tidak nak, orangnya sudah bilang ke Ibu Dia tidak mau dengan desain motif seperti itu"
     sriyani "Kamu ini kenapa sih"
     sriyani "Kalau kamu tidak ada ide sendiri untuk membuat desain motif batik"
     sriyani "Gunakan desain yang sudah Ibu berikan"
+    hide larasatisma_pasrah
+    show larasatisma_murungsedih at left
     larasati "..."
     larasati "Iya bu"
     # 10:11
@@ -218,15 +227,30 @@ label chapter_1:
     narrator "Membuat selendang cukup mudah untuknya"
     narrator "Karena sudah terbiasa sejak Ia masih anak-anak"
     # 12:20
+    hide larasatisma_murungsedih
+    hide sriyanitua_serius
+    window hide
+    jump transisi_2
+
+label transisi_2:
     show screen black_screen
     with dissolve
     pause 1.0
     hide screen black_screen
     with dissolve
+    jump chapter_1_2
+
+label chapter_1_2:
+    show larasatisma_senang at center
+    with moveinbottom
+    with dissolve
+    window show
 
     larasati "Selesai"
     larasati "Sekarang saatnya membuat desain motif batik"
     larasati "Apasih padahal desain motif ini bagus loh"
+    hide larasatisma_senang
+    show larasatisma_bingungheran at center
     larasati "Dan kenapa orangnya juga tidak suka ya"
     larasati "Ah malas sekali"
     larasati "Ide apa lagi yang bisa aku buat"
@@ -236,12 +260,16 @@ label chapter_1:
     narrator "Larasati tidak bisa mengerjakan desain motif batiknya"
     narrator "Karena pikiran yang tidak tenang"
     narrator "Ditambah harus belajar untuk ujian dua minggu lagi"
+    hide larasatisma_bingungheran
+    show larasatisma_bingungcemas at center
     larasati "Ah iya tugas sejarah belum selesai lagi"
     larasati "Mana sebentar lagi ujian"
     larasati "Bagaimana ini ?"
     larasati "Desain motif batik harus selesai dalam beberapa hari kedepan"
     narrator "Pikiran Larasati benar-benar kacau"
     narrator "Dia tidak bisa berpikir jernih untuk menyelesaikan masalahnya satu per satu"
+    hide larasatisma_bingungcemas
+    show larasatisma_murungsedih at center
     larasati "..."
     larasati "Kurang menarik"
     larasati "Yang ini kurang bagus"
@@ -249,20 +277,41 @@ label chapter_1:
     larasati "Kalau desain ini dijadikan kemeja kayaknya aneh"
     narrator "Hampir 2 jam Larasati tidak menyelesaikan"
     # 14:35
+    scene bg kamar_larasati
     narrator "Larasati belum menyelesaikan desainnya dan memilih untuk istirahat di kasur"
+    hide larasatisma_murungsedih
+    show larasatisma_bingungheran at center
     larasati "Haah..."
     larasati "Kenapa aku jadi tidak yakin begini ya dengan desain yang aku buat"
     narrator "Larasati memejamkan matanya"
+    hide larasatisma_bingungheran
+    window hide
+    jump transisi_3
+
+label transisi_3:
     show screen black_screen
     with dissolve
     pause 1.0
     hide screen black_screen
     with dissolve
-    
+    jump chapter_1_3
+
+label chapter_1_3:
     # sfx notif hp
+    play sound "audio/SFX/Notif2.mp3" fadeout 1.0
+    show larasatisma_kagetbiasa at center
+    window show
     larasati "Siapa sih"
+    hide larasatisma_kagetbiasa
+    show larasatisma_senang at center
+    with dissolve
+    with moveinbottom
     larasati "Oh..."
     larasati "Rani"
+    hide larasatisma_senang
+    # gambar hp
+    show phone at center:
+        ypos 0.85
     rani "Sore ini kamu kosong gak ?"
     larasati "Kosong, memangnya kenapa ?"
     rani "Aku mau ngajak kamu ke kafe yang kemarin aku kasih tau"
@@ -276,7 +325,21 @@ label chapter_1:
     larasati "Yaudah jam berapa"
     rani "Jam 15:30 kita disana"
     larasati "Okelah"
+    hide phone
+
+    # transisi -------------
+    window hide
+    show screen black_screen
+    with dissolve
+    pause 1.0
+    hide screen black_screen
+    with dissolve
+    window show
+
     # 15:35
+    scene bg cafe
+    show rani_base at center
+    with moveinleft
     narrator "Rani sudah sampai di kafe tapi Larasati belum datang"
     rani "..."
     rani "Ternyata belum sampai Dia"
@@ -284,10 +347,16 @@ label chapter_1:
     rani "Lama banget sih itu anak"
     narrator "Larasati akhirnya datang"
     narrator "Rani melambaikan tangan untuk memberitahu Larasati"
+    hide rani_base
+    show rani_senang at right
     rani "Datang juga kamu"
+    show larasati_casuall_senang at left
+    with dissolve
     larasati "Ah iya"
     rani "Aku sampai pesan kopi duluan"
     rani "Kenapa lama sekali sih ?"
+    hide larasati_casuall_senang
+    show larasati_casuall_senyum at left
     larasati "Dih..."
     larasati "Macet tahu"
     rani "Dih..."
@@ -296,6 +365,8 @@ label chapter_1:
     larasati "Aku mau pesan kopi dulu"
     narrator "Setelah Larasati memesan kopi"
     narrator "Mereka melanjutkan pembicaraan"
+    hide larasati_casuall_senyum
+    show larasati_casuall_pasrah at left
     larasati "Tempatnya lumayan juga"
     rani "Iyalah"
     larasati "Tapi lumayan mahal-mahal menunya"
@@ -311,10 +382,14 @@ label chapter_1:
     rani "Jadi kamu buat ulang lagi tuh ?"
     larasati "Iyalah"
     rani "Sudah selesai ?"
+    hide larasati_casuall_pasrah
+    show larasati_casuall_murungs at left
     larasati "Belum"
     larasati "Aku bingung nggak ada ide lagi"
     larasati "Eh udah sih tapi aku nggak yakin hasilnya bagus di manat orang lain"
     rani "Emang kamu bikin yang kaya gimana"
+    hide larasati_casuall_murungs
+    show larasati_casuall_pasrah at left
     larasati "Aku bikin yang modelnya agak modern gitu"
     larasati "Tapi kayaknya aneh kalau di aplikasikan ke kemeja"
     rani "Batik tapi modern ?"
@@ -338,21 +413,40 @@ label chapter_1:
     rani "Hmm"
     rani "Yaa tidak apa-apa"
     rani "Untuk mencari ide memang tidak harus terburu-buru"
+    hide rani_senang
+    hide larasati_casuall_pasrah
+    show rani_ngodain at left
+    show larasati_casuall_tertarik at left
     rani "Eh kamu tahu kakak kelas kita nggak yang ikut ekskul bahasa Inggris"
     larasati "Yang mana ? ada banyak tuh"
     rani "Itu yang namanya *bisik-bisik*"
+    hide larasati_casuall_tertarik
+    show larasati_casuall_senyum at left 
     larasati "Ohh diaaa"
     larasati "Dia kenapa ?"
     rani "Dia masih single tidak ya"
     larasati "Dih"
     larasati "Mau deketin anak orang"
+    hide rani_ngodain
+    show rani_jahil at right
     rani "Dih"
     rani "Suka-suka"
     larasati "Emang dia single ?"
+    hide rani_jahil
+    show rani_senyum at right
     rani "Harusnya sih iya"
     rani "Dia nggak pernah bikin status sama pasangannya sih"
     narrator "Obrolan mereka berlanjut sampai jam 19:45"
     narrator "Dan mereka pulang ke rumah masing-masing"
+
+    window hide
+    show screen black_screen
+    with dissolve
+    pause 1.0
+    hide screen black_screen
+    with dissolve
+    window show
+
     larasati "Aku pulang"
     # 20:25
     narrator "Larasati sampai di rumah"
@@ -408,7 +502,7 @@ label chapter_1:
     narrator "Buku yang Larasati pegang berada di tempat semula"
     narrator "Barang-barang yang berjatuhan kembali ke tempat semula"
 
-    jump chapter_3:
+    jump chapter_2
 
-label chapter_3:
-    "ch 3"
+label chapter_2:
+    "ch 2"

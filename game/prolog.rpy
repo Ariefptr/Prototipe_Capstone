@@ -8,6 +8,7 @@ define narrator = Character("   ",color = "#000000")
 image bg envi mom = im.Scale("envi_mom.jpg",1280,720)
 image bg ruang_menjahit = im.Scale("ruang_menjahit.png",1280,720)
 image bg kamar_larasati = im.Scale("kamar_larasati.png",1280,720)
+image bg cafe = im.Scale("Cafe.png",1280,720)
 image lolilaras_base = im.Scale("larasatilolibase.png",442,539)
 image lolilaras_bahagia = im.Scale("larasatilolibahagia.png",442,539)
 image lolilaras_penasaran = im.Scale("larasatilolipenasaran.png",442,539)
@@ -67,6 +68,13 @@ image satria_senang = im.Scale("satriasenang.png",510,667)
 image satria_senyum = im.Scale("satriasenyum.png",510,667)
 image satria_merem = im.Scale("satriasenyummerem.png",510,667)
 image satria_serius = im.Scale("satriaserius.png",510,667)
+image larasati_casuall_senang = im.Scale("casuallarasatisenang.png",380,640)
+image larasati_casuall_senyum = im.Scale("casuallarasatisenyum.png",380,640)
+image larasati_casuall_tertarik = im.Scale("casuallarasatitertarik.png",380,640)
+image larasati_casuall_pasrah = im.Scale("casuallarasatipasrah.png",380,640)
+image larasati_casuall_murungs = im.Scale("casuallarasatimurungsedih.png",380,640)
+
+
 
 
 define narator_text=[
