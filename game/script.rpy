@@ -1103,7 +1103,7 @@ label soal_quiz_2:
     show makaras_base at center
     makara "Kamu sudah melewati rintangan di tempat ini"
     makara "Jadi apa yang kamu dapat dari tempat ini ?"
-    show screen quiz_kedua
+    call screen quiz_2
 
 label jawaban_soal_2_1:
     makara "Benar"

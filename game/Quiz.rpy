@@ -11,7 +11,7 @@ screen quiz_1():
             auto "images/quiz/quiz_1_2_%s.png"
             action Jump("jawaban_soal_1_2")
 
-screen quiz_kedua():
+screen quiz_2():
     hbox:
         xalign 0.5
         yalign 0.2

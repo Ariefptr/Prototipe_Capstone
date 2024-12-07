@@ -1,12 +1,14 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 1109, in script
-    makara "Benar"
+  File "game/script.rpy", line 1106, in script
+    call screen quiz_2
+  File "renpy/common/000statements.rpy", line 671, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
   File "game/Quiz.rpy", line 14, in execute
-    screen quiz_kedua():
+    screen quiz_2():
   File "game/Quiz.rpy", line 14, in execute
-    screen quiz_kedua():
+    screen quiz_2():
   File "game/Quiz.rpy", line 15, in execute
     hbox:
   File "game/Quiz.rpy", line 19, in execute
@@ -16,20 +18,18 @@ Exception: Imagebutton does not have a idle image. (auto='images/quiz/quiz_2_1_%
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 1109, in script
-    makara "Benar"
-  File "D:\RenPy\renpy-8.3.0-sdk\renpy\ast.py", line 2572, in execute
-    Say.execute(self)
-  File "D:\RenPy\renpy-8.3.0-sdk\renpy\ast.py", line 615, in execute
-    renpy.exports.say(who, what, *args, **kwargs)
-  File "D:\RenPy\renpy-8.3.0-sdk\renpy\exports\sayexports.py", line 132, in say
-    who(what, *args, **kwargs)
-  File "D:\RenPy\renpy-8.3.0-sdk\renpy\character.py", line 1451, in __call__
-    self.do_display(who, what, cb_args=self.cb_args, dtt=dtt, **display_args)
-  File "D:\RenPy\renpy-8.3.0-sdk\renpy\character.py", line 1102, in do_display
-    display_say(who,
-  File "D:\RenPy\renpy-8.3.0-sdk\renpy\character.py", line 799, in display_say
-    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
+  File "game/script.rpy", line 1106, in script
+    call screen quiz_2
+  File "D:\RenPy\renpy-8.3.0-sdk\renpy\ast.py", line 1974, in execute
+    self.call("execute")
+  File "D:\RenPy\renpy-8.3.0-sdk\renpy\ast.py", line 1953, in call
+    return renpy.statements.call(method, parsed, *args, **kwargs)
+  File "D:\RenPy\renpy-8.3.0-sdk\renpy\statements.py", line 374, in call
+    return method(parsed, *args, **kwargs)
+  File "renpy/common/000statements.rpy", line 671, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+  File "D:\RenPy\renpy-8.3.0-sdk\renpy\exports\statementexports.py", line 345, in call_screen
+    rv = renpy.ui.interact(mouse="screen", type="screen", roll_forward=roll_forward)
   File "D:\RenPy\renpy-8.3.0-sdk\renpy\ui.py", line 301, in interact
     rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
   File "D:\RenPy\renpy-8.3.0-sdk\renpy\display\core.py", line 2188, in interact
@@ -51,9 +51,9 @@ Full traceback:
   File "D:\RenPy\renpy-8.3.0-sdk\renpy\display\screen.py", line 697, in update
     self.screen.function(**self.scope)
   File "game/Quiz.rpy", line 14, in execute
-    screen quiz_kedua():
+    screen quiz_2():
   File "game/Quiz.rpy", line 14, in execute
-    screen quiz_kedua():
+    screen quiz_2():
   File "game/Quiz.rpy", line 15, in execute
     hbox:
   File "game/Quiz.rpy", line 19, in execute
@@ -67,4 +67,4 @@ Exception: Imagebutton does not have a idle image. (auto='images/quiz/quiz_2_1_%
 Windows-10-10.0.19045 AMD64
 Ren'Py 8.3.0.24082114
  
-Sun Dec  8 00:17:39 2024
+Sun Dec  8 00:27:30 2024
