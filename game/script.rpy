@@ -557,7 +557,17 @@ label dikafe_3:
 # ----- Hutan Parang --------
 
 label chapter_2_hutan:
+    scene hutan_parang
     narrator "Suatu tempat yang tidak diketahui"
+    show screen black_screen
+    with dissolve
+    pause 0.5
+    hide screen black_screen
+    with dissolve
+
+    show larasati_bingungcemas at center
+    with moveinbottom
+    with dissolve
     larasati "Ukh.."
     narrator "Larasati terbangun dan membuka mata"
     narrator "Mencoba mengingat apa yang terjadi"
@@ -569,6 +579,8 @@ label chapter_2_hutan:
     narrator "Larasati mencoba untuk tidak panik dan tetap tenang"
     narrator "Serta memperhatikan sekelilingnya"
     narrator "Banyak sekali batang-batang pohon dan rumput yang tinggi"
+    hide larasati_bingungcemas
+    show larasati_bingungheran at center
     larasati "..."
     larasati "......"
     larasati "Tempat ini seperti hutan"
@@ -577,17 +589,22 @@ label chapter_2_hutan:
     larasati "Batik ?"
     narrator "Larasati melihat sekelilingnya dan memahami apa yang benar-benar terjadi"
     larasati "Tempat ini benar-benar seperti hutan"
+    hide larasati_bingungheran
+    show larasati_bingungcemas at center
     larasati "Agak sedikit menyeramkan tapi.."
     larasati "Eh tunggu dulu"
     larasati "Disini ada hewan buas tidak ya ?"
     larasati "Apa aku disini sendiri ?"
     larasati "Kalau benar bagaimana caranya aku keluar dari sini"
     larasati "Dan juga ini tempat apa dan dimana sih"
+    hide larasati_bingungcemas
     narrator "Sudah 4 menit Larasati diam ditempat dan memperhatikan sekelilingnya"
     narrator "Melihat pohon-pohon tinggi dengan pola yang dianggap seperti batik"
     narrator "Begitu pun juga rumput dan tanaman lainnya"
     narrator "Suasana yang tenang dengan angin lembut yang berhembus"
     narrator "Tapi tidak menutup kemungkinan bahwa hutan ini memiliki aura yang menyeramkan bagi orang yang pertama kali datang"
+    show larasati_bingungheran at center
+    with dissolve
     larasati "Aku harus kemana dan bagaimana ini"
     larasati "Hutan ini terlalu luas"
     narrator "Larasati tidak berani untuk mengambil keputusan untuk mencari jalan keluar"
@@ -596,22 +613,51 @@ label chapter_2_hutan:
     larasati "......"
     narrator "Tapi ia terus mencoba untuk menenangkan pikirannya dan membuat dirinya berani untuk mencari jalan keluar"
     larasati "Mungkin ke arah sana"
+    hide larasati_bingungheran
+    show larasati_pasrah at left
+    pause 1.0
+    hide larasati_pasrah
+    show larasati_pasrah at center
+    pause 1.0
+    hide larasati_pasrah
+    show larasati_pasrah at right
+    pause 1.0
+    hide larasati_pasrah with dissolve
     narrator "Larasati meninggalkan tempatnya"
     narrator "Dia berjalan ke arah yang ia tidak tahu menuju kemana"
     narrator "Baru beberapa langkah berjalan, Larasati melihat ada bunga besar berwarna emas"
     narrator "Di bagian atas bunga tersebut ada sesuatu bergerak"
+    show makaras_base:
+        xpos 0.8
+        xzoom -1
+    show larasati_bingungcemas at left
+    with moveinleft
     larasati "Eh itu apa ?"
     larasati "Seperti ekor"
     larasati "Hah ada makhluk hidup di disini ?"
     narrator "Larasati memperhatikan dari jarak yang cukup jauh"
     narrator "Dia ingin tahu makhluk hidup tersebut dapat membahayakan dirinya atau sebaliknya"
+    hide larasati_bingungcemas
+    show larasati_bingungcemas at left:
+        xzoom -1
     narrator "Larasati menoleh ke belakang dan sekelilingnya untuk melihat situasi"
+    hide makaras_base
+    hide larasati_bingungcemas
+    show larasati_bingungcemas at left
     narrator "Ketika dia kembali menoleh ke depan, tiba-tiba makhluk hidup tadi hilang"
     larasati "Haah, itu dia pergi kemana"
+    show makaras_base at right
+    with moveinright
+    with dissolve
     makhluk "Kamu mencari siapa ?"
+    hide larasati_bingungcemas
+    show larasati_kagetemoji1 at left
     larasati "Huahhh"
     narrator "Tiba-tiba makhluk hidup tadi berada di sampingnya"
+    hide larasati_kagetemoji1
     narrator "Dan Larasati terjatuh karena kaget"
+    show larasati_bingungcemas at left
+    with moveinbottom
     larasati "Siapa kamu"
     narrator "Makhluk hidup tersebut terlihat seperti burung"
     larasati "Kenapa kamu bisa bicara ?"
@@ -624,6 +670,8 @@ label chapter_2_hutan:
     larasati "..."
     larasati "Kamu kok kamu bisa bicara ?"
     makhluk "Aku memang bisa bicara"
+    hide larasati_bingungcemas
+    show larasati_senyum at left
     narrator "Pikiran Larasati di situasi ini sudah tenang dan tidak merasa panik"
     narrator "Larasati pun mencoba untuk berbicara dengan makhluk hidup yang ada di depannya"
     makhluk "Hei kenapa kamu tidak menjawab ?"
@@ -632,10 +680,14 @@ label chapter_2_hutan:
     makhluk "Berarti kamu dari dunia luar ya ?"
     larasati "Dunia luar ?, yaa sepertinya begitu"
     makhluk "Oh kamu dari dunia manusia"
+    hide larasati_senyum
+    show larasati_bingungheran at left
     larasati "Kamu tahu dunia manusia ?"
     makhluk "Seseorang pernah memberitahuku tentang dunia manusia"
     makhluk "Siapa namamu ?"
     larasati "Eh aku Larasati"
+    hide makaras_base
+    show makara_senang_ref at right
     makara "Namaku Makara"
     makara "Bagaimana kamu bisa berada di sini ?"
     larasati "Itu aku tidak tahu"
@@ -665,25 +717,41 @@ label chapter_2_hutan:
     larasati "Begitu rupanya"
     makara "Sekarang apa yang kamu mau lakukan ?"
     narrator "Larasati sampai lupa bahwa ia ingin mencari jalan keluar dari dunia ini"
+    hide larasati_bingungheran
+    show larasati_murungsedih at left
     larasati "Aku, aku tidak tahu"
     larasati "Aku ingin mencari jalan keluar dari dunia ini"
     makara "Hmm aku bisa membantumu"
     larasati "Benarkah"
     makara "Yaa"
+    hide larasati_murungsedih
+    show larasati_senyum at left
     narrator "Larasati merasa senang dan mempercayai Makara untuk mencari jalan keluar dari dunia ini"
     makara "Sebenarnya untuk keluar dari sini tidak begitu mudah"
     makara "Kamu harus siap untuk rintangan-rintangan yang akan kamu hadapi"
+    hide larasati_senyum
+    show larasati_bingungheran at left
     larasati "Rintangan ?"
     narrator "Larasati melihat sekelilingnya yang penuh dengan pohon-pohon tinggi dan tumbuh-tumbuhan yang asing baginya"
     narrator "Tapi dia harus yakin jika ingin keluar dari dunia ini"
     narrator "Larasati tetap memberanikan dirinya dan menghilangkan rasa takutnya"
+    hide larasati_bingungheran
+    show larasati_tertarik at left
     larasati "Baiklah aku akan menghadapi rintangan yang aku hadapi"
     narrator "Makara tersenyum karena keputusan Larasati"
     makara "Pertama kita harus keluar dari hutan ini terlebih dahulu"
     makara "Ikuti aku lewat sini"
+    hide makara_senang_ref
+    show makara_senang_ref with dissolve:
+        xpos 0.9
+    pause 1.0
+    hide makara_senang_ref
+    hide larasati_tertarik with dissolve
     narrator "Mereka pun berjalan untuk keluar dari hutan parang"
     narrator "Selama diperjalanan Makara memperhatikan wajah Larasati"
     narrator "Makara berpikir ada sesuatu yang mengganggu pikirannya"
+    show makaras_base at right
+    show larasati_pasrah at left
     makara "Kamu, apa kamu baik-baik saja ?"
     larasati "Ah iya aku baik-baik saja"
     makara "Sepertinya ada yang mengganggu di pikiranmu"
@@ -697,6 +765,9 @@ label chapter_2_hutan:
     larasati "Itu salah satu yang membuatku takut untuk desain baru dan menunjukkannya ke orang lain"
     narrator "Larasati menjelaskan permasalahan lebih lanjut antara dirinya dengan ibunya"
     narrator "Makara memahaminya dengan perlahan"
+    window hide
+    pause 0.5
+    window show
     makara "Begitu rupanya"
     makara "Aku tidak memiliki solusi yang pasti untuk permasalahan itu"
     makara "Tapi terimakasih karena sudah berbagi cerita"
@@ -710,9 +781,15 @@ label chapter_2_hutan:
     makara "Kamu simpan dulu saja, nanti pasti dibutuhkan"
     larasati "Baiklah"
     narrator "Mereka pun tetap melanjutkan perjalanan"
+    hide larasati_pasrah
+    with dissolve
+    hide makaras_base
+    with dissolve
     narrator "Sampai didepan mereka ada sungai yang cukup lebar untuk dilewati"
+    show larasati_bingungheran at left
     larasati "Sungai"
     larasati "Bagaimana cara melewatinya?"
+    show makaras_base at right
     makara "Hmm..."
     narrator "Makara melihat ada batu-batu yang dapat dipijak untuk melewati sungai"
     makara "Lewat sini"
@@ -721,12 +798,16 @@ label chapter_2_hutan:
     narrator "Larasati berpikir sejenak, batu mana yang harus dipijak untuk sampai ke seberang sungai"
     narrator "Lalu Larasati mulai melompati batu secara perlahan"
     narrator "Satu persatu batu dilompati dan dilangkahi"
+    hide larasati_bingungheran 
+    show larasati_kagetemoji2 at left
     larasati "Huaaa..."
     makara "Hati-hati"
     makara "tidak perlu terburu-buru, tidak perlu mempercepat langkah"
     makara "yang penting kamu konsisten dan tetap berusaha untuk sampai ke seberang sana"
     narrator "Larasati menyadari satu hal"
     narrator "Ini adalah salah satu rintangan yang dimaksud Makara sebelumnya"
+    hide larasati_kagetemoji2
+    show larasati_senyum at left
     larasati "Baiklah"
     narrator "Larasati terus mengikuti kecepatan langkah yang ia buat sebelumnya"
     narrator "Dan tetap semangat berjuang walaupun hanya batu yang ia pijak"
@@ -745,44 +826,61 @@ label chapter_2_hutan:
     larasati "Apa kamu mau istirahat dulu?"
     makara "Aku tidak masalah"
     makara "Kalau begitu kita lanjutkan perjalanannya"
+    hide larasati_senyum
+    hide makaras_base
     narrator "Mereka pun melanjutkan perjalanan"
     narrator "Hutan Parang yang mereka lewati sekarang berbeda dari sebelumnya"
     narrator "Hutan ini banyak sekali batu-batu besar yang menghalanginya dan semak-semak yang lebat"
     narrator "Tapi Larasati tidak masalah dengan hal itu"
     narrator "Ia sudah memiliki keberanian sejak sebelum melewati sungai"
     narrator "Saat ini keberanian Larasati semakin meningkat"
+    show makara_senang_ref at center
     makara "Sepertinya kamu sudah mulai terbiasa dengan hutan ini"
+    hide makara_senang_ref
     # ----- Quiz 1 -----
     
 
 label soal_quiz_1:
+    scene hutan_parang
+    show makaras_base at center
     makara "Selama kita berada di hutan Parang"
     makara "Apa yang sudah kamu dapat ?"
     makara "Seperti esensinya"
+    hide makaras_base
     call screen quiz_1
 
 label jawaban_soal_1_1:
+    show makaras_base at center
     makara "Hmm ?"
     makara "Bukan itu yang sebenarnya dari esensi Hutan Parang ini"
     makara "Esensi dari hutan Parang ini adalah keberanian, ketekunan dan semangat untuk menghadapi tantangan hidup"
     jump chapter_2_hutan_2
 
 label jawaban_soal_1_2:
+    hide makaras_base
+    show makara_senang_ref at center
     makara "Benar"
     makara "Hutan Parang ini memiliki Esensi dari hutan Parang ini adalah keberanian, ketekunan dan semangat untuk menghadapi tantangan hidup"
     jump chapter_2_hutan_2
 
 label chapter_2_hutan_2:
+    hide makara_senang_ref
+    hide makaras_base
     narrator "Larasati mengerti maksud perkataan Makara"
     narrator "Ketiga hal yang dibicarakan..."
     narrator "Keberanian, ketekunan, dan semangat berjuang"
     narrator "Sudah ada di dalam diri Larasati"
+    show larasati_senang at left
+    with dissolve
     larasati "Ngomong-ngomong jalannya menanjak"
     larasati "Apa kita sebentar lagi keluar dari hutan ini ?"
+    show makaras_base at right
     makara "Ya benar kita sebentar lagi keluar dari hutan ini"
     narrator "Setelah beberapa saat"
     makara "Akhirnya kita keluar dari hutan Parang"
     makara "Lelah juga ya"
+    hide makaras_base
+    show makara_senang_ref at right
     narrator "Makara langsung rebahan di atas rumput"
     larasati "Iya cukup melelahkan"
     larasati "Tapi disini anginnya cukup sejuk dari sebelumnya"
@@ -793,11 +891,16 @@ label chapter_2_hutan_2:
     makara "Motif Parang berasal dari Solo"
     makara "Lebih tepatnya dari Keraton Mataram Kartasura"
     larasati "Solo ?"
+    hide larasati_senang
+    show larasati_tertarik at left
     larasati "Kamu benar-benar tahu dunia ku ya ?"
     makara "Aku sudah bilang sebelumnya"
     makara "Aku tahu karena seseorang pernah memberitahuku"
     larasati "Eh seseorang ?"
     makara "Aku ingin istirahat dulu"
+    hide larasati_tertarik
+    hide makara_senang_ref
+    show larasati_senyum at center
     narrator "Melihat Makara yang sedang rebahan, Larasati langsung duduk dan memandangi hutan Parang"
     narrator "Larasati menghela nafas panjang karena melihat hutan Parang dan mengingat apa yang sudah dilewati serta pelajaran yang didapat"
     narrator "Ia melihat hutan tersebut, banyak sekali pohon-pohon yang menyerupai suatu pola dan begitu juga sungainya"
