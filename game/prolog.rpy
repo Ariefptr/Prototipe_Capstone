@@ -1,11 +1,12 @@
-define larasati = Character("Larasati",color ="#ea0674")
-define sriyani = Character("Sriyani",color = "#007b1d")
-define rani = Character("Rani",color = "#e374ffff")
+define larasati = Character("Larasati",color ="#c9166d")
+define sriyani = Character("Sriyani",color = "#296a38")
+define rani = Character("Rani",color = "#d07e13ff")
 define makhluk_1 = Character("Makara",color = "#000000")
 define makhluk = Character("???",color = "#000000")
 define narrator = Character("   ",color = "#000000")
 
 image bg envi mom = im.Scale("envi_mom.jpg",1280,720)
+image bg kamar_larasatimalam = im.Scale("kamar_larasati21.png",1280,720)
 image bg ruang_menjahit = im.Scale("ruang_menjahit.png",1280,720)
 image bg kamar_larasati = im.Scale("kamar_larasati.png",1280,720)
 image bg cafe = im.Scale("Cafe.png",1280,720)
@@ -54,7 +55,7 @@ image rani_jahil = im.Scale("ranijahil.png",540,667)
 image rani_ngodain = im.Scale("raningodain.png",540,667)
 image rani_senang = im.Scale("ranisenang.png",540,667)
 image rani_senyum = im.Scale("ranisenyum.png",540,667)
-image rani_seyumciptadent = im.Scale("ranisenyumciptadent.png",543,720)
+image rani_seyumciptadent = im.Scale("ranisenyumciptadent.png",540,667)
 image ranisweater_base = im.Scale("sweaterranibase.png",380,637)
 image ranisweater_nyengir = im.Scale("sweaterraninyengir.png",380,637)
 image ranisweater_senang = im.Scale("sweaterranisenang.png",380,637)
@@ -164,6 +165,24 @@ define text_prolog_sriyani=[
 
 # chapter 1 = larasati pulang dari sekolah dan menjahit batik
 
+define text_narrator_sma=[
+    "Kini Larasati sudah duduk di bangku SMA, dan Dia bukan hanya seorang pelajar",
+    "Tapi seorang yang bisa dibilang memiliki bisnis",
+    "Desain motif batik dan menjahit, Itulah yang dilakukan Larasati saat ini dan melanjutkan usaha Ibunya",
+    "Dan juga sekolah",
+    "Larasati menunjuk jarinya ke arah desain motif yang sudah Ia buat",
+    "Larasati membuat selendang pesanan orang",
+    "Membuat selendang cukup mudah untuknya,karena sudah terbiasa sejak Ia masih anak-anak",
+    "Larasati melihat desain motif batik Ibunya yang sudah lama",
+    "Ada 3 desain motif batik, tapi Larasati bosan melihat desain yang seperti itu dan ingin membuat desain yang lebih modern",
+    "Larasati tidak bisa mengerjakan desain motif batiknya",
+    "Karena pikiran yang tidak tenang, ditambah harus belajar untuk ujian dua minggu lagi",
+    "Pikiran Larasati benar-benar kacau",
+    "Dia tidak bisa berpikir jernih untuk menyelesaikan masalahnya satu per satu",
+    "Larasati pun pada akhirnya belum menmenyelesaikan desainnya dan memilih untuk istirahat di kasur",
+    "Larasati memejamkan matanya dan tiba-tiba muncul notifikasi dari handphone",
+]
+
 define text_larasati_sma=[
     "Aku pulang...",
     "Iya gurunya ada rapat jadi pulang lebih awal",
@@ -216,7 +235,7 @@ define text_larasati_dm=[
 ]
 
 define text_rani=[
-    "Siang ini kamu kosong gak ?",
+    "Sore ini kamu kosong gak ?",
     "Aku mau ngajak kamu ke kafe yang kemarin aku kasih tau",
     "ENGGA MAHAL",
     "Ih, yaudah nanti aku tambahin",
@@ -229,12 +248,11 @@ define text_rani=[
 define text_larasati_kafe=[
     "Ah iya",
     "Dih... macet tahu",
-    "Aku mau pesan kopi dulu"
     "Au ah... aku mau pesan kopi dulu",
-    "Tempat nya lumaya juga"
+    "Tempat nya lumaya juga",
     "Tapi lumayan mahal-mahal menunya",
     "Iyaa..",
-    "Sudah, tapi aku harus buat ulang dari",
+    "Sudah, tapi aku harus buat ulang lagi",
     "Desain yang aku buat ternyata nggak sesuai keinginan pelanggan",
     "Iyalah",
     "Belum, aku bingung nggak ada ide lagi",
@@ -252,6 +270,16 @@ define text_larasati_kafe=[
     "Dih... mau deketin anak orang",
     "Emang dia single ?",
 
+]
+define text_narrator_kafe=[
+    "Pukul 15:35",
+    "Rani sudah sampai di kafe tapi Larasati belum datang",
+    "Pukul 15:55",
+    "Larasati akhirnya datang",
+    "Rani melambaikan tangan untuk memberitahu Larasati",
+    "Setelah Larasati memesan kopi, mereka melanjutkan pembicaraan",
+    "Dan obrolan mereka berlanjut hingga pukul 19:45",
+    "Dan mereka pulang ke rumah masing-masing",
 ]
 
 define text_rani_kafe=[
@@ -279,7 +307,7 @@ define text_rani_kafe=[
     "Siapa tahu ada desain model batik yang dapat membantu kamu",
     "Hmm.. ya tidak apa-apa",
     "Untuk mencari ide memang tidak harus terburu-buru",
-    "Eh kamu tahu kakak kelas kita nggak yang ikut ekskul bahasa Inggris",
+    "Eh kamu tahu gak ? kakak kelas kita nggak yang ikut ekskul bahasa Inggris",
     "Itu loh yang namanya .....*bisik-bisik*",
     "Dia masih single tidak ya?",
     "Dih... suka-suka lah",
@@ -287,6 +315,35 @@ define text_rani_kafe=[
 
 
 ]
+
+
+define text_narrator_pulang=[
+    "Pukul 20:25",
+    "Larasati sampai di rumah", 
+    "Dan dia pun teringat harus bersih-bersih dan melanjutkan desainnya",
+    "Larasati pergi ke kamarnya",
+    "Larasati masih memikirkan desain model batiknya",
+    "Ia merasa bahwa desain modelnya masih kurang bagus",
+    "Larasati sekali lagi melihat desain model Ibunya",
+    "Tapi Larasati tetap penasaran",
+    "Ada rasa ingin mencari buku peninggalan Ayahnya",
+    "Dan akhirnya",
+    "Larasati membuka semua lemari dan laci yang ada di kamarnya dan mencari buku peninggalan ayahnya",
+    "Larasati membuka laci yang ada di sebelah kasurnya",
+    "Ketika baru dibuka, tiba-tiba ada buku yang tidak pernah Ia lihat sebelumnya",
+    "Larasati membuka buku tersebut",
+    "Tiba-tiba ada cahaya yang muncul dari buku tersebut",
+    "Buku tersebut melayang di hadapan Larasati",
+    "Barang-barang berjatuhan ke lantai",
+    "Suasana menjadi tegang seperti ada bencana yang datang",
+    "Dan Tiba-tiba Larasati masuk ke dalam buku tersebut",
+    "Semua menjadi hening",
+    "Buku yang Larasati pegang berada di tempat semula",
+    "Barang-barang yang berjatuhan kembali ke tempat semula",
+
+
+]
+
 
 define text_larasati_pulangkafe=[
     "Aku pulang...",
@@ -313,8 +370,8 @@ define text_larasati_pulangkafe=[
 
 define text_respon_ibularas=[
     "Baru pulang sayang ?",
-    "Sudah makan belum...? Ini lauknya mau ibu masukkin ke dalam kulkas",
-    "Oh...yasudah, sebelum tidur mandi dulu ya",
+    "Sudah makan belum...? Ini lauknya mau ibu masukkin ke dalam lemari es",
+    "Oh...yasudah kalau begitu, sebelum tidur mandi dulu ya",
     "Sama desainnya jangan lupa dikerjakan juga ya",
     
 
