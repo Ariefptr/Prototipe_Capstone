@@ -337,11 +337,13 @@ label dm_dari_rani:
     larasati "[text_larasati_dm[6]]"
 
     hide phone
+    stop music fadeout 2.0
     with dissolve
     jump kafe_sore
 
 label kafe_sore:
     scene cafe
+    play music "BGM/Cafe_BGM3.mp3" volume 0.7
     with dissolve
     narrator "[text_narrator_kafe[0]]"
     narrator "[text_narrator_kafe[1]]"
@@ -415,19 +417,34 @@ label kafe_sore:
     rani "[text_rani_kafe[22]]"
     rani "[text_rani_kafe[23]]"
     rani "[text_rani_kafe[24]]"
+    hide larasati_senyum
+    show larasati_bingungheran at left
     larasati "[text_larasati_kafe[19]]"
+    hide rani_base
+    show rani_ngodain at right
     rani "[text_rani_kafe[25]]"
+    hide larasati_bingungheran
+    show larasati_bingungcemas at left
     larasati "[text_larasati_kafe[20]]"
     rani "[text_rani_kafe[26]]"
+    hide larasati_bingungcemas
+    show larasati_kagetbiasa at left
     larasati "[text_larasati_kafe[21]]"
+    hide rani_ngodain
+    show rani_jahil at right
     rani "[text_rani_kafe[27]]"
+    hide larasati_kagetbiasa
+    show larasati_pasrah at left
     larasati "[text_larasati_kafe[22]]"
+    hide rani_jahil
+    show rani_seyumciptadent at right
     rani "[text_rani_kafe[28]]"
     narrator "[text_narrator_kafe[6]]"
-    hide larasati_senyum 
-    hide rani_base
+    hide larasati_pasrah 
+    hide rani_seyumciptadent
     with fade
     narrator "[text_narrator_kafe[7]]"
+    stop music fadeout 2.0
     with dissolve
 
 
@@ -435,6 +452,7 @@ label kafe_sore:
 
 label pulang_rumah:
     scene bg ruang_menjahit
+    play music "BGM/All_Idle_Game_BGM.mp3" volume 0.7
     show larasati_kalem
     with fade
     larasati "[text_larasati_pulangkafe[0]]"
@@ -444,13 +462,24 @@ label pulang_rumah:
     hide larasati_kalem 
     show sriyanitua_tulus at right
     show larasati_senyum at left
+    with fade
     sriyani "[text_respon_ibularas[0]]"
     sriyani "[text_respon_ibularas[1]]"
+    hide larasati_senyum 
+    show larasati_senang at left
     larasati "[text_larasati_pulangkafe[1]]"
+    hide sriyanitua_tulus 
+    show sriyanitua_senang at right
     sriyani "[text_respon_ibularas[2]]"
     larasati "[text_larasati_pulangkafe[2]]"
+    hide sriyanitua_senang 
+    show sriyanitua_bahagia at right
     sriyani "[text_respon_ibularas[3]]"
+    hide larasati_senang
+    show larasati_bingungheran at left
     larasati "[text_larasati_pulangkafe[3]]"
+    hide larasati_bingungheran
+    show larasati_pasrah at left
     larasati "[text_larasati_pulangkafe[4]]"
     narrator "[text_narrator_pulang[3]]"
     hide sriyanitua_tulus
@@ -485,6 +514,8 @@ label pulang_rumah:
     larasati "[text_larasati_pulangkafe[14]]"
     larasati "[text_larasati_pulangkafe[15]]"
     narrator "[text_narrator_pulang[13]]"
+    hide larasati_bingungcemas
+    show larasati_kagetemoji2
     narrator "[text_narrator_pulang[14]]"
     hide larasati_bingungcemas
     show larasati_kagetemoji1
@@ -492,9 +523,15 @@ label pulang_rumah:
     narrator "[text_narrator_pulang[15]]"
     hide larasati_kagetemoji1
     show larasati_kagetemoji2
+    play sound "audio/SFX/BukuJatuh2.mp3" fadeout 0.5
     larasati "[text_larasati_pulangkafe[17]]"
+    show larasati_kagetemoji2
+    with hpunch
     larasati "[text_larasati_pulangkafe[18]]"
+    with hpunch
+    play sound "audio/SFX/BukuJatuh3.mp3" fadeout 0.5
     narrator "[text_narrator_pulang[16]]"
+    with hpunch
     narrator "[text_narrator_pulang[17]]"
     narrator "[text_narrator_pulang[18]]"
     show dimensi
@@ -503,58 +540,13 @@ label pulang_rumah:
     hide dimensi
     hide larasati_kagetemoji2
     narrator "[text_narrator_pulang[19]]"
+    play sound "audio/SFX/BukuJatuh4.mp3" fadeout 0.5
     narrator "[text_narrator_pulang[20]]"
     narrator "[text_narrator_pulang[21]]"
+    stop music
+    jump chapter_2_hutan
 
-
-label dikafe_3:
-    scene cafe
-    show menunggu at center
-    with dissolve
-    $renpy.pause(5.0, hard=True)
-    hide menunggu
-
-    scene cafe
-    show rani_outfit at center
-    with dissolve
-
-    rani "[text_rani[7]]"
-    rani "[text_rani[8]]"
-
-    hide rani_outfit
-    with dissolve
-
-    scene cafe
-    show ketemuan at center
-    with dissolve
-    $renpy.pause(6.0, hard=True)
-    hide ketemuan
-
-    show rani_outfit at right
-    with dissolve
-
-    rani "[text_rani[9]]"
-
-    show larasati_outfit at left
-    with dissolve
-
-    larasati "[text_larasati_kafe[0]]"
-    rani "[text_rani[10]]"
-    larasati "[text_larasati_kafe[1]]"
-    larasati "[text_larasati_kafe[2]]"
-
-    scene cafe
-    show screen white_screen
-    with dissolve
-    $renpy.pause(3.0, hard=True)
-    hide screen white_screen
-    scene cafe
-    show screen black_screen
-    with dissolve
-    $renpy.pause(3.0, hard=True)
-    hide screen black_screen
-
-# ----- Hutan Parang --------
+    # ----- Hutan Parang --------
 
 label chapter_2_hutan:
     scene hutan_parang
@@ -837,6 +829,7 @@ label chapter_2_hutan:
     show makara_senang_ref at center
     makara "Sepertinya kamu sudah mulai terbiasa dengan hutan ini"
     hide makara_senang_ref
+    jump soal_quiz_1
     # ----- Quiz 1 -----
     
 
@@ -916,7 +909,8 @@ label chapter_2_hutan_2:
 
     narrator "Sesaat setelah selesai menggambar, Larasati rebahan di atas rumput sembari memandangi langit"
     narrator "Suasana saat ini membuatnya begitu sangat tenang, walaupun tetap harus mencari jalan keluar dari dunia ini"
-
+    hide larasati_senyum
+    jump chapter_3_gunung
     # ----- end chapter 2 -------
 
 label chapter_3_gunung:
@@ -1198,5 +1192,635 @@ label chapter_3_gunung_2:
     larasati "Benarkah ?"
     "Makara menganggukkan kepala dan tersenyum"
     larasati "Ayo kita lanjutkan perjalanan"
-
+    jump desa_kawung
     # ------ end ch 3 ---------
+
+
+label desa_kawung:
+    play music "BGM/kawung.mp3" volume 0.7
+    scene bg bukit
+    with fade
+    narrator "Makara dan Larasati turun dari gunung untuk melanjutkan perjalanannya"
+    narrator "Perjalanan turun gunung hanya membutuhkan waktu yang tidak banyak"
+    narrator "Makara sudah memberitahukan Larasati sebelumnya"
+    narrator "Larasati melihat dua kertas yang sudah ada gambar desain batiknya sendiri"
+    narrator "Lalu tersenyum dengan hasil desainnya sendiri"
+    narrator "Larasati belajar banyak hal di dunia batik ini"
+    narrator "Berikutnya Larasati tidak sabar untuk sampai Desa Kawung"
+    show larasati_senang at left
+    with easeinleft
+    larasati "Masih jauh kah...?"
+    show makara_base at right
+    with easeinright
+    makhluk_1 "Tidak juga"
+    makhluk_1 "Jarak dari atas gunung Megamendung ke Desa Kawung tidak begitu jauh"
+    narrator "Dan benar saja"
+    narrator "Desa Kawung sudah jelas terlihat di mata mereka"
+    scene bg desa_kawung
+    with dissolve
+    show larasati_tertarik at left
+    with easeinleft
+    larasati "Itu desanya....?"
+    show makara_senang at right
+    with easeinright
+    makhluk_1 "Benar"
+    larasati "WOW..."
+    hide larasati_tertarik
+    hide makara_senang
+    show larasati_senang at left
+    show makara_base at right
+    larasati "Apa ada orang yang tinggal disana ?"
+    makhluk_1 "Ada"
+    makhluk_1 "Tapi kita tidak bisa berbicara dengan mereka"
+    makhluk_1 "Dan juga mereka tidak bisa melihat kita"
+    hide larasati_senang
+    show larasati_bingungheran at left
+    larasati "Heeh kenapa begitu... ?"
+    makhluk_1 "Mereka adalah orang-orang asli Desa Kawung"
+    makhluk_1 "Mereka juga tidak bisa meninggalkan desa mereka"
+    narrator "Larasati tidak mengerti ucapan Makara"
+    hide larasati_bingungheran
+    show larasati_bingungcemas at left
+    makhluk_1 "Nanti kamu juga tahu ketika sampai di sana"
+    larasati "Kawung itu apakah motif batik dari dunia ku juga ?"
+    makhluk_1 "Ya benar"
+    makhluk_1 "Kawung ini berasal dari Yogyakarta"
+    hide larasati_bingungcemas
+    show larasati_kalem at left
+    larasati "Hmm... begitu"
+    larasati "Sebenarnya kamu tahu seberapa banyak tentang dunia luar ?"
+    larasati "Maksudku dunia aku"
+    makhluk_1 "Tidak banyak"
+    makhluk_1 "Aku hanya tahu tentang yang ada di dunia ini saja"
+    makhluk_1 "Sebenarnya apa yang kamu lihat disini aku mengetahuinya"
+    makhluk_1 "Tapi selebihnya aku tidak tahu banyak tentang dunia kamu"
+    larasati "Ohh begitu ya..."
+    narrator "Larasati berpikir kira-kira rintangan apa yang ada di desa tersebut"
+    narrator "Tapi Dia tidak begitu cemas"
+    narrator "Karena sudah banyak pelajaran yang dipahami sejak kedatangannya disini"
+    narrator "Tapi ada satu hal yang masih ia bingungkan"
+    hide larasati_kalem
+    show larasati_bingungcemas at left
+    narrator "Bagaimana caranya keluar dari dunia ini ?"
+    larasati "Kira-kira penduduk Desa Kawung biasanya melakukan apa ?"
+    makhluk_1 "Hmm..."
+    makhluk_1 "Mereka biasanya bertani, mencari persediaan makanan, berinteraksi dengan satu sama lain dan banyak lagi"
+    hide larasati_bingungcemas
+    show larasati_senyum at left
+    larasati "Hampir sama seperti dunia ku juga ya"
+    hide larasati_senyum
+    show larasati_senang at left
+    larasati "Eh kita boleh masuk ke desa ini ?"
+    makhluk_1 "Boleh-boleh saja"
+    makhluk_1 "Lagipula mereka tidak dapat melihat kita"
+    larasati "tapi sebelum itu aku ingin bertanya ?"
+    makhluk_1 "Hmm...."
+    makhluk_1 "Apa itu?"
+    hide larasati_senang
+    show larasati_bingungcemas at left
+    larasati "Sepertinya aku tidak melihat rintangan di desa ini ?"
+    larasati "Penduduk desa ini juga tidak menyadari kehadiran kita ?"
+    larasati "Lalu apa yang kita lakukan disini ?"
+    makhluk_1 "Kalau kamu perhatikan desa ini"
+    makhluk_1 "Ada beberapa hal yang dapat kamu ambil"
+    larasati "....."
+    hide larasati_bingungcemas
+    show larasati_senang at left
+    narrator "Larasati menyadari desa ini memiliki pola seperti batik"
+    hide larasati_senang
+    show larasati_tertarik at left
+    larasati "Sepertinya aku punya ide lagi untuk desain batik"
+    hide larasati_tertarik
+    with wipeleft
+    hide makara_base
+    with wiperight
+    play sound "audio/SFX/footstep2.mp3" fadeout 0.5
+    narrator "Larasati pun berjalan mengelilingi desa untuk mencari tempat yang cocok untuk menggambar desainnya"
+    narrator "Larasati dan Makara berjalan mengelilingi Desa Kawung"
+    narrator "Dan melihat kehidupan penduduk desa tersebut"
+    play sound "audio/SFX/suasanadesa.mp3" fadeout 1.5
+    narrator "Seperti kehidupan manusia pada umumnya"
+    narrator "Tapi semua penduduk terlihat senang dan bahagia"
+    narrator "Tidak ada satupun yang sedih atau konflik diantara mereka"
+    stop sound fadeout 0.5
+    show larasati_senang at left
+    with easeinleft
+    larasati "Penduduk desa ini terlihat bahagia semua"
+    show makara_senang at right
+    with easeinright
+    makhluk_1 "Sepertinya begitu"
+    narrator "Larasati melihat ada salah satu penduduk yang beda dari yang lainnya"
+    hide larasati_senang
+    show larasati_bingungheran at left
+    narrator "Dia menggunakan aksesoris seperti topi"
+    larasati "Orang itu terlihat berbeda dari yang lainnya"
+    larasati "Tapi apa yang bisa didapat ?"
+    narrator "Larasati mencoba untuk mencari makna dan esensi dari Desa Kawung ini"
+    hide larasati_bingungheran
+    with wiperight
+    hide makara_senang
+    with wiperight
+    show larasati_bingungcemas
+    narrator "Larasati pun berdiri di atas batu yang cukup besar"
+    narrator "Dan duduk di atas batu yang ia naiki"
+    narrator "Tapi Larasati hanya mendapat ide untuk desain motif batik"
+    hide larasati_bingungcemas
+    show larasati_tertarik
+    larasati "Sepertinya aku punya ide untuk desain yang berikutnya"
+    hide larasati_tertarik 
+    show larasati_senyum
+    larasati "Hmm....."
+    larasati "Sepertinya motifnya begini"
+    narrator "PUZZLE DRAG N DROP"
+    hide larasati_senyum 
+    show larasati_kalem
+    narrator "Larasati membuat desain batik dengan serius"
+    narrator "Tapi Dia juga memperhatikan Desa Kawung"
+    narrator "Larasati melihat pemimpin dari penduduk tersebut"
+    narrator "Dan mencari kesimpulan bahwa pemimpin tersebutlah yang membuat Desa Kawung terlihat damai seperti ini"
+    larasati "Seorang pemimpin"
+    larasati "Pemimpin yang baik akan membuat semuanya menjadi baik"
+    hide larasati_kalem 
+    show larasati_bingungheran
+    larasati "Tapi kata-kata itu terdengar aneh"
+    larasati "Pemimpin yang memiliki tanggung jawab…"
+    larasati "Terhadap orang lain dan…"
+    larasati "Terhadap dirinya"
+    larasati "Memiliki kerendahan hati dan juga bijaksana"
+    hide larasati_bingungheran 
+    show larasati_bingungcemas
+    larasati "Dan juga memiliki sifat adil ?"
+    narrator ""
+    hide larasati_bingungcemas 
+    show larasati_kalem
+    narrator ""
+    larasati "Sepertinya Aku mengerti"
+    larasati "Seseorang harus rendah hati, memiliki rasa tanggung jawab terhadap orang lain dan juga dirinya sendiri"
+    hide larasati_kalem
+    show larasati_bingungcemas 
+    larasati "Tapi benar tidak yah ?"
+    narrator "Makara menghampiri Larasati yang ada di atas batu"
+    hide larasati_bingungcemas
+    show makara_base at right
+    with fade
+    makhluk_1 "Kamu sedang apa duduk di atas batu ?"
+    show larasati_bingungheran at left
+    with dissolve
+    larasati "Eh Makara ?"
+    hide larasati_bingungheran
+    show larasati_senang at left
+    larasati "Aku tadi dapat ide desain dari Desa Kawung"
+    hide makara_base 
+    show makara_senang at right
+    makhluk_1 "Hmm Benarkah ?"
+    larasati "Iya..."
+    hide larasati_senang
+    show larasati_tertarik at left
+    larasati "Sepertinya aku tahu esensi dari tempat ini"
+    hide makara_senang  
+    show makara_base at right
+    narrator "Makara terdiam sebentar dan bertanya sesuatu ke Larasati"
+    makhluk_1 "Kalau begitu"
+
+    jump pilihan
+
+
+label pilihan:
+    default learned = False
+    hide larasati_tertarik
+    show larasati_bingungcemas at left
+    makhluk_1 "Kira-kira apa esensi dari desa Kawung ini ?"
+    larasati "Yang aku tahu dari penduduk disini, seseorang harus rendah hati dan juga...."
+    menu:
+        "...harus punya tanggung jawab":
+            jump pilihan1
+        "...memahami perasaan orang lain ":
+            jump pilihan2
+
+label pilihan1:
+    hide makara_base  
+    show makara_senang at right
+    makhluk_1 "Hmm.. Benar"
+    hide larasati_bingungcemas
+    show larasati_senang at left
+    makhluk_1 "Penduduk desa Kawung terlihat sangat ramah dan juga tidak terlihat adanya perdebatan diantara mereka"
+    makhluk_1 "Karena pemimpin mereka rendah hati terhadap orang lain, bijaksana dan juga harus memiliki tanggung jawab terhadap diri sendiri maupun orang lain"
+    $ learned = True
+    jump pilihanumum
+
+label pilihan2:
+    hide makara_base  
+    show makara_kaget at right
+    makhluk_1 "Hmm.. "
+    hide larasati_bingungcemas
+    show larasati_pasrah at left
+    makhluk_1 "Benar tapi kurang tepat"
+    makhluk_1 "Penduduk desa Kawung terlihat sangat ramah dan juga tidak terlihat adanya perdebatan diantara mereka"
+    hide makara_kaget  
+    show makara_base at right
+    makhluk_1 "Karena pemimpin mereka rendah hati terhadap orang lain, bijaksana dan juga harus memiliki tanggung jawab terhadap diri sendiri maupun orang lain"
+    $ learned = False
+    jump pilihanumum
+
+label pilihanumum:
+    hide larasati_pasrah
+    show larasati_bingungheran at left
+    makhluk_1 "Kamu orang yang cepat belajar juga ya"
+    makhluk_1 "Ngomong-ngomong, coba aku lihat desain kamu"
+    hide larasati_bingungheran
+    show larasati_senang at left
+    larasati "Ini..."
+    narrator "Larasati menunjukkan tiga kertas yang masing-masing terdapat desain motifnya"
+    narrator "Makara menaruh ketiga kertas tersebut di atas batu tepat di depan Larasati"
+    makhluk_1 "Coba kamu simpulkan dari ketiga tempat yang sudah kita kunjungi"
+    makhluk_1 "Hutan Parang"
+    makhluk_1 "Gunung Megamendung"
+    makhluk_1 "dan Desa Kawung"
+    narrator "Larasati mencari kata-kata untuk kesimpulan dari awal berada di dunia ini"
+    hide larasati_senang
+    show larasati_senyum at left
+    larasati "Hutan Parang"
+    larasati "Aku belajar keberanian dan juga semangat juang"
+    larasati "Keberanian dan semangat juang adalah prinsip yang kuat dan tidak mudah menyerah"
+    larasati "Maka itu kunci untuk menghadapi tantangan hidup adalah keberanian dan semangat"
+    larasati "Gunung Megamendung"
+    larasati "Awan yang berputar dengan anggun"
+    larasati "Aku belajar untuk menjadi pribadi yang tenang dan pribadi yang sabar"
+    larasati "Maka setiap masalah yang aku hadapi harus dikendalikan dengan tenang"
+    larasati "Maka itu kunci untuk menghadapi konflik batin adalah tenang dan sabar"
+    larasati "Desa Kawung"
+    larasati "Desa dengan rumah dan sawah yang tersusun dengan rapi"
+    larasati "Penduduk yang ceria dan tidak ada permasalahan dalam bersosial"
+    larasati "Dalam sebuah desa ini pasti ada pemimpin yang memiliki sifat adil, bijaksana dan juga rendah hati"
+    larasati "Maka pemimpin inilah yang memiliki tanggung jawab terhadap dirinya sendiri dan orang lain di desa ini"
+    larasati "Maka itu kunci untuk menyempurnakan dari keberanian, semangat juang, pribadi yang tenang dan sabar adalah…"
+    larasati "Memiliki sifat kepemimpinan"
+    larasati "Bertanggung jawab terhadap orang lain dan tanggung jawab terhadap dirinya sendiri"
+    narrator "Setelah selesai membuat kesimpulan"
+    narrator "Tiba-tiba saja ketiga kertas tersebut mengeluarkan cahaya"
+    show dimensi
+    with dissolve
+    $renpy.pause(4.0, hard=True)
+    hide dimensi
+    hide larasati_senyum
+    show larasati_kagetbiasa at left
+    narrator "Suasana sekitar berubah menjadi dramatis"
+    hide larasati_kagetbiasa
+    show larasati_kagetemoji1 at left
+    with hpunch
+    narrator "Tanah bergetar layaknya gempa bumi"
+    hide larasati_kagetemoji1
+    show larasati_kagetemoji2 at left
+    with hpunch
+    narrator "Angin bertiup sangat kencang"
+    larasati "Huahhh....."
+    hide larasati_kagetemoji2
+    show larasati_kagethoror at left
+    larasati "Apa yang terjadi ....??"
+    narrator "Makara terlihat tenang dan hanya melihat sekitarnya"
+    makhluk_1 "...."
+    show makara_senang at right
+    makhluk_1 "....."
+    narrator "Makara tersenyum"
+    hide larasati_kagethoror
+    show larasati_bingungheran at left
+    makhluk_1 "Ternyata kamu sudah memahaminya"
+    narrator "Tapi Larasati tidak mendengar perkataan Makara"
+    narrator "Larasati...."
+    hide larasati_bingungheran
+    show larasati_bingungcemas at left
+    larasati "Eh apa ? Makara kenapa dunia ini menjadi begini ?"
+    narrator "Melihat Larasati panik"
+    narrator "(Makara mencoba untuk membuat Larasati menjadi tenang"
+    makhluk_1 "Larasati dengar"
+    narrator "Larasati yang seketika melihat Makara"
+    hide larasati_bingungcemas
+    show larasati_bingungheran at left
+    makhluk_1 "Tenangkan dirimu"
+    makhluk_1 "Kamu sudah memahami esensi dan filosofi tentang setiap batik yang ada di dunia ini"
+    makhluk_1 "Semuanya ada di dalam diri kamu"
+    narrator "Larasati sekali lagi mencoba untuk tenang"
+    narrator "Dan teringat momen ketika ia membuka buku Rahara Batik"
+    narrator "Kejadian yang sama persis"
+    narrator "Hanya berbeda tempat"
+    hide larasati_bingungheran
+    show larasati_bingungcemas at left
+    larasati "Apa yang akan terjadi pada dunia ini ...??"
+    makhluk_1 "Dunia ini tidak akan terjadi apa-apa, ini hanya membuktikan kamu sudah memahami setiap batik yang ada di dunia ini"
+    makhluk_1 "Maksudku dunia buku Rahara Batik"
+    makhluk_1 "Setelah ini kamu akan kembali ke dunia kamu"
+    larasati "Kembali ke duniaku ?"
+    hide larasati_bingungcemas
+    show larasati_kagetbiasa at left
+    larasati "Tunggu.... Kamu tahu buku Rahara Ba...."
+    narrator "Kilatan cahaya datang dari berbagai arah"
+    show dimensi
+    with dissolve
+    $renpy.pause(4.0, hard=True)
+    narrator "Membuat dunia yang baru saja dilihat menjadi hilang"
+    scene bg kamar_larasatimalam
+    hide dimensi
+    stop music fadeout 2.0
+    with dissolve
+
+    jump tibatiba_dikamar
+
+label tibatiba_dikamar:
+    show larasati_kagetbiasa
+    play music "BGM/All_Idle_Game_BGM.mp3" volume 0.7
+    larasati "Ehh.... dimana aku ....??"
+    narrator "Kamar Larasati, tempat dimana Larasati menemukan buku Rahara Batik"
+    narrator "Dan membuka buku tersebut"
+    hide larasati_kagetbiasa
+    show larasati_pasrah
+    larasati "Pusing sekali"
+    narrator "Larasati menyadari Dia sedang berada di kamarnya"
+    hide larasati_pasrah
+    show larasati_bingungcemas
+    larasati "Heh ini di kamar ?"
+    larasati "Aku sudah kembali"
+    narrator "Larasati melihat sekelilingnya dengan teliti"
+    larasati "Terakhir aku ingat…"
+    larasati "Terjadi sesuatu di kamarku"
+    larasati "Tapi kamarku terlihat rapi dan tidak ada yang berantakan"
+    narrator "Larasati menoleh ke arah laci samping tempat tidurnya"
+    narrator "Dia tahu buku yang membuatnya masuk ke dunia batik adalah buku Rahara Batik milik ayahnya"
+    larasati "...."
+    narrator "Larasati ingin melihat buku itu lagi"
+    narrator "Ketika Larasati membuka laci tersebut terdapat buku Rahara Batik"
+    narrator "Larasati mengambil buku tersebut dan hanya memegangnya"
+    larasati "Tidak akan terjadi sesuatu kan ?"
+    narrator "Larasati membuka buku tersebut dan tidak ada hal yang terjadi"
+    narrator "Buku Rahara Batik berisi tentang batik Parang, Megamendung, dan Kawung. Terdapat desain motif batik yang Ia kenali"
+    narrator "Larasati mengambil buku tersebut dan hanya memegangnya"
+    larasati "Ini gambar tangan ayah"
+    larasati "Aku mengenalinya"
+    narrator "Larasati membolak-balikkan buku karena ada rasa penasaran"
+    narrator "Tetapi hanya terdapat desain motif ayahnya dan penjelasan tentang motif batik tersebut"
+    larasati "....."
+    narrator "Melihat desain motif ayahnya"
+    narrator "Larasati teringat apa yang terjadi selama di dunia batik"
+    narrator "Aspek-aspek serta filosofi tentang batik yang dilihatnya"
+    narrator "Ternyata memiliki maknanya tersendiri"
+    larasati "....."
+    narrator "Di halaman terakhir buku ada gambar seperti burung" 
+    narrator "Tapi gambar tersebut tidak terlihat dengan jelas"
+    larasati "....."
+    hide larasati_bingungcemas
+    show larasati_senyum
+    larasati "Makara"
+    hide larasati_senyum
+    show larasati_senang
+    larasati "Terima kasih...."
+    narrator "Teringat sudah lama berada di dunia batik, Larasati tidak tahu berapa lama Ia berada disana"
+    larasati "Eh iya.."
+    larasati "Sekarang sudah jam berapa ?"
+    narrator "Larasati meletakkan kembali buku Rahara Batik di laci"
+    narrator "Pukul 20:30"
+    larasati "Lohh.. ?!?!"
+    narrator "Larasati kaget karena jam menunjukkan pukul 20:30"
+    larasati "Perasaan aku lama sekali berada di sana"
+    larasati "Ternyata waktu berjalan lebih lambat"
+    larasati "Atau aku sudah seharian berada di sana ?"
+    narrator "Tiba-tiba ibunya datang ke kamarnya"
+    show larasati_senang at left
+    show sriyanitua_bingung at right
+    with fade
+    sriyani "...."
+    sriyani "Laras....?"
+    sriyani "Kamu jam segini belum mandi juga ?"
+    sriyani "Kamu kan tadi habis main sama temen kamu"
+    larasati "Eh ibu...?"
+    larasati "iya ini aku.... baru saja mau mandi"
+    sriyani "Kalau sudah selesai langsung tidur, ingat jangan begadang ya sayang"
+    larasati "Iya bu"
+    hide sriyanitua_bingung
+    show larasati_senang at center
+    with dissolve
+    narrator "Larasati heran"
+    narrator "Ternyata waktu seperti berhenti ketika berada di sana"
+    narrator "Larasati menoleh ke arah meja kerjanya"
+    larasati "....."
+    larasati "Ah iya aku ada tugas yang harus dikerjakan"
+    narrator "Larasati teringat desain motif batik yang dibuatnya saat berada di dunia batik"
+    narrator "Kertas yang diberikan oleh Makara hilang"
+    narrator "Tapi semua desain yang sudah dibuat teringat di kepala Larasati"
+    narrator "Begitupun dengan esensi dan filosofi yang dipelajarinya"
+    narrator "Sudah tertanam di dalam dirinya"
+    larasati "Sebaiknya dikerjakan besok saja"
+    larasati "Aku mau mandi lalu istirahat"
+    narrator "Sebuah kejadian yang tidak terlupakan"
+    narrator "Kejadian yang tidak bisa dijelaskan secara logika atau ilmiah"
+    narrator "Seperti dunia fantasi yang terjadi di film-film terkenal"
+    with dissolve
+    scene bg kamar_larasati
+    with fade
+    narrator "Satu minggu setelah kejadian"
+    narrator "Pukul 09:14"
+    narrator "Larasati menyelesaikan desain motif batik yang dipesan oleh pelanggan"
+    narrator "Dan membuat selendang dengan baik seperti biasanya"
+    narrator "Banyak sekali perubahan yang ada di Larasati"
+    narrator "Bahkan Ibunya menyadari ada perubahan dari Larasati"
+    narrator "Gaya bicara"
+    narrator "Keputusan yang diambil"
+    narrator "Semangat yang lebih"
+    narrator "Tanggung jawab yang baik"
+    narrator "Emosi yang terkendali"
+    scene bg ruang_menjahit
+    with fade
+    show sriyani_senyum at right
+    sriyani "Laras..."
+    sriyani "Desain motif batik yang kemarin sudah kamu kirim ?"
+    show larasati_senyum at left
+    with fade
+    larasati "Yang motif Parang ?"
+    sriyani "Iya sayang"
+    larasati "Sudah tapi belum ada balasan dari orangnya"
+    sriyani "Oh begitu ya sayang...."
+
+    jump pilihan_quiz4
+
+label pilihan_quiz4:
+    default tau = False
+    sriyani "Kamu tahu motif parang itu darimana ?"
+    menu:
+        "Dari Keraton Mataram Kartasura Solo":
+            jump pilihan_quiz4_1
+        "Dari Keraton Tarumanegara Kartasura Solo":
+            jump pilihan_quiz4_2
+
+label pilihan_quiz4_1:
+    sriyani "Hmm..." 
+    sriyani "Benar"
+    $ tau = True
+    jump pilihan_umum_quiz4
+
+label pilihan_quiz4_2:
+    sriyani "Hmm..." 
+    sriyani "Bukan..."
+    sriyani "Yang benar itu Keraton Mataram Kartasura Solo"    
+    $ tau = False
+    jump pilihan_umum_quiz4
+
+label pilihan_umum_quiz4:
+    narrator "Dengan kejadian Larasati di dunia batik"
+    narrator "Hubungan dengan Ibunya menjadi baik"
+    narrator "Hubungan anak dengan Ibu yang harmonis"
+    narrator "Itulah hal yang harus terjadi"
+    stop music fadeout 1.5
+    with dissolve
+    jump epilog
+
+label epilog:
+    play music "BGM/All_Idle_Game_BGM.mp3" volume 0.7
+    scene bg kamar_larasati
+    with fade
+    show larasati_kalem
+    larasati "Hmmm...." 
+    larasati "Selendangnya bagus juga kalau begini"
+    narrator "Larasati membuat selendang untuk temannya"
+    narrator "Tiba-tiba notif handphone masuk"
+    narrator "Larasati langsung mengecek notif tersebut"
+    hide larasati_kalem
+    with dissolve
+    show phone at center
+    with dissolve
+    play sound "audio/SFX/dring.mp3" fadeout 0.3
+    larasati "Ish… kirain pelanggan yang kemarin"
+    rani "Oii..."
+    play sound "audio/SFX/dring.mp3" fadeout 0.3
+    rani "Ntar sore ke kafe lagi yuk..."
+    play sound "audio/SFX/typing.mp3" fadeout 1.5
+    larasati "Sore ini ?"
+    play sound "audio/SFX/dring.mp3" fadeout 0.3
+    rani "Ya iya dong  :)"
+    play sound "audio/SFX/dring.mp3" fadeout 0.3
+    rani "Kamu lagi sibuk gak ?"
+    play sound "audio/SFX/typing.mp3" fadeout 1.5
+    larasati "Ngga juga sih, aku sih mah ayuk aja"
+    play sound "audio/SFX/dring.mp3" fadeout 0.3
+    rani "Oke bestie"
+    play sound "audio/SFX/typing4.mp3" fadeout 1.5
+    larasati "Kafe yang mana ?"
+    play sound "audio/SFX/dring.mp3" fadeout 0.3
+    rani "Tempat biasaaaa...."
+    play sound "audio/SFX/typing.mp3" fadeout 1.5
+    larasati "Oh... oke"
+    play sound "audio/SFX/dring.mp3" fadeout 0.3
+    rani "Aku mau nunjukin sesuatu ke kamu"
+    play sound "audio/SFX/typing2.mp3" fadeout 0.6
+    larasati "Aku juga ada sesuatu sih hehe"
+    play sound "audio/SFX/dring.mp3" fadeout 0.3
+    rani "Wihhh...."
+    play sound "audio/SFX/dring.mp3" fadeout 0.3
+    rani "Oke aku kesana jam 15:40 udah gerak"
+    play sound "audio/SFX/typing3.mp3" fadeout 0.7
+    larasati "Oke bestie.... "
+
+    hide phone
+    stop music fadeout 2.0
+    with dissolve
+    show larasati_kalem
+    with dissolve
+    larasati "Kebetulan sekali"
+    larasati "Aku harus menyelesaikan selendangnya sekarang"
+    narrator "Pukul 15:25"
+    hide larasati_kalem
+    scene bg ruang_menjahit
+    show sriyanitua_tulus at right
+    show larasati_senang at left
+    with dissolve
+    larasati "Bu aku jalan dulu"
+    sriyani "Iya hati-hati ya sayang..."
+    sriyani "Jangan terlalu malam, kalau sudah mau hujan langsung pulang"
+    larasati "Iya bu"
+    stop music fadeout 1.5
+    with dissolve
+    jump kafe_epilog
+
+
+label kafe_epilog:
+    play music "BGM/Cafe_BGM2.mp3" volume 0.7
+    scene cafe
+    with fade
+    show larasati_kalem
+    narrator "Larasati tiba di kafe terlebih dahulu"
+    narrator "Dengan membawa sesuatu untuk diberikan ke Rani"
+    narrator "Pukul 15:58"
+    narrator "Rani datang"
+    narrator "Larasati melihat Rani, tapi ada seseorang disebelahnya"
+    hide larasati_kalem
+    show larasati_bingungheran at left
+    show rani_senyum at right
+    with dissolve
+    rani "Hai Laras kenalin ini pacarku"
+    rani "Tapi kamu kayaknya udah kenal sih"
+    larasati "Lahh... Ehh... Kok... Dih..."
+    rani "Kenalan dong kalian"
+    larasati "Eh.. kak satria"
+    show rani_senyum at center
+    show satria_senyum at right
+    with dissolve
+    satria "Hai, kamu larasati ya?"
+    larasati "Eh iya kak.."
+    larasati "Kalian jadian ?"
+    rani "Benarr..."
+    larasati "Sejak kapan..?"
+    rani "Sebenarnya sudah dari beberapa hari yang lalu, tapi belum aku kasih tahu saja"
+    larasati "Jadi ini yang kamu bilang sesuatu"
+    rani "Hehe.... benar"
+    rani "Kali ini aku yang bayarin kopi nya ya...."
+    larasati "Ohya... nih aku ada sesuatu buat kamu"
+    rani "Apa tuh?"
+    narrator "Larasati mengeluarkan kotak berukuran persegi lalu membukanya"
+    larasati "Tada...."
+    narrator "Rani tidak bisa berkata-kata"
+    rani "Eh itukan.... sarung ??"
+    satria "Itu selendang"
+    larasati "ini selendang loh Rani"
+    rani "Eh hahaha...."
+    narrator "Larasati memberikan selendang tersebut ke Rani"
+    larasati "Coba deh kamu pakai ini..."
+    hide rani_senyum
+    show ranisweater_nyengir
+    rani "Cocok gak ?"
+    satria "Cocok sih buat kamu"
+    hide ranisweater_nyengir
+    show ranisweater_senang
+    rani "Laras makasih yah....."
+    larasati "Iyaa Rani, kak Satria maaf ya aku tidak tau kalau kamu juga datang"
+    satria "Oh tidak apa-apa"
+    larasati "Lagi pula Rani ga ngasih tahu kalau kakak datang juga"
+    rani "Ini baru pertama kalinya dia ke kafe ini"
+    larasati "Aku tidak menyangka kamu bisa punya pasangan"
+    rani "Heeh... ?? Maksudnya apa nih ???"
+    rani "Gini-gini aku juga bisa kali punya pasangan"
+    rani "Tapi, kamu penasaran kan gimana caranya..?"
+    narrator "Obrolan mereka berlanjut sampai pukul 17:02 ,mereka harus pulang karena hujan mau turun"
+    rani "Eh sudah mau hujan nih"
+    larasati "Pulang sekarang aja ..?"
+    rani "Gimana kak?"
+    satria "terserah kamu rani"
+    larasati "......."
+    rani "yaudah deh kita pulang sekarang aja, yang tadi kita bahas di sekolah aja ya besok.... "
+    larasati "iya-iya...."
+    hide ranisweater_senang
+    hide satria_senyum
+    hide larasati_bingungheran
+    narrator "Mereka pun pulang meninggalkan kafe"
+    with fade
+    jump story_ending
+
+
+label story_ending:
+    scene bg kamar_larasatimalam
+    show larasati_kalem
+    with dissolve
+    larasati "Hmm...."
+    larasati "Makara pernah bilang dia tahu dunia manusia karena seseorang pernah memberitahukannya"
+    larasati "Kira-kira orang yang dimaksud siapa ya ?"
+    
+    return
+
+
+
