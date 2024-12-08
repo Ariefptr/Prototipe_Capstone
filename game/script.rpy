@@ -1211,7 +1211,7 @@ label desa_kawung:
     show larasati_senang at left
     with easeinleft
     larasati "Masih jauh kah...?"
-    show makara_base at right
+    show makaras_base at right
     with easeinright
     makhluk_1 "Tidak juga"
     makhluk_1 "Jarak dari atas gunung Megamendung ke Desa Kawung tidak begitu jauh"
@@ -1222,14 +1222,14 @@ label desa_kawung:
     show larasati_tertarik at left
     with easeinleft
     larasati "Itu desanya....?"
-    show makara_senang at right
+    show makara_senang_ref at right
     with easeinright
     makhluk_1 "Benar"
     larasati "WOW..."
     hide larasati_tertarik
-    hide makara_senang
+    hide makara_senang_ref
     show larasati_senang at left
-    show makara_base at right
+    show makaras_base at right
     larasati "Apa ada orang yang tinggal disana ?"
     makhluk_1 "Ada"
     makhluk_1 "Tapi kita tidak bisa berbicara dengan mereka"
@@ -1293,7 +1293,7 @@ label desa_kawung:
     larasati "Sepertinya aku punya ide lagi untuk desain batik"
     hide larasati_tertarik
     with wipeleft
-    hide makara_base
+    hide makaras_base
     with wiperight
     play sound "audio/SFX/footstep2.mp3" fadeout 0.5
     narrator "Larasati pun berjalan mengelilingi desa untuk mencari tempat yang cocok untuk menggambar desainnya"
@@ -1307,7 +1307,7 @@ label desa_kawung:
     show larasati_senang at left
     with easeinleft
     larasati "Penduduk desa ini terlihat bahagia semua"
-    show makara_senang at right
+    show makara_senang_ref at right
     with easeinright
     makhluk_1 "Sepertinya begitu"
     narrator "Larasati melihat ada salah satu penduduk yang beda dari yang lainnya"
@@ -1319,7 +1319,7 @@ label desa_kawung:
     narrator "Larasati mencoba untuk mencari makna dan esensi dari Desa Kawung ini"
     hide larasati_bingungheran
     with wiperight
-    hide makara_senang
+    hide makara_senang_ref
     with wiperight
     show larasati_bingungcemas
     narrator "Larasati pun berdiri di atas batu yang cukup besar"
@@ -1362,7 +1362,7 @@ label desa_kawung:
     larasati "Tapi benar tidak yah ?"
     narrator "Makara menghampiri Larasati yang ada di atas batu"
     hide larasati_bingungcemas
-    show makara_base at right
+    show makaras_base at right
     with fade
     makhluk_1 "Kamu sedang apa duduk di atas batu ?"
     show larasati_bingungheran at left
@@ -1371,15 +1371,15 @@ label desa_kawung:
     hide larasati_bingungheran
     show larasati_senang at left
     larasati "Aku tadi dapat ide desain dari Desa Kawung"
-    hide makara_base 
-    show makara_senang at right
+    hide makaras_base 
+    show makara_senang_ref at right
     makhluk_1 "Hmm Benarkah ?"
     larasati "Iya..."
     hide larasati_senang
     show larasati_tertarik at left
     larasati "Sepertinya aku tahu esensi dari tempat ini"
-    hide makara_senang  
-    show makara_base at right
+    hide makara_senang_ref  
+    show makaras_base at right
     narrator "Makara terdiam sebentar dan bertanya sesuatu ke Larasati"
     makhluk_1 "Kalau begitu"
 
@@ -1399,8 +1399,8 @@ label pilihan:
             jump pilihan2
 
 label pilihan1:
-    hide makara_base  
-    show makara_senang at right
+    hide makaras_base  
+    show makara_senang_ref at right
     makhluk_1 "Hmm.. Benar"
     hide larasati_bingungcemas
     show larasati_senang at left
@@ -1410,7 +1410,7 @@ label pilihan1:
     jump pilihanumum
 
 label pilihan2:
-    hide makara_base  
+    hide makaras_base  
     show makara_kaget at right
     makhluk_1 "Hmm.. "
     hide larasati_bingungcemas
@@ -1418,7 +1418,7 @@ label pilihan2:
     makhluk_1 "Benar tapi kurang tepat"
     makhluk_1 "Penduduk desa Kawung terlihat sangat ramah dan juga tidak terlihat adanya perdebatan diantara mereka"
     hide makara_kaget  
-    show makara_base at right
+    show makaras_base at right
     makhluk_1 "Karena pemimpin mereka rendah hati terhadap orang lain, bijaksana dan juga harus memiliki tanggung jawab terhadap diri sendiri maupun orang lain"
     $ learned = False
     jump pilihanumum
@@ -1480,7 +1480,7 @@ label pilihanumum:
     larasati "Apa yang terjadi ....??"
     narrator "Makara terlihat tenang dan hanya melihat sekitarnya"
     makhluk_1 "...."
-    show makara_senang at right
+    show makara_senang_ref at right
     makhluk_1 "....."
     narrator "Makara tersenyum"
     hide larasati_kagethoror
