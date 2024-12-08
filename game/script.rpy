@@ -924,12 +924,18 @@ label chapter_3_gunung:
     narrator "Larasati memandangi langit yang biru"
     narrator "Tiba-tiba Dia melihat bentuk awan yang berbeda dari yang sebelumnya"
     narrator "Bentuk awan yang berbeda ketika Dia dan Makara berada di hutan Parang"
+    show larasati_bingungheran at left
     larasati "Loh itu awannya berbeda"
     narrator "Larasati pun berdiri untuk melihat sekelilingnya"
     narrator "Menoleh kiri lalu kanan dan sebaliknya"
     narrator "Melihat perbedaan bentuk awan"
+    hide larasatisma_bingungheran
+    show larasati_kalem at left
     larasati "Awannya berbeda tapi masih seperti pola batik"
+    hide larasati_kalem
+    show larasati_bingungheran at left
     larasati "Hmm..."
+    show makaras_kaget at right
     makara "Hoamm"
     makara "Kamu sedang apa ?"
     larasati "Itu..."
@@ -939,9 +945,15 @@ label chapter_3_gunung:
     makara "Itu karena kita sudah berada di tempat yang berbeda"
     makara "Tempat ini bukan hutan Parang lagi"
     makara "Melainkan gunung Megamendung"
+    hide larasati_bingungheran
+    show larasati_kagetemoji1 at left
     larasati "Ah iya juga kita berada di sekitar area pegunungan"
     larasati "Tapi sepertinya aku pernah mendengar kata Megamendung"
+    hide makaras_kaget
+    show makaras_base at right
     makara "Kamu tahu batik motif megamendung ?"
+    hide larasati_kagetemoji1
+    show larasati_senang at left
     larasati "Aku tidak tahu tapi aku pernah mendengarnya sebelumnya"
     makara "Batik motif Megamendung ini berasal dari Cirebon di Jawa Barat"
     larasati "Oh ternyata dari Cirebon"
@@ -951,6 +963,8 @@ label chapter_3_gunung:
     larasati "Iya"
     makara "Aku tidak pernah memikirkan untuk keluar dari sini"
     makara "Lagipula aku memiliki tugas disini"
+    hide larasati_senang
+    show larasati_bingungheran at left
     larasati "Tugas ?"
     makara "Iya"
     makara "Kamu mau melanjutkan perjalanan ?"
@@ -971,12 +985,16 @@ label chapter_3_gunung:
     makara "Ada apa ?"
     larasati "Tidak apa-apa"
     makara "Kamu menggambar sesuatu ?"
+    hide larasati_bingungheran
+    show larasati_kalem at left
     larasati "Benar, aku menggambar hutan Parang di kertas ini"
     makara "Coba aku lihat"
     narrator "Larasati mencoba menunjukkan hasil desainnya"
     narrator "Berharap Makara memiliki respon yang baik"
     makara "Waah.. bagus sekali"
     makara "Kamu membuat seperti ini berapa kali mencoba"
+    hide larasati_kalem 
+    show larasati_senang at left
     larasati "Eh itu terimakasih aku membuatnya hanya sekali mencoba"
     makara "Hmm.."
     makara "Ini bagus"
@@ -998,11 +1016,15 @@ label chapter_3_gunung:
     narrator "Tapi Larasati sudah tahu jawabannya"
     narrator "Setiap tempat disini pasti memiliki esensinya tersendiri"
     narrator "Hanya saja Dia tidak tahu esensi apa yang ada di gunung Megamendung ini"
+    hide larasati_senang
+    show larasati_pasrah at left
     larasati "Jalannya melelahkan juga"
     makara "Hmm… ya begitulah"
     narrator "Mereka tetap melewati jalan yang melelahkan"
     narrator "Terkadang harus melompat atau melewati jalan bebatuan yang banyak"
     makara "Kamu suka mendesain sesuatu ?"
+    hide larasati_pasrah
+    show larasati_kalem at left
     larasati "Tidak juga"
     larasati "Aku hanya mendesain motif batik saja"
     makara "Hmm begitu"
@@ -1016,6 +1038,8 @@ label chapter_3_gunung:
     makara "Sudah berapa banyak yang kamu buat"
     larasati "Tidak begitu banyak"
     larasati "Sekitar tujuh atau delapan motif"
+    hide larasati_kalem
+    show larasati_pasrah at left
     larasati "Tapi akhir-akhir ini aku malas membuat desain"
     narrator "Makara mengingat permasalahan antara Larasati dengan Ibunya"
     makara "Kenapa ?"
@@ -1029,11 +1053,15 @@ label chapter_3_gunung:
     makara "Tapi ada saatnya ketika masalah datang, pikiran harus tenang"
     larasati "..."
     narrator "Tiba-tiba saja jalan yang dilewati menjadi curam menanjak ke atas"
+    hide larasati_pasrah
+    show larasati_kagetbiasa at left
     larasati "Loh jalannya curam sekali"
     makara "Apa yang kamu tunggu ?"
     makara "Ayo naik"
     makara "Ikuti aku"
     narrator "Jalan yang curam dan jalan yang penuh dengan bebatuan"
+    hide larasati_kagetbiasa
+    show larasati_bingungheran at left
     larasati "Apa aku bisa berjalan di jalanan seperti ini ?"
     narrator "Melihat Makara yang sudah jalan duluan membuat Larasati ingin segera mengikutinya"
     narrator "Larasati sudah memiliki esensi keberanian dari hutan Parang"
@@ -1056,6 +1084,8 @@ label chapter_3_gunung:
     larasati "Dan aku harus.."
     narrator "Di depan Larasati harus melompat"
     narrator "Melompat lagi"
+    hide larasati_bingungheran
+    show larasati_senang at left
     larasati "Huaah untung saja"
     larasati "Tapi tidak terlalu sulit"
     narrator "Dan di depan masih ada banyak rintangan yang harus dihadapi"
@@ -1098,6 +1128,7 @@ label chapter_3_gunung:
     larasati "Apa karena..."
     larasati "Esensi dari tempat ini ?"
     # ------ quiz 2 --------
+    jump soal_quiz_2
 
 label soal_quiz_2:
     show makaras_base at center
@@ -1118,6 +1149,45 @@ label jawaban_soal_2_2:
     jump chapter_3_gunung_2
 
 label chapter_3_gunung_2:
-    ""
+    "Karena Larasati sudah mengerti esensi dari gunung Megamendung"
+    "Larasati kembali memandangi sekitarnya"
+    "Dan menoleh ke atas untuk melihat awan yang sekiranya dianggap menarik"
+    "Larasati melihat awan tersebut dengan penuh ketenangan di dalam pikirannya"
+    "Dan mencari batu yang bisa diduduki"
+    larasati "..."
+    "Larasati duduk di atas batu dan mengeluarkan kertas serta pena"
+    "Lalu membuat desain batik dengan bentuk awan yang dilihatnya"
+    "Sedangkan Makara membiarkan Larasati menyelesaikannya dan beristirahat"
+    "Larasati mengerti mengerti"
+    "Dalam menyelesaikan sebuah masalah, pikiran harus tetap tenang"
+    "Jangan membiarkan emosi mengambil alih pikiran"
+    "Jika emosi tetap tinggi maka kesabaran akan membuatnya menjadi seimbang"
+    "Dengan hal itu maka akan menciptakan keharmonisan untuk menghadapi sebuah masalah"
+    "Itulah pelajaran yang didapat oleh Larasati di gunung Megamendung ini"
+    larasati "..."
+    larasati "Kayaknya seperti ini bagus"
+    larasati "Bagaimana kalau..."
+    
+    # ------- Minigame Matching Puzzle ------
 
+    larasati "Begini"
+    larasati "Hmm bagus juga"
+    "Setelah itu Larasati menghampiri Makara yang sedang melihat pemandangan"
+    "Larasati ingin melanjutkan perjalanannya"
+    makara "Apa ?"
+    makara "Kamu mau melanjutkan perjalanan ?"
+    larasati "Iyaa, kamu bagaimana ?"
+    makara "Aku sih tidak apa apa"
+    "Makara kembali melihat pemandangan yang ada di depannya"
+    "Larasati ikut melihatnya"
+    larasati "Itu.."
+    larasati "Itu seperti desa"
+    makara "Hmm ?"
+    makara "Ya itu desa"
+    makara "Itu adalah tujuan kita berikutnya"
+    makara "Setelah itu kamu bisa kembali ke dunia asalmu"
+    larasati "Benarkah ?"
+    "Makara menganggukkan kepala dan tersenyum"
+    larasati "Ayo kita lanjutkan perjalanan"
 
+    # ------ end ch 3 ---------
