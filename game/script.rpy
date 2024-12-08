@@ -1127,29 +1127,38 @@ label chapter_3_gunung:
     larasati "Eh aku merasa disini cukup tenang"
     larasati "Apa karena..."
     larasati "Esensi dari tempat ini ?"
+    hide larasati_senang
     # ------ quiz 2 --------
     jump soal_quiz_2
 
 label soal_quiz_2:
+    scene bukit
     show makaras_base at center
     makara "Kamu sudah melewati rintangan di tempat ini"
     makara "Jadi apa yang kamu dapat dari tempat ini ?"
+    hide makaras_base
     call screen quiz_2
 
 label jawaban_soal_2_1:
+    show makara_senang_ref at center
     makara "Benar"
     makara "Gunung Megamendung memiliki esensi ketenangan"
+    hide makara_senang_ref
     jump chapter_3_gunung_2
 
 label jawaban_soal_2_2:
+    show makaras_base at center
     makara "Hmm"
     makara "Belum benar"
     makara "Gunung Megamendung ini memiliki esensi ketenangan di setiap tempatnya"
     makara "Itulah kenapa kamu berhasil menghadapi rintangan yang ada di Gunung Megamendung ini"
+    hide makaras_base
     jump chapter_3_gunung_2
 
 label chapter_3_gunung_2:
     "Karena Larasati sudah mengerti esensi dari gunung Megamendung"
+    show larasati_senyum at center
+    with dissolve
     "Larasati kembali memandangi sekitarnya"
     "Dan menoleh ke atas untuk melihat awan yang sekiranya dianggap menarik"
     "Larasati melihat awan tersebut dengan penuh ketenangan di dalam pikirannya"
