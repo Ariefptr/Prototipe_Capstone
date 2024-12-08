@@ -1150,6 +1150,7 @@ label jawaban_soal_2_2:
     jump chapter_3_gunung_2
 
 label chapter_3_gunung_2:
+    scene bukit
     "Karena Larasati sudah mengerti esensi dari gunung Megamendung"
     show larasati_senyum at center
     with dissolve

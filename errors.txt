@@ -2,9 +2,29 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 859: show statement expects a non-empty block.
-    show makarassenang at center:
-                                 ^
+File "game/prolog.rpy", line 4: expected statement.
+    <<<<<<< HEAD
+                ^
+
+File "game/prolog.rpy", line 6: expected statement.
+    =======
+          ^
+
+File "game/prolog.rpy", line 10: expected statement.
+    >>>>>>> e7a048253ba2ce847fc6eefe69690b8d72d52ec4
+                                                    ^
+
+File "game/prolog.rpy", line 20: expected statement.
+    <<<<<<< HEAD
+                ^
+
+File "game/prolog.rpy", line 22: expected statement.
+    =======
+          ^
+
+File "game/prolog.rpy", line 24: expected statement.
+    >>>>>>> e7a048253ba2ce847fc6eefe69690b8d72d52ec4
+                                                    ^
 
 Ren'Py Version: Ren'Py 8.3.0.24082114
-Sat Dec  7 21:02:38 2024
+Sun Dec  8 18:27:56 2024
