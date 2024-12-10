@@ -1,4 +1,48 @@
 
+default piece_r_7 = 50
+default piece_r_13 = 200
+
+screen ui_edukasi_parang():
+    image "images/ui_edukasi_parang.png"
+
+screen ui_edukasi_megamendung():
+    image "images/ui_edukasi_megamendung.png"
+
+screen ui_edukasi_kawung():
+    image "images/ui_edukasi_kawung.png"
+
+screen puzzle_rotate_1():
+    image "images/bg_puzzle_rotate.png"
+    add "images/puzzle/puzzle_r_1.png" xalign 0.5 yalign 0.4
+    add "images/puzzle/piece_7.png" rotate piece_r_7 xalign 0.55 yalign 0.35
+
+    hbox:
+        imagebutton:
+            idle "images/puzzle/rotate_kiri.png"
+            action SetVariable("piece_r_7",piece_r_7 - 5)
+            if piece_r_7 == 0:
+                action Jump("puzzle_rotate_megamendung_2")
+        imagebutton:
+            idle "images/puzzle/rotate_kanan.png"
+            action SetVariable("piece_r_7",piece_r_7 + 5)
+            if piece_r_7 == 360:
+                action Jump("puzzle_rotate_megamendung_2")
+screen puzzle_rotate_2():
+    image "images/bg_puzzle_rotate.png"
+    add "images/puzzle/puzzle_r_2.png" xalign 0.5 yalign 0.4
+    add "images/puzzle/piece_13.png" rotate piece_r_13 xalign 0.36 yalign 0.73
+
+    hbox:
+        imagebutton:
+            idle "images/puzzle/rotate_kiri.png"
+            action SetVariable("piece_r_13",piece_r_13 - 5)
+            if piece_r_13 == 0:
+                action Jump("chapter_3_gunung_3")
+        imagebutton:
+            idle "images/puzzle/rotate_kanan.png"
+            action SetVariable("piece_r_13",piece_r_13 + 5)
+            if piece_r_13 == 360:
+                action Jump("chapter_3_gunung_3")
 
 screen quiz_1():
     hbox:
@@ -30,6 +74,9 @@ screen quiz_2():
 init python:
     import random
     status = [
+        False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+    ]
+    status2 = [
         False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False
     ]
     def random_pos():
@@ -111,13 +158,320 @@ init python:
             if drags_items[0].drag_name == "piece_15" and drop_items.drag_name == "location_15":
                 drags_items[0].snap(drop_items.x,drop_items.y,0.5)
                 status[14] = True
-                if all(status) == True:
+                if all(status2) == True:
                     renpy.call("chapter_3_gunung")
             if drags_items[0].drag_name == "piece_16" and drop_items.drag_name == "location_16":
                 drags_items[0].snap(drop_items.x,drop_items.y,0.5)
                 status[15] = True
-                if all(status) == True:
+                if all(status2) == True:
                     renpy.call("chapter_3_gunung")
+
+    def drag_function_2(drags_items,drop_items):
+        if drop_items is not None:
+            if drags_items[0].drag_name == "piece_1" and drop_items.drag_name == "location_1":
+                drags_items[0].snap(drop_items.x,drop_items.y,0.5)
+                status2[0] = True
+                if all(status2) == True:
+                    renpy.call("desa_kawung_2")
+            if drags_items[0].drag_name == "piece_2" and drop_items.drag_name == "location_2":
+                drags_items[0].snap(drop_items.x,drop_items.y,0.5)
+                status2[1] = True
+                if all(status2) == True:
+                    renpy.call("desa_kawung_2")
+            if drags_items[0].drag_name == "piece_3" and drop_items.drag_name == "location_3":
+                drags_items[0].snap(drop_items.x,drop_items.y,0.5)
+                status2[2] = True
+                if all(status2) == True:
+                    renpy.call("desa_kawung_2")
+            if drags_items[0].drag_name == "piece_4" and drop_items.drag_name == "location_4":
+                drags_items[0].snap(drop_items.x,drop_items.y,0.5)
+                status2[3] = True
+                if all(status2) == True:
+                    renpy.call("desa_kawung_2")
+            if drags_items[0].drag_name == "piece_5" and drop_items.drag_name == "location_5":
+                drags_items[0].snap(drop_items.x,drop_items.y,0.5)
+                status2[4] = True
+                if all(status2) == True:
+                    renpy.call("desa_kawung_2")
+            if drags_items[0].drag_name == "piece_6" and drop_items.drag_name == "location_6":
+                drags_items[0].snap(drop_items.x,drop_items.y,0.5)
+                status2[5] = True
+                if all(status2) == True:
+                    renpy.call("desa_kawung_2")
+            if drags_items[0].drag_name == "piece_7" and drop_items.drag_name == "location_7":
+                drags_items[0].snap(drop_items.x,drop_items.y,0.5)
+                status2[6] = True
+                if all(status2) == True:
+                    renpy.call("desa_kawung_2")
+            if drags_items[0].drag_name == "piece_8" and drop_items.drag_name == "location_8":
+                drags_items[0].snap(drop_items.x,drop_items.y,0.5)
+                status2[7] = True
+                if all(status2) == True:
+                    renpy.call("desa_kawung_2")
+            if drags_items[0].drag_name == "piece_9" and drop_items.drag_name == "location_9":
+                drags_items[0].snap(drop_items.x,drop_items.y,0.5)
+                status2[8] = True
+                if all(status2) == True:
+                    renpy.call("desa_kawung_2")
+            if drags_items[0].drag_name == "piece_10" and drop_items.drag_name == "location_10":
+                drags_items[0].snap(drop_items.x,drop_items.y,0.5)
+                status2[9] = True
+                if all(status2) == True:
+                    renpy.call("desa_kawung_2")
+            if drags_items[0].drag_name == "piece_11" and drop_items.drag_name == "location_11":
+                drags_items[0].snap(drop_items.x,drop_items.y,0.5)
+                status2[10] = True
+                if all(status2) == True:
+                    renpy.call("desa_kawung_2")
+            if drags_items[0].drag_name == "piece_12" and drop_items.drag_name == "location_12":
+                drags_items[0].snap(drop_items.x,drop_items.y,0.5)
+                status2[11] = True
+                if all(status2) == True:
+                    renpy.call("desa_kawung_2")
+            if drags_items[0].drag_name == "piece_13" and drop_items.drag_name == "location_13":
+                drags_items[0].snap(drop_items.x,drop_items.y,0.5)
+                status2[12] = True
+                if all(status2) == True:
+                    renpy.call("desa_kawung_2")
+            if drags_items[0].drag_name == "piece_14" and drop_items.drag_name == "location_14":
+                drags_items[0].snap(drop_items.x,drop_items.y,0.5)
+                status2[13] = True
+                if all(status2) == True:
+                    renpy.call("desa_kawung_2")
+            if drags_items[0].drag_name == "piece_15" and drop_items.drag_name == "location_15":
+                drags_items[0].snap(drop_items.x,drop_items.y,0.5)
+                status2[14] = True
+                if all(status2) == True:
+                    renpy.call("desa_kawung_2")
+            if drags_items[0].drag_name == "piece_16" and drop_items.drag_name == "location_16":
+                drags_items[0].snap(drop_items.x,drop_items.y,0.5)
+                status2[15] = True
+                if all(status2) == True:
+                    renpy.call("desa_kawung_2")
+
+# ------ Kawung Puzzle -----
+
+screen puzzle_drag_2():
+    $ pos1 = random_pos()
+    $ pos2 = random_pos()
+    $ pos3 = random_pos()
+    $ pos4 = random_pos()
+    $ pos5 = random_pos()
+    $ pos6 = random_pos()
+    $ pos7 = random_pos()
+    $ pos8 = random_pos()
+    $ pos9 = random_pos()
+    $ pos10 = random_pos()
+    $ pos11 = random_pos()
+    $ pos12 = random_pos()
+    $ pos13 = random_pos()
+    $ pos14 = random_pos()
+    $ pos15 = random_pos()
+    $ pos16 = random_pos()
+    image "images/puzzle_parang/bg_puzzle_parang.png"
+    text "Susun Puzzle Batik Kawung":
+        xalign 0.5
+        yalign 0.03
+    draggroup:
+        drag:
+            xpos pos1[0]
+            ypos pos1[1]
+            drag_name "piece_1"
+            drag_raise True
+            dragged drag_function_2
+            add "images/puzzle_kawung/Kawung 1.png"
+        drag:
+            xpos pos2[0]
+            ypos pos2[1]
+            drag_name "piece_2"
+            drag_raise True
+            dragged drag_function_2
+            add "images/puzzle_kawung/Kawung 2.png"
+        drag:
+            xpos pos3[0]
+            ypos pos3[1]
+            drag_name "piece_3"
+            drag_raise True
+            dragged drag_function_2
+            add "images/puzzle_kawung/Kawung 3.png"
+        drag:
+            xpos pos4[0]
+            ypos pos4[1]
+            drag_name "piece_4"
+            drag_raise True
+            dragged drag_function_2
+            add "images/puzzle_kawung/Kawung 4.png"
+        drag:
+            xpos pos5[0]
+            ypos pos5[1]
+            drag_name "piece_5"
+            drag_raise True
+            dragged drag_function_2
+            add "images/puzzle_kawung/Kawung 5.png"
+        drag:
+            xpos pos6[0]
+            ypos pos6[1]
+            drag_name "piece_6"
+            drag_raise True
+            dragged drag_function_2
+            add "images/puzzle_kawung/Kawung 6.png"
+        drag:
+            xpos pos7[0]
+            ypos pos7[1]
+            drag_name "piece_7"
+            drag_raise True
+            dragged drag_function_2
+            add "images/puzzle_kawung/Kawung 7.png"
+        drag:
+            xpos pos8[0]
+            ypos pos8[1]
+            drag_name "piece_8"
+            drag_raise True
+            dragged drag_function_2
+            add "images/puzzle_kawung/Kawung 8.png"
+        drag:
+            xpos pos9[0]
+            ypos pos9[1]
+            drag_name "piece_9"
+            drag_raise True
+            dragged drag_function_2
+            add "images/puzzle_kawung/Kawung 9.png"
+        drag:
+            xpos pos10[0]
+            ypos pos10[1]
+            drag_name "piece_10"
+            drag_raise True
+            dragged drag_function_2
+            add "images/puzzle_kawung/Kawung 10.png"
+        drag:
+            xpos pos11[0]
+            ypos pos11[1]
+            drag_name "piece_11"
+            drag_raise True
+            dragged drag_function_2
+            add "images/puzzle_kawung/Kawung 11.png"
+        drag:
+            xpos pos12[0]
+            ypos pos12[1]
+            drag_name "piece_12"
+            drag_raise True
+            dragged drag_function_2
+            add "images/puzzle_kawung/Kawung 12.png"
+        drag:
+            xpos pos13[0]
+            ypos pos13[1]
+            drag_name "piece_13"
+            drag_raise True
+            dragged drag_function_2
+            add "images/puzzle_kawung/Kawung 13.png"
+        drag:
+            xpos pos14[0]
+            ypos pos14[1]
+            drag_name "piece_14"
+            drag_raise True
+            dragged drag_function_2
+            add "images/puzzle_kawung/Kawung 14.png"
+        drag:
+            xpos pos15[0]
+            ypos pos15[1]
+            drag_name "piece_15"
+            drag_raise True
+            dragged drag_function_2
+            add "images/puzzle_kawung/Kawung 15.png"
+        drag:
+            xpos pos16[0]
+            ypos pos16[1]
+            drag_name "piece_16"
+            drag_raise True
+            dragged drag_function_2
+            add "images/puzzle_kawung/Kawung 16.png"
+        
+        # ------ Drop Target ------
+        drag:
+            drag_name "location_1"
+            draggable False
+            align(0.5,0.12)
+            add "images/puzzle_drag_kawung/Kawung 1.png"
+        drag:
+            drag_name "location_2"
+            draggable False
+            align(0.6,0.1)
+            add "images/puzzle_drag_kawung/Kawung 2.png"
+        drag:
+            drag_name "location_3"
+            draggable False
+            align(0.7,0.1)
+            add "images/puzzle_drag_kawung/Kawung 3.png"
+        drag:
+            drag_name "location_4"
+            draggable False
+            align(0.8,0.1)
+            add "images/puzzle_drag_kawung/Kawung 4.png"
+        # ------- baris 2
+        drag:
+            drag_name "location_5"
+            draggable False
+            align(0.5,0.25)
+            add "images/puzzle_drag_kawung/Kawung 5.png"
+        drag:
+            drag_name "location_6"
+            draggable False
+            align(0.6,0.25)
+            add "images/puzzle_drag_kawung/Kawung 6.png"
+        drag:
+            drag_name "location_7"
+            draggable False
+            align(0.7,0.25)
+            add "images/puzzle_drag_kawung/Kawung 7.png"
+        drag:
+            drag_name "location_8"
+            draggable False
+            align(0.8,0.25)
+            add "images/puzzle_drag_kawung/Kawung 8.png"
+        # ----- baris 3
+        drag:
+            drag_name "location_9"
+            draggable False
+            align(0.5,0.48)
+            add "images/puzzle_drag_kawung/Kawung 9.png"
+        drag:
+            drag_name "location_10"
+            draggable False
+            align(0.6,0.48)
+            add "images/puzzle_drag_kawung/Kawung 10.png"
+        drag:
+            drag_name "location_11"
+            draggable False
+            align(0.7,0.48)
+            add "images/puzzle_drag_kawung/Kawung 11.png"
+        drag:
+            drag_name "location_12"
+            draggable False
+            align(0.8,0.48)
+            add "images/puzzle_drag_kawung/Kawung 12.png"
+        # ------ baris 4
+        drag:
+            drag_name "location_13"
+            draggable False
+            align(0.5,0.68)
+            add "images/puzzle_drag_kawung/Kawung 13.png"
+        drag:
+            drag_name "location_14"
+            draggable False
+            align(0.6,0.68)
+            add "images/puzzle_drag_kawung/Kawung 14.png"
+        drag:
+            drag_name "location_15"
+            draggable False
+            align(0.7,0.68)
+            add "images/puzzle_drag_kawung/Kawung 15.png"
+        drag:
+            drag_name "location_16"
+            draggable False
+            align(0.8,0.68)
+            add "images/puzzle_drag_kawung/Kawung 16.png"
+
+# ------ Parang Puzzle -------
 
 screen puzzle_drag_1():
     image "images/puzzle_parang/bg_puzzle_parang.png"

@@ -1,25 +1,29 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 919, in script
-    call screen puzzle_drag_1
+  File "game/script.rpy", line 1202, in script
+    call screen puzzle_drag_2
   File "renpy/common/000statements.rpy", line 671, in execute_call_screen
     store._return = renpy.call_screen(name, *args, **kwargs)
-  File "game/Quiz.rpy", line 122, in execute
-    screen puzzle_drag_1():
-  File "game/Quiz.rpy", line 122, in execute
-    screen puzzle_drag_1():
-  File "game/Quiz.rpy", line 123, in execute
-    image bg_puzzle_parang
-  File "game/Quiz.rpy", line 123, in <module>
-    image bg_puzzle_parang
-NameError: name 'bg_puzzle_parang' is not defined
+  File "game/Quiz.rpy", line 124, in execute
+    screen puzzle_drag_2():
+  File "game/Quiz.rpy", line 124, in execute
+    screen puzzle_drag_2():
+  File "game/Quiz.rpy", line 129, in execute
+    draggroup:
+  File "game/Quiz.rpy", line 130, in execute
+    drag:
+  File "game/Quiz.rpy", line 130, in keywords
+    drag:
+  File "game/Quiz.rpy", line 131, in <module>
+    xpos pos1[0]
+NameError: name 'pos1' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 919, in script
-    call screen puzzle_drag_1
+  File "game/script.rpy", line 1202, in script
+    call screen puzzle_drag_2
   File "D:\RenPy\renpy-8.3.0-sdk\renpy\ast.py", line 1974, in execute
     self.call("execute")
   File "D:\RenPy\renpy-8.3.0-sdk\renpy\ast.py", line 1953, in call
@@ -50,17 +54,21 @@ Full traceback:
     self.update()
   File "D:\RenPy\renpy-8.3.0-sdk\renpy\display\screen.py", line 697, in update
     self.screen.function(**self.scope)
-  File "game/Quiz.rpy", line 122, in execute
-    screen puzzle_drag_1():
-  File "game/Quiz.rpy", line 122, in execute
-    screen puzzle_drag_1():
-  File "game/Quiz.rpy", line 123, in execute
-    image bg_puzzle_parang
-  File "game/Quiz.rpy", line 123, in <module>
-    image bg_puzzle_parang
-NameError: name 'bg_puzzle_parang' is not defined
+  File "game/Quiz.rpy", line 124, in execute
+    screen puzzle_drag_2():
+  File "game/Quiz.rpy", line 124, in execute
+    screen puzzle_drag_2():
+  File "game/Quiz.rpy", line 129, in execute
+    draggroup:
+  File "game/Quiz.rpy", line 130, in execute
+    drag:
+  File "game/Quiz.rpy", line 130, in keywords
+    drag:
+  File "game/Quiz.rpy", line 131, in <module>
+    xpos pos1[0]
+NameError: name 'pos1' is not defined
 
 Windows-10-10.0.19045 AMD64
 Ren'Py 8.3.0.24082114
  
-Tue Dec 10 08:06:20 2024
+Tue Dec 10 08:26:56 2024

@@ -920,6 +920,11 @@ label chapter_2_hutan_2:
     # ----- end chapter 2 -------
 
 label chapter_3_gunung:
+    window hide
+    show ui_edukasi_parang
+    pause 30.0
+    hide ui_edukasi_parang
+    window show
     narrator "Sesaat setelah selesai menggambar, Larasati rebahan di atas rumput sembari memandangi langit"
     narrator "Suasana saat ini membuatnya begitu sangat tenang, walaupun tetap harus mencari jalan keluar dari dunia ini"
     hide larasati_senyum
@@ -1199,11 +1204,24 @@ label chapter_3_gunung_2:
     larasati "Bagaimana kalau..."
     
     # ------- Minigame Matching Puzzle ------
+    call screen puzzle_rotate_1
 
+label puzzle_rotate_megamendung_2:
+    call screen puzzle_rotate_2
+
+label chapter_3_gunung_3:
+    scene bg bukit
+    window hide
+    show ui_edukasi_megamendung
+    pause 30.0
+    hide ui_edukasi_megamendung
+    window show
+    show larasati_senang at left
     larasati "Begini"
     larasati "Hmm bagus juga"
     "Setelah itu Larasati menghampiri Makara yang sedang melihat pemandangan"
     "Larasati ingin melanjutkan perjalanannya"
+    show makaras_base at right
     makara "Apa ?"
     makara "Kamu mau melanjutkan perjalanan ?"
     larasati "Iyaa, kamu bagaimana ?"
@@ -1358,7 +1376,14 @@ label desa_kawung:
     show larasati_senyum
     larasati "Hmm....."
     larasati "Sepertinya motifnya begini"
-    narrator "PUZZLE DRAG N DROP"
+    call screen puzzle_drag_2
+
+label desa_kawung_2:
+    window hide
+    show ui_edukasi_kawung
+    pause 30.0
+    hide ui_edukasi_kawung
+    window show
     hide larasati_senyum 
     show larasati_kalem
     narrator "Larasati membuat desain batik dengan serius"
