@@ -850,6 +850,7 @@ label chapter_2_hutan_2:
     larasati "Sepertinya kalau seperti ini jadi menarik"
 
     # ---- mini game drag and drop -----
+    window hide
     call screen puzzle_drag_1
     # ----- end chapter 2 -------
 
@@ -1625,7 +1626,7 @@ label tibatiba_dikamar:
     sriyani "Iya sayang"
     larasati "Sudah tapi belum ada balasan dari orangnya"
     sriyani "Oh begitu ya sayang...."
-
+    hide larasati_senyum
     jump pilihan_quiz4
 
 label pilihan_quiz4:
@@ -1652,10 +1653,7 @@ label pilihan_quiz4_2:
 
 label pilihan_umum_quiz4:
     narrator "Dengan kejadian Larasati di dunia batik"
-    hide sriyanitua_senang
-    show sriyanitua_bahagia at right
-    hide larasati_senyum
-    show larasati_senang
+    jump epilog
 
 label epilog:
     play music "BGM/All_Idle_Game_BGM.mp3" volume 0.7
@@ -1811,11 +1809,7 @@ label story_ending:
     window hide
     show screen black_screen
     with dissolve
-    pause 1.5
-    hide screen black_screen
-    with dissolve
     
-    return
-
+    $ renpy.quit()
 
 

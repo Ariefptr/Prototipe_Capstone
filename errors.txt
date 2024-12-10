@@ -2,8 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/Quiz.rpy", line 468: is not terminated with a newline. (Check strings and parenthesis.)
-                align(0.5,0.605
+File "game/script.rpy", line 1816: expected 'label_name' not found.
+    jump "main_menu"
+        ^
 
 Ren'Py Version: Ren'Py 8.3.0.24082114
-Tue Dec 10 19:16:48 2024
+Tue Dec 10 20:55:15 2024
