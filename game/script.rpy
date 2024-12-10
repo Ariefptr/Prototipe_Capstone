@@ -348,7 +348,6 @@ label kafe_sore:
     narrator "[text_narrator_kafe[0]]"
     narrator "[text_narrator_kafe[1]]"
     show rani_base 
-    rani "[text_rani_kafe[0]]"
     hide rani_base
     narrator "[text_narrator_kafe[2]]"
     show rani_base
@@ -444,10 +443,9 @@ label kafe_sore:
     hide rani_seyumciptadent
     with fade
     narrator "[text_narrator_kafe[7]]"
-    stop music fadeout 2.0
-    with dissolve
-
-
+    narrator "Pukul 15:35"
+    narrator "Rani sudah sampai di kafe tapi Larasati belum datang"
+    show rani_base
     jump pulang_rumah
 
 label pulang_rumah:
@@ -1262,12 +1260,8 @@ label desa_kawung:
     narrator "Dan benar saja"
     narrator "Desa Kawung sudah jelas terlihat di mata mereka"
     scene bg desa_kawung
-    with dissolve
-    show larasati_tertarik at left
-    with easeinleft
+    hide makaras_base
     larasati "Itu desanya....?"
-    show makara_senang_ref at right
-    with easeinright
     makhluk_1 "Benar"
     larasati "WOW..."
     hide larasati_tertarik
@@ -1716,12 +1710,10 @@ label pilihan_quiz4_2:
 
 label pilihan_umum_quiz4:
     narrator "Dengan kejadian Larasati di dunia batik"
-    narrator "Hubungan dengan Ibunya menjadi baik"
-    narrator "Hubungan anak dengan Ibu yang harmonis"
-    narrator "Itulah hal yang harus terjadi"
-    stop music fadeout 1.5
-    with dissolve
-    jump epilog
+    hide sriyanitua_senang
+    show sriyanitua_bahagia at right
+    hide larasati_senyum
+    show larasati_senang:
 
 label epilog:
     play music "BGM/All_Idle_Game_BGM.mp3" volume 0.7
