@@ -2,29 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/prolog.rpy", line 4: expected statement.
-    <<<<<<< HEAD
-                ^
-
-File "game/prolog.rpy", line 6: expected statement.
-    =======
-          ^
-
-File "game/prolog.rpy", line 10: expected statement.
-    >>>>>>> e7a048253ba2ce847fc6eefe69690b8d72d52ec4
-                                                    ^
-
-File "game/prolog.rpy", line 20: expected statement.
-    <<<<<<< HEAD
-                ^
-
-File "game/prolog.rpy", line 22: expected statement.
-    =======
-          ^
-
-File "game/prolog.rpy", line 24: expected statement.
-    >>>>>>> e7a048253ba2ce847fc6eefe69690b8d72d52ec4
-                                                    ^
+File "game/Quiz.rpy", line 93: 'jump' is not a keyword argument or valid child of the screen statement.
+    jump chapter_3_gunung
+        ^
 
 Ren'Py Version: Ren'Py 8.3.0.24082114
-Sun Dec  8 18:27:56 2024
+Mon Dec  9 21:41:28 2024

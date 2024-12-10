@@ -549,6 +549,7 @@ label pulang_rumah:
     # ----- Hutan Parang --------
 
 label chapter_2_hutan:
+    play music "BGM/parang.mp3" volume 0.7
     scene hutan_parang
     narrator "Suatu tempat yang tidak diketahui"
     show screen black_screen
@@ -605,6 +606,7 @@ label chapter_2_hutan:
     larasati "......"
     narrator "Tapi ia terus mencoba untuk menenangkan pikirannya dan membuat dirinya berani untuk mencari jalan keluar"
     larasati "Mungkin ke arah sana"
+    play sound "audio/SFX/footstep2.mp3" 
     hide larasati_bingungheran
     show larasati_pasrah at left
     pause 1.0
@@ -615,6 +617,7 @@ label chapter_2_hutan:
     show larasati_pasrah at right
     pause 1.0
     hide larasati_pasrah with dissolve
+    stop sound fadeout 0.5
     narrator "Larasati meninggalkan tempatnya"
     narrator "Dia berjalan ke arah yang ia tidak tahu menuju kemana"
     narrator "Baru beberapa langkah berjalan, Larasati melihat ada bunga besar berwarna emas"
@@ -647,6 +650,7 @@ label chapter_2_hutan:
     larasati "Huahhh"
     narrator "Tiba-tiba makhluk hidup tadi berada di sampingnya"
     hide larasati_kagetemoji1
+    with hpunch
     narrator "Dan Larasati terjatuh karena kaget"
     show larasati_bingungcemas at left
     with moveinbottom
@@ -739,8 +743,10 @@ label chapter_2_hutan:
     pause 1.0
     hide makara_senang_ref
     hide larasati_tertarik with dissolve
+    play sound "audio/SFX/footstep2.mp3" 
     narrator "Mereka pun berjalan untuk keluar dari hutan parang"
     narrator "Selama diperjalanan Makara memperhatikan wajah Larasati"
+    stop sound fadeout 0.3
     narrator "Makara berpikir ada sesuatu yang mengganggu pikirannya"
     show makaras_base at right
     show larasati_pasrah at left
@@ -772,11 +778,13 @@ label chapter_2_hutan:
     larasati "Ini untuk apa ?"
     makara "Kamu simpan dulu saja, nanti pasti dibutuhkan"
     larasati "Baiklah"
+    play sound "audio/SFX/footstep2.mp3"
     narrator "Mereka pun tetap melanjutkan perjalanan"
     hide larasati_pasrah
     with dissolve
     hide makaras_base
     with dissolve
+    stop sound fadeout 0.3
     narrator "Sampai didepan mereka ada sungai yang cukup lebar untuk dilewati"
     show larasati_bingungheran at left
     larasati "Sungai"
@@ -875,6 +883,7 @@ label chapter_2_hutan_2:
     scene bukit
     hide makaras_base
     show makara_senang_ref at right
+    show larasati_pasrah at left
     makara "Lelah juga ya"
     narrator "Makara langsung rebahan di atas rumput"
     larasati "Iya cukup melelahkan"
@@ -886,6 +895,7 @@ label chapter_2_hutan_2:
     makara "Motif Parang berasal dari Solo"
     makara "Lebih tepatnya dari Keraton Mataram Kartasura"
     larasati "Solo ?"
+    hide larasati_pasrah
     hide larasati_senang
     show larasati_tertarik at left
     larasati "Kamu benar-benar tahu dunia ku ya ?"
@@ -906,15 +916,25 @@ label chapter_2_hutan_2:
     larasati "Sepertinya kalau seperti ini jadi menarik"
 
     # ---- mini game drag and drop -----
-
-    narrator "Sesaat setelah selesai menggambar, Larasati rebahan di atas rumput sembari memandangi langit"
-    narrator "Suasana saat ini membuatnya begitu sangat tenang, walaupun tetap harus mencari jalan keluar dari dunia ini"
-    hide larasati_senyum
-    jump chapter_3_gunung
+    call screen puzzle_drag_1
     # ----- end chapter 2 -------
 
 label chapter_3_gunung:
+    narrator "Sesaat setelah selesai menggambar, Larasati rebahan di atas rumput sembari memandangi langit"
+    narrator "Suasana saat ini membuatnya begitu sangat tenang, walaupun tetap harus mencari jalan keluar dari dunia ini"
+    hide larasati_senyum
+    stop music
+    # --- Transisi ----
+    window hide
+    show screen black_screen
+    with dissolve
+    pause 1.0
+    hide screen black_screen
+    with dissolve
+    window show
+    # --- Transisi ----
     scene bukit
+    play music "audio/BGM/megamendung.mp3"
     narrator "Larasati memandangi langit yang biru"
     narrator "Tiba-tiba Dia melihat bentuk awan yang berbeda dari yang sebelumnya"
     narrator "Bentuk awan yang berbeda ketika Dia dan Makara berada di hutan Parang"
@@ -972,8 +992,14 @@ label chapter_3_gunung:
     makara "Aku tahu arahnya"
     makara "Cukup melewati jalan ini saja"
     makara "Ayo ikuti aku"
+    play sound "audio/SFX/footstep2.mp3" 
     narrator "Mereka pun akhirnya melanjutkan perjalanan"
+    hide makaras_base
+    with dissolve
+    hide larasati_bingungheran
+    with dissolve
     narrator "ketika mereka berjalan, Larasati menoleh ke belakang untuk melihat hutan Parang sekali lagi"
+    stop sound fadeout 0.3
     narrator "Dan melihat kertas yang berisi desain gambar yang baru saja dibuatnya"
     narrator "Makara melihat ke arah Larasati"
     makara "Ada apa ?"
