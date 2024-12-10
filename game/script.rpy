@@ -235,73 +235,6 @@ label larasati_sudah_sma:
     larasati "[text_larasati_sma[20]]"
     hide larasatisma_bingungcemas
     narrator "[text_narrator_sma[14]]"
-
-
-
-
-label penasaran_1:
-    scene envi_mom
-    play sound "SFX/Kain.mp3" fadeout 1.3
-    show mengamati at center
-    play sound "SFX/Kain2.mp3" fadeout 1.3
-    with dissolve
-    $renpy.pause(5.0, hard=True)
-    hide mengamati
-
-    show sriyani_muda at right
-    with dissolve
-    show larasati_kecil at left
-    sriyani "[text_prolog_sriyani[6]]"
-
-    scene envi_mom
-    show berpikir at center
-    with dissolve
-    $renpy.pause(5.0, hard=True)
-    hide berpikir
-
-    show larasati_kecil at left
-    with dissolve
-    show sriyani_muda at right
-    larasati "[text_prolog_larasati[6]]"
-
-    # This ends the game.
-    hide larasati_kecil
-    hide sriyani_muda
-    jump kamar_larasati_1
-
-
-label kamar_larasati_1:
-    scene kamar_larasati
-    show mencobaa at center
-    with dissolve
-    $renpy.pause(5.0, hard=True)
-    hide mencobaa
-    show mencoba at center
-    with dissolve
-    $renpy.pause(5.0, hard=True)
-    hide mencoba
-
-    show larasati_sma at left
-    with dissolve
-
-    larasati "[text_larasati_kamar[0]]"
-    larasati "[text_larasati_kamar[1]]"
-
-    scene kamar_larasati
-    show kebingungan at center
-    with dissolve
-    $renpy.pause(5.0, hard=True)
-    hide kebingungan
-
-    show larasati_sma at left
-    larasati "[text_larasati_kamar[2]]"
-
-    scene kamar_larasati
-    show notif_pesan at center
-    play sound "SFX/Notif2.mp3"
-    with dissolve
-    $renpy.pause(4.0, hard=True)
-    hide notif_pesan
     jump dm_dari_rani
 
 label dm_dari_rani:
@@ -846,9 +779,11 @@ label soal_quiz_1:
     makara "Apa yang sudah kamu dapat ?"
     makara "Seperti esensinya"
     hide makaras_base
+    window hide
     call screen quiz_1
 
 label jawaban_soal_1_1:
+    window show
     show makaras_base at center
     makara "Hmm ?"
     makara "Bukan itu yang sebenarnya dari esensi Hutan Parang ini"
@@ -856,6 +791,7 @@ label jawaban_soal_1_1:
     jump chapter_2_hutan_2
 
 label jawaban_soal_1_2:
+    window show
     hide makaras_base
     show makara_senang_ref at center
     makara "Benar"
@@ -1160,9 +1096,11 @@ label soal_quiz_2:
     makara "Kamu sudah melewati rintangan di tempat ini"
     makara "Jadi apa yang kamu dapat dari tempat ini ?"
     hide makaras_base
+    window hide
     call screen quiz_2
 
 label jawaban_soal_2_1:
+    window show
     show makara_senang_ref at center
     makara "Benar"
     makara "Gunung Megamendung memiliki esensi ketenangan"
@@ -1170,6 +1108,7 @@ label jawaban_soal_2_1:
     jump chapter_3_gunung_2
 
 label jawaban_soal_2_2:
+    window show
     show makaras_base at center
     makara "Hmm"
     makara "Belum benar"
@@ -1202,6 +1141,8 @@ label chapter_3_gunung_2:
     larasati "Bagaimana kalau..."
     
     # ------- Minigame Matching Puzzle ------
+    hide larasati_senyum
+    window hide
     call screen puzzle_rotate_1
 
 label puzzle_rotate_megamendung_2:
@@ -1370,6 +1311,8 @@ label desa_kawung:
     show larasati_senyum
     larasati "Hmm....."
     larasati "Sepertinya motifnya begini"
+    hide larasati_senyum
+    window hide
     call screen puzzle_drag_2
 
 label desa_kawung_2:
@@ -1378,8 +1321,7 @@ label desa_kawung_2:
     pause 30.0
     hide ui_edukasi_kawung
     window show
-    hide larasati_senyum 
-    show larasati_kalem
+    show larasati_kalem at center
     narrator "Larasati membuat desain batik dengan serius"
     narrator "Tapi Dia juga memperhatikan Desa Kawung"
     narrator "Larasati melihat pemimpin dari penduduk tersebut"
@@ -1387,23 +1329,23 @@ label desa_kawung_2:
     larasati "Seorang pemimpin"
     larasati "Pemimpin yang baik akan membuat semuanya menjadi baik"
     hide larasati_kalem 
-    show larasati_bingungheran
+    show larasati_bingungheran at center
     larasati "Tapi kata-kata itu terdengar aneh"
     larasati "Pemimpin yang memiliki tanggung jawab…"
     larasati "Terhadap orang lain dan…"
     larasati "Terhadap dirinya"
     larasati "Memiliki kerendahan hati dan juga bijaksana"
     hide larasati_bingungheran 
-    show larasati_bingungcemas
+    show larasati_bingungcemas at center
     larasati "Dan juga memiliki sifat adil ?"
     narrator ""
     hide larasati_bingungcemas 
-    show larasati_kalem
+    show larasati_kalem at center
     narrator ""
     larasati "Sepertinya Aku mengerti"
     larasati "Seseorang harus rendah hati, memiliki rasa tanggung jawab terhadap orang lain dan juga dirinya sendiri"
     hide larasati_kalem
-    show larasati_bingungcemas 
+    show larasati_bingungcemas  at center
     larasati "Tapi benar tidak yah ?"
     narrator "Makara menghampiri Larasati yang ada di atas batu"
     hide larasati_bingungcemas
@@ -1456,13 +1398,13 @@ label pilihan1:
 
 label pilihan2:
     hide makaras_base  
-    show makara_kaget at right
+    show makaras_kaget at right
     makhluk_1 "Hmm.. "
     hide larasati_bingungcemas
     show larasati_pasrah at left
     makhluk_1 "Benar tapi kurang tepat"
     makhluk_1 "Penduduk desa Kawung terlihat sangat ramah dan juga tidak terlihat adanya perdebatan diantara mereka"
-    hide makara_kaget  
+    hide makaras_kaget  
     show makaras_base at right
     makhluk_1 "Karena pemimpin mereka rendah hati terhadap orang lain, bijaksana dan juga harus memiliki tanggung jawab terhadap diri sendiri maupun orang lain"
     $ learned = False
@@ -1713,7 +1655,7 @@ label pilihan_umum_quiz4:
     hide sriyanitua_senang
     show sriyanitua_bahagia at right
     hide larasati_senyum
-    show larasati_senang:
+    show larasati_senang
 
 label epilog:
     play music "BGM/All_Idle_Game_BGM.mp3" volume 0.7
@@ -1782,7 +1724,7 @@ label epilog:
     with dissolve
     jump kafe_epilog
 
-
+# ---- cafe epilog error
 label kafe_epilog:
     play music "BGM/Cafe_BGM2.mp3" volume 0.7
     scene cafe
@@ -1863,7 +1805,7 @@ label story_ending:
     larasati "Hmm...."
     larasati "Makara pernah bilang dia tahu dunia manusia karena seseorang pernah memberitahukannya"
     larasati "Kira-kira orang yang dimaksud siapa ya ?"
-    
+
     return
 
 

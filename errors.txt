@@ -2,18 +2,9 @@
 errors listed below, and try again.
 
 
-<<<<<<< HEAD
-File "game/Quiz.rpy", line 2: screen expects a non-empty block.
-    screen ui_edukasi_parang():
-                               ^
+File "game/script.rpy", line 1716: show statement expects a non-empty block.
+    show larasati_senang:
+                         ^
 
 Ren'Py Version: Ren'Py 8.3.0.24082114
-Tue Dec 10 09:16:30 2024
-=======
-File "game/script.rpy", line 1821: expected 'simple_expression' not found.
-    with 
-         ^
-
-Ren'Py Version: Ren'Py 8.3.3.24111502
-Mon Dec  9 19:22:12 2024
->>>>>>> dbf4cd4c04be0fbd2c92c2dbecccee35eaf4fb23
+Tue Dec 10 10:11:16 2024

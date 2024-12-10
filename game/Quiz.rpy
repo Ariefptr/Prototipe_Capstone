@@ -13,10 +13,13 @@ screen ui_edukasi_kawung():
 
 screen puzzle_rotate_1():
     image "images/bg_puzzle_rotate.png"
+    text "Rotate puzzle di bawah ini" xalign 0.5 yalign 0.05
     add "images/puzzle/puzzle_r_1.png" xalign 0.5 yalign 0.4
     add "images/puzzle/piece_7.png" rotate piece_r_7 xalign 0.55 yalign 0.35
 
     hbox:
+        xalign 0.5
+        yalign 1.0
         imagebutton:
             idle "images/puzzle/rotate_kiri.png"
             action SetVariable("piece_r_7",piece_r_7 - 5)
@@ -29,10 +32,13 @@ screen puzzle_rotate_1():
                 action Jump("puzzle_rotate_megamendung_2")
 screen puzzle_rotate_2():
     image "images/bg_puzzle_rotate.png"
+    text "Rotate puzzle di bawah ini" xalign 0.5 yalign 0.05
     add "images/puzzle/puzzle_r_2.png" xalign 0.5 yalign 0.4
     add "images/puzzle/piece_13.png" rotate piece_r_13 xalign 0.36 yalign 0.73
 
     hbox:
+        xalign 0.5
+        yalign 1.0
         imagebutton:
             idle "images/puzzle/rotate_kiri.png"
             action SetVariable("piece_r_13",piece_r_13 - 5)
@@ -45,6 +51,9 @@ screen puzzle_rotate_2():
                 action Jump("chapter_3_gunung_3")
 
 screen quiz_1():
+    imagebutton:
+        auto "back_btn_ref_%s.png"
+        action Jump("soal_quiz_2")
     hbox:
         xalign 0.5
         yalign 0.2
