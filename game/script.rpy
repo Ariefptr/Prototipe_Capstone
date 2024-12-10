@@ -1804,8 +1804,17 @@ label story_ending:
     with dissolve
     larasati "Hmm...."
     larasati "Makara pernah bilang dia tahu dunia manusia karena seseorang pernah memberitahukannya"
+    hide larasati_kalem
+    show larasati_bingungheran at center
     larasati "Kira-kira orang yang dimaksud siapa ya ?"
 
+    window hide
+    show screen black_screen
+    with dissolve
+    pause 1.5
+    hide screen black_screen
+    with dissolve
+    
     return
 
 

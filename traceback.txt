@@ -1,22 +1,14 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 921, in script call
-    call screen puzzle_drag_1
-  File "game/script.rpy", line 921, in script call
-    call screen puzzle_drag_1
-  File "game/script.rpy", line 1818, in script
+  File "game/script.rpy", line 1750, in script
     satria "Hai, kamu larasati ya?"
 Exception: Sayer 'satria' is not defined.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 921, in script call
-    call screen puzzle_drag_1
-  File "game/script.rpy", line 921, in script call
-    call screen puzzle_drag_1
-  File "game/script.rpy", line 1818, in script
+  File "game/script.rpy", line 1750, in script
     satria "Hai, kamu larasati ya?"
   File "D:\RenPy\renpy-8.3.0-sdk\renpy\ast.py", line 2572, in execute
     Say.execute(self)
@@ -29,4 +21,4 @@ Exception: Sayer 'satria' is not defined.
 Windows-10-10.0.19045 AMD64
 Ren'Py 8.3.0.24082114
  
-Tue Dec 10 10:48:44 2024
+Tue Dec 10 20:06:43 2024

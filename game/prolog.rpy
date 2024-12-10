@@ -5,6 +5,7 @@ define makara = Character("Makara",color = "#000000")
 define makhluk = Character("???",color = "#000000")
 define makhluk_1 = Character("Makara",color = "#000000")
 define narrator = Character("   ",color = "#000000")
+define satria = Character("Satria",color= "#2d6fffff")
 
 image bg envi mom = im.Scale("envi_mom.jpg",1280,720)
 image bg kamar_larasatimalam = im.Scale("kamar_larasati21.png",1280,720)
