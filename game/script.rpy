@@ -855,6 +855,7 @@ label chapter_2_hutan_2:
     # ----- end chapter 2 -------
 
 label chapter_3_gunung:
+    scene bukit
     window hide
     show ui_edukasi_parang
     pause 30.0
@@ -942,6 +943,7 @@ label chapter_3_gunung:
     stop sound fadeout 0.3
     narrator "Dan melihat kertas yang berisi desain gambar yang baru saja dibuatnya"
     narrator "Makara melihat ke arah Larasati"
+    show makaras_base at right
     makara "Ada apa ?"
     larasati "Tidak apa-apa"
     makara "Kamu menggambar sesuatu ?"
@@ -951,6 +953,8 @@ label chapter_3_gunung:
     makara "Coba aku lihat"
     narrator "Larasati mencoba menunjukkan hasil desainnya"
     narrator "Berharap Makara memiliki respon yang baik"
+    hide makaras_base
+    show makara_senang_ref at right
     makara "Waah.. bagus sekali"
     makara "Kamu membuat seperti ini berapa kali mencoba"
     hide larasati_kalem 
@@ -963,9 +967,15 @@ label chapter_3_gunung:
     narrator "Makara mengembalikan kertasnya ke Larasati"
     larasati "Ayo kita jalan"
     makara "Yaa"
+    hide makara_senang_ref
+    with dissolve
+    hide larasati_senang
+    with dissolve
     narrator "Perjalanan ini memiliki jalur yang menanjak dan menurun"
     narrator "Melewati jalan yang berkelok kiri dan kanan"
+    show larasati_pasrah at left
     larasati "Jalur ini benar-benar seperti pegunungan"
+    show makaras_base at right
     makara "Kita memang berada di area pegunungan"
     larasati "Apakah gunung ini memiliki nama ?"
     makara "Hmm"
@@ -1001,6 +1011,7 @@ label chapter_3_gunung:
     hide larasati_kalem
     show larasati_pasrah at left
     larasati "Tapi akhir-akhir ini aku malas membuat desain"
+    show makaras_base at right
     narrator "Makara mengingat permasalahan antara Larasati dengan Ibunya"
     makara "Kenapa ?"
     makara "Bukannya tadi kamu baru membuat desain ?"
@@ -1020,6 +1031,7 @@ label chapter_3_gunung:
     makara "Ayo naik"
     makara "Ikuti aku"
     narrator "Jalan yang curam dan jalan yang penuh dengan bebatuan"
+    hide makaras_base
     hide larasati_kagetbiasa
     show larasati_bingungheran at left
     larasati "Apa aku bisa berjalan di jalanan seperti ini ?"
@@ -1065,11 +1077,14 @@ label chapter_3_gunung:
     larasati "Harus lebih sabar"
     narrator "Cukup lama untuk sampai ke atas"
     narrator "Tapi mereka berhasil berada di sana"
+    show makara_senang_ref at right
     makara "Ayo sebentar lagi"
     narrator "Makara melihat Larasati dengan wajah yang tenang dan tidak tergesa-gesa"
     makara "..."
     makara "Ternyata dia sudah mendapatkan esensi dari gunung ini"
     larasati "Akhirnya sampai juga"
+    hide larasati_senang
+    show larasati_casuall_pasrah at left
     larasati "Apa masih jauh jalannya"
     makara "Sebentar lagi"
     makara "Di depan sana sudah mencapai dataran tinggi di gunung ini"
@@ -1081,12 +1096,17 @@ label chapter_3_gunung:
     narrator "Hembusan angin yang membuat pikiran menjadi lebih tenang"
     narrator "Tidak ada emosi yang dapat mengalahkan ketenangan Larasati"
     narrator "Walaupun Dia ingat permasalahan dengan Ibunya"
+    hide makaras_base
+    show makara_senang_ref at right
     makara "Yeay sampai"
     makara "Dari sini kita bisa melihat pemandangan yang indah"
     makara "Bagaimana perasaanmu ?"
+    hide larasati_casuall_pasrah
+    show larasati_senang at left
     larasati "Eh aku merasa disini cukup tenang"
     larasati "Apa karena..."
     larasati "Esensi dari tempat ini ?"
+    hide makara_senang_ref
     hide larasati_senang
     # ------ quiz 2 --------
     jump soal_quiz_2
